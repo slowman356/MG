@@ -800,14 +800,17 @@
     right: 8px; top: 8px;
   }
 
-  /* ✅ 手機：Twitch 按鈕固定在右下角（FAB） */
+/* ✅ 手機：Twitch 按鈕固定在左下角（FAB） */
+@media (max-width: 640px) {
   #division-actions{
     position: fixed;
-    right: 16px;
+    left: 16px;          /* ← 改這行 */
+    right: auto;         /* ← 加這行，避免跟 right 衝突 */
     bottom: 16px;
-    z-index: 1110;        /* 高於底部浮層 */
+    z-index: 1110;
     margin: 0;
   }
+
   .twitch-btn{
     padding: 12px 16px;
     border-radius: 999px; /* 圓角膠囊 */
@@ -816,10 +819,14 @@
   }
 }
 
-/* 可選：桌機時仍維持原本在文字下方的佈局 */
 @media (min-width: 641px){
   #division-actions{
-    position: static; /* 回到原位 */
+    position: fixed;
+    left: 20px;
+    right: auto;
+    bottom: 20px;
   }
 }
+
+
 
