@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Magic Academy Entrance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+  <div class="cloud-layer"></div>
+  <a href="#" id="logo" title="回到首頁">Magic Academy</a>
+
+  <nav>
+    <ul>
+      <li><a href="#" data-section="home">首頁</a></li>
+      <li><a href="#" data-section="sever">伺服器規範</a></li>
+      <li><a href="#" data-section="academies">學院介紹</a></li>
+      <li><a href="#" id="studentIntroNav">學生介紹</a></li>
+      <li><a href="#" data-section="teachers">師資介紹</a></li>
+      <li><a href="#" data-section="rulesPage">校規</a></li>
+      <li><a href="#" data-section="map">地圖</a></li>
+      <li><a href="#" data-section="team">製作團隊</a></li>
+    </ul>
+  </nav>
+  <!-- 學院分業區 -->
+  <div id="academies" class="section">
+    <h1>學院介紹</h1>
+    <p style="max-width:800px;margin:auto;color:#dcd0a1;">
+      選擇一個學院查看該學院的背景與特色介紹
+    </p>
+
+    <!-- 學院選單 -->
+    <div class="academy-selector" id="academySelector" aria-label="學院選單">
+      <button data-academy="gryffindor" class="active">霍爾芬多</button>
+      <button data-academy="hufflepuff">史克瑪林</button>
+      <button data-academy="ravenclaw">羅文帕夫</button>
+      <button data-academy="slytherin">特威克勞</button>
+    </div>
+
+    <!-- 學院介紹內容 -->
+    <div class="academy-content" id="academyContent">
+      <!-- 內容由JS注入 -->
+      <div class="academy-card">
+        <div class="academy-text">
+          <h2>霍爾芬多</h2>
+          <p>霍爾芬多學院以勇氣、膽識與騎士精神聞名。這裡的學生崇尚冒險與正義，常常勇於面對挑戰。學院徽章是一頭獅子，象徵著無畏與領導力。</p>
+          <p><strong>特色：</strong>勇氣、冒險、領導力。</p>
+        </div>
+        <div class="academy-image">
+          <img src="https://example.com/gryffindor.png" alt="霍爾芬多 學院徽章">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 從 nav 外獨立出來 -->
+  <a href="#" id="musicToggle" class="music-toggle" aria-pressed="false" title="背景音樂播放/暫停">
+    <span id="musicIcon">▶</span>
+    <span class="music-status" id="musicLabel">背景音樂</span>
+  </a>
+
+
+  <div id="entryPage">
+    <h1>Magic Academy</h1>
+    <button id="joinBtn">ENTER</button>
+  </div>
+
+  <div id="home" class="section">
+    <h1 style="text-align:center; margin-bottom: 20px; color: white;">大陸背景</h1>
+
+    <div style="position:relative; width:70%; max-width:800px; margin:auto;">
+      <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+        <iframe src="https://www.youtube.com/embed/1g4IKLiWx88" frameborder="0" allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:10px;">
+        </iframe>
+      </div>
+    </div>
+
+    <p
+      style="margin: 30px auto 0 auto; width: 70%; max-width: 800px; font-size: 1.2em; line-height: 1.6; color: white; text-align: justify;">
+      艾斯瑞達是一片充滿魔法與神秘種族的古老大陸，這裡蘊藏著無數未知的奇蹟與危機。十八歲的少年少女們懷抱夢想，齊聚麥格華茲魔法學院，努力磨練技能，期望成為最頂尖的魔法師，守護這片土地的和平與繁榮。<br>
+      然而，暗黑勢力正悄然侵蝕大陸，異界魔族與原生種族展開激烈的對抗，戰火在大地上蔓延。作為即將踏入魔法世界的新生
+      你將面臨重重挑戰，必須突破自我極限，與志同道合的夥伴攜手合作，共同抵禦那席捲而來的黑暗風暴，守護艾斯瑞達的未來。
+    </p>
+  </div>
+
+
+
+  <!-- 學生介紹頁 -->
+  <div id="students" class="section">
+    <h1>學生介紹</h1>
+    <!-- 學院小選單 -->
+    <div id="studentSubNav">
+      <a data-house="holfindo" class="active">霍爾芬多</a>
+      <a data-house="skmalin">史克瑪林</a>
+      <a data-house="rowenpaf">羅文帕夫</a>
+      <a data-house="twicklow">特威克勞</a>
+    </div>
+
+    <!-- 霍爾芬多 -->
+    <div class="house-students" id="house-holfindo">
+      <div class="studentsSection">
+        <div class="student-card" data-student="學生1" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生1頭貼" />
+          <div class="student-info">
+            <h3>學生1</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生2" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
+          <div class="student-info">
+            <h3>學生2</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生3" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生3頭貼" />
+          <div class="student-info">
+            <h3>學生3</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生4" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生4頭貼" />
+          <div class="student-info">
+            <h3>學生4</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生5" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生5頭貼" />
+          <div class="student-info">
+            <h3>學生5</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生6" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生6頭貼" />
+          <div class="student-info">
+            <h3>學生6</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生7" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生7頭貼" />
+          <div class="student-info">
+            <h3>學生7</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生8" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生8頭貼" />
+          <div class="student-info">
+            <h3>學生8</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生9" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生9頭貼" />
+          <div class="student-info">
+            <h3>學生9</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生10" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生10頭貼" />
+          <div class="student-info">
+            <h3>學生10</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生11" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生11頭貼" />
+          <div class="student-info">
+            <h3>學生11</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生12" data-house="holfindo">
+          <img src="https://via.placeholder.com/70" alt="學生12頭貼" />
+          <div class="student-info">
+            <h3>學生12</h3>
+            <p>霍爾芬多學生。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 史克瑪林 -->
+    <div class="house-students" id="house-skmalin" style="display:none;">
+      <div class="studentsSection">
+        <div class="student-card" data-student="學生1" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生1頭貼" />
+          <div class="student-info">
+            <h3>學生1</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <!-- 後續同理 -->
+        <div class="student-card" data-student="學生2" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
+          <div class="student-info">
+            <h3>學生2</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生3" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生3頭貼" />
+          <div class="student-info">
+            <h3>學生3</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生4" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生4頭貼" />
+          <div class="student-info">
+            <h3>學生4</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生5" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生5頭貼" />
+          <div class="student-info">
+            <h3>學生5</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生6" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生6頭貼" />
+          <div class="student-info">
+            <h3>學生6</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生7" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生7頭貼" />
+          <div class="student-info">
+            <h3>學生7</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生8" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生8頭貼" />
+          <div class="student-info">
+            <h3>學生8</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生9" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生9頭貼" />
+          <div class="student-info">
+            <h3>學生9</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生10" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生10頭貼" />
+          <div class="student-info">
+            <h3>學生10</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生11" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生11頭貼" />
+          <div class="student-info">
+            <h3>學生11</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生12" data-house="skmalin">
+          <img src="https://via.placeholder.com/70" alt="學生12頭貼" />
+          <div class="student-info">
+            <h3>學生12</h3>
+            <p>史克瑪林學生。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 羅文帕夫 -->
+    <div class="house-students" id="house-rowenpaf" style="display:none;">
+      <div class="studentsSection">
+        <div class="student-card" data-student="學生1" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生1頭貼" />
+          <div class="student-info">
+            <h3>學生1</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <!-- 同理 -->
+        <div class="student-card" data-student="學生2" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
+          <div class="student-info">
+            <h3>學生2</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生3" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生3頭貼" />
+          <div class="student-info">
+            <h3>學生3</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生4" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生4頭貼" />
+          <div class="student-info">
+            <h3>學生4</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生5" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生5頭貼" />
+          <div class="student-info">
+            <h3>學生5</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生6" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生6頭貼" />
+          <div class="student-info">
+            <h3>學生6</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生7" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生7頭貼" />
+          <div class="student-info">
+            <h3>學生7</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生8" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生8頭貼" />
+          <div class="student-info">
+            <h3>學生8</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生9" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生9頭貼" />
+          <div class="student-info">
+            <h3>學生9</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生10" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生10頭貼" />
+          <div class="student-info">
+            <h3>學生10</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生11" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生11頭貼" />
+          <div class="student-info">
+            <h3>學生11</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生12" data-house="rowenpaf">
+          <img src="https://via.placeholder.com/70" alt="學生12頭貼" />
+          <div class="student-info">
+            <h3>學生12</h3>
+            <p>羅文帕夫學生。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 特威克勞 -->
+    <div class="house-students" id="house-twicklow" style="display:none;">
+      <div class="studentsSection">
+        <div class="student-card" data-student="學生1" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生1頭貼" />
+          <div class="student-info">
+            <h3>學生1</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <!-- 同理 -->
+        <div class="student-card" data-student="學生2" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
+          <div class="student-info">
+            <h3>學生2</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生3" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生3頭貼" />
+          <div class="student-info">
+            <h3>學生3</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生4" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生4頭貼" />
+          <div class="student-info">
+            <h3>學生4</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生5" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生5頭貼" />
+          <div class="student-info">
+            <h3>學生5</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生6" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生6頭貼" />
+          <div class="student-info">
+            <h3>學生6</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生7" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生7頭貼" />
+          <div class="student-info">
+            <h3>學生7</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生8" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生8頭貼" />
+          <div class="student-info">
+            <h3>學生8</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生9" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生9頭貼" />
+          <div class="student-info">
+            <h3>學生9</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生10" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生10頭貼" />
+          <div class="student-info">
+            <h3>學生10</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生11" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生11頭貼" />
+          <div class="student-info">
+            <h3>學生11</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+        <div class="student-card" data-student="學生12" data-house="twicklow">
+          <img src="https://via.placeholder.com/70" alt="學生12頭貼" />
+          <div class="student-info">
+            <h3>學生12</h3>
+            <p>特威克勞學生。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="division-detail" style="display:none;">
+  <!-- 關閉按鈕 -->
+  <button id="close-detail" title="關閉分業詳細">✕</button>
+
+  <!-- 主要內容 -->
+  <div class="content-wrapper">
+    <img id="division-img" src="" alt="分業圖片" />
+    <div class="division-info">
+      <div id="division-text"></div>
+
+      <!-- 新增：Twitch 動作列 -->
+      <div id="division-actions"></div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- 校規頁面-->
+
+
+  </style>
+
+  <div id="rulesPage" class="section">
+    <h1></h1>
+    <img
+      src="https://media.discordapp.net/attachments/843799477360918549/1403811542692266024/52900910-013f-466a-93aa-7bdd03975d46-removebg-preview.png?ex=6898e8e1&is=68979761&hm=c9cccb44d6d9e953d24b6bd455125e15faeb77f9bc5cd9ed105dbf1e0da338ec&=&format=webp&quality=lossless"
+      alt="校規圖片" style="width: 630px; height: auto;" />
+  </div>
+
+
+
+  <div id="sever" class="section"
+    style="max-width: 650px; margin: 40px auto; padding: 25px 30px; background: rgba(255, 235, 235, 0.1); border-radius: 12px; box-shadow: 0 0 15px rgba(255, 100, 100, 0.2); color: #fff; font-size: 1.3em; line-height: 1.8; font-weight: 600; font-family: 'Noto Sans TC', sans-serif; ">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <img
+        src="https://cdn.discordapp.com/attachments/843799477360918549/1403777468221100243/1.png?ex=6898c925&is=689777a5&hm=301aff9de045f9c87e1fe9af47cc749acdb99099f46ddc98b911311f67e46455&"
+        alt="" style="max-width: 100%; height: auto;">
+    </div>
+    <ol style="padding-left: 1.3em;">
+      <li style="margin-bottom: 1.6em;">
+        保持角色扮演：玩家請確保遊玩過程中，言行舉止符合角色背景與設定。遇到問題時，請先以 RP 方式應對，或先行離開場景，並錄影或截圖，通報管理團隊。
+      </li>
+      <li style="margin-bottom: 1.6em;">
+        恐懼角色扮演：角色遭遇威脅、危險情境應做出合理反應。例如：當遭遇巨型怪物時，可以表現出恐懼，而非直接衝上去跟他拼命。
+      </li>
+      <li style="margin-bottom: 1.6em;">
+        Minecraft RP 遊戲機制：非劇情需求，禁止玩家任意合成、破壞物品／方塊。人物skin請符合人物設定，並且除劇情需求，請勿隨意更換。
+      </li>
+      <li style="margin-bottom: 1.6em;">
+        Metagaming（場外資訊濫用）禁止以非遊戲內獲取的資訊來影響角色扮演（如 Twitch 直播、Discord 訊息等）。
+      </li>
+      <li style="margin-bottom: 1.6em;">
+        Powergaming（超能力行為）禁止執行超出合理能力範圍的行為，或使用遊戲機制獲取優勢。例如：為趕時間直接疊超高的方塊跨過障礙物、閒閒沒事開始用泥土蓋房子、利用死亡復活快速返回重生點。
+      </li>
+      <li style="margin-bottom: 1.6em;">
+        Random Deathmatch（RDM, 隨機殺戮）禁止在沒有任何合理背景或衝突的情況下，隨機攻擊或殺害其他玩家、NPC、動物。
+      </li>
+      <li style="margin-bottom: 1.6em;">
+        生命尊重規則伺服器內角色死亡時雖不會噴裝，但請玩家尊重自生生命，倒地時可以先等待救援，若無玩家支援再進行重生。
+      </li>
+      <li style="margin-bottom: 1.6em;">
+        遊戲內外行為規範遊玩內容請遵守 Twitch 社群規範，並確保不違反 Twitch 服務條款。
+      </li>
+      <li>
+        不得利用遊戲漏洞（Bug Exploits）：任何未經預期的機制（如 Bug 獲取道具、非正常手段獲利等）應立即回報管理員。
+      </li>
+    </ol>
+  </div>
+
+  <div id="teachers" class="section" style="max-width: 900px; margin: 40px auto; padding: 20px;">
+    <h1 style="text-align:center; margin-bottom: 30px;">師資介紹</h1>
+
+    <div class="teacher-card"
+      style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: rgba(246,219,135,0.1); padding: 15px 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(246,219,135,0.3);">
+      <img
+        src="https://media.discordapp.net/attachments/843799477360918549/1403777611376889958/20250224002416.png?ex=6898c947&is=689777c7&hm=a4b2ee088b69dc72a84ec55f0dcb046c3936fde458baec744ff8fd2e98f44bf3&=&format=webp&quality=lossless"
+        alt="教授1" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; flex-shrink: 0;">
+      <div class="teacher-info" style="color: #f0e6a5; font-size: 1.1em; line-height: 1.5;">
+        <h2 style="margin: 0 0 10px;">教授1</h2>
+        <p>魔法研究經驗，。</p>
+      </div>
+    </div>
+
+    <div class="teacher-card"
+      style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: rgba(246,219,135,0.1); padding: 15px 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(246,219,135,0.3);">
+      <img
+        src="https://media.discordapp.net/attachments/843799477360918549/1403777611376889958/20250224002416.png?ex=6898c947&is=689777c7&hm=a4b2ee088b69dc72a84ec55f0dcb046c3936fde458baec744ff8fd2e98f44bf3&=&format=webp&quality=lossless"
+        alt="教授2" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; flex-shrink: 0;">
+      <div class="teacher-info" style="color: #f0e6a5; font-size: 1.1em; line-height: 1.5;">
+        <h2 style="margin: 0 0 10px;">教授2</h2>
+        <p>魔法研究經驗，。</p>
+      </div>
+    </div>
+
+    <div class="teacher-card"
+      style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: rgba(246,219,135,0.1); padding: 15px 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(246,219,135,0.3);">
+      <img
+        src="https://media.discordapp.net/attachments/843799477360918549/1403777611376889958/20250224002416.png?ex=6898c947&is=689777c7&hm=a4b2ee088b69dc72a84ec55f0dcb046c3936fde458baec744ff8fd2e98f44bf3&=&format=webp&quality=lossless"
+        alt="教授3" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; flex-shrink: 0;">
+      <div class="teacher-info" style="color: #f0e6a5; font-size: 1.1em; line-height: 1.5;">
+        <h2 style="margin: 0 0 10px;">教授3</h2>
+        <p>魔法研究經驗，。</p>
+      </div>
+    </div>
+
+    <div class="teacher-card"
+      style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: rgba(246,219,135,0.1); padding: 15px 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(246,219,135,0.3);">
+      <img
+        src="https://media.discordapp.net/attachments/843799477360918549/1403777611376889958/20250224002416.png?ex=6898c947&is=689777c7&hm=a4b2ee088b69dc72a84ec55f0dcb046c3936fde458baec744ff8fd2e98f44bf3&=&format=webp&quality=lossless"
+        alt="教授4" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; flex-shrink: 0;">
+      <div class="teacher-info" style="color: #f0e6a5; font-size: 1.1em; line-height: 1.5;">
+        <h2 style="margin: 0 0 10px;">教授4</h2>
+        <p>魔法研究經驗，。</p>
+      </div>
+    </div>
+
+    <div class="teacher-card"
+      style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: rgba(246,219,135,0.1); padding: 15px 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(246,219,135,0.3);">
+      <img
+        src="https://media.discordapp.net/attachments/843799477360918549/1403777611376889958/20250224002416.png?ex=6898c947&is=689777c7&hm=a4b2ee088b69dc72a84ec55f0dcb046c3936fde458baec744ff8fd2e98f44bf3&=&format=webp&quality=lossless"
+        alt="教授5" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; flex-shrink: 0;">
+      <div class="teacher-info" style="color: #f0e6a5; font-size: 1.1em; line-height: 1.5;">
+        <h2 style="margin: 0 0 10px;">教授5</h2>
+        <p>魔法研究經驗，。</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+  </div>
+  </div>
+
+
+  <!-- 地圖區：新增五個選項與預設圖片、文字 -->
+  <div id="map" class="section">
+    <h1>地圖</h1>
+    <p style="max-width:800px;margin:auto;color:#dcd0a1;">選擇一個地點查看該地區簡介</p>
+
+    <div class="map-selector" id="mapSelector" aria-label="地圖選單">
+      <button data-map="school" class="active">麥格華茲</button>
+      <button data-map="dwarf">矮人城塞</button>
+      <button data-map="sakura">櫻花城</button>
+      <button data-map="elves">精靈城邦</button>
+      <button data-map="snow">希臘城</button>
+    </div>
+
+
+    <div class="map-content" id="mapContent">
+      <!-- 內容由 JS 注入 -->
+      <div class="map-card">
+        <div class="map-text">
+          <h2>矮人城塞</h2>
+          <p>矮人城塞位於高聳岩巒之中，石砌建築與鍛造作坊遍佈其間。這裡的矮人工匠擅長打造堅固盔甲與精密機械，城內常有金屬火花與悠揚的敲擊聲。來到此地，旅者會被深厚的歷史感與工藝魅力所吸引。</p>
+          <p><strong>特色：</strong>地下鍛造坊、堅固城牆、古老礦道。</p>
+        </div>
+        <div class="map-image">
+          <img
+            src="https://media.discordapp.net/attachments/1382019503394652173/1420394380115705956/image.png?ex=68d53cd9&is=68d3eb59&hm=c29036cc353460899100a87a5ecc65aeaa55999e6ce03ebea032fc1dae158334&=&format=webp&quality=lossless&width=1376&height=915"
+            alt="矮人城塞 圖片">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="team" class="section">
+    <h1>製作團隊</h1>
+    <div class="team-members-wrapper">
+      <div class="team-member">
+        <img src="https://via.placeholder.com/130x115" alt="製作團隊成員1" />
+        <div class="member-info">
+          <h3>賈霸</h3>
+          <p>伺服器創辦人、編劇、企劃、建築</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img
+          src="https://i.pinimg.com/736x/c8/e5/dd/c8e5dd83342972246aef0c3e2bd659bc.jpg"
+          alt="製作團隊成員2" />
+        <div class="member-info">
+          <h3>赤樂</h3>
+          <p>建築、影片拍攝和後製</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img
+          src="https://inews.gtimg.com/om_bt/O9MEiituWhxSJAugz5LbjAQTmwtKjYkRrzBN2gFJvameEAA/641"
+          alt="製作團隊成員3" />
+        <div class="member-info">
+          <h3>Nokia</h3>
+          <p>前端開發與設計、劇情編劇、建築</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="https://via.placeholder.com/130x115" alt="製作團隊成員4" />
+        <div class="member-info">
+          <h3>咬耳朵</h3>
+          <p>建築、建議整合、給予情緒價值</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 隱藏的背景音樂（可更換 src） -->
+  <audio id="bgMusic" loop preload="auto">
+    <source
+      src="https://cdn.discordapp.com/attachments/843799477360918549/1403790107927904297/Celtic_MusicBGM_-___Mono_Music_Box_youtube_online-audio-converter.com.mp3?ex=68d4d12a&is=68d37faa&hm=fcaeb67471ccdd24dfc1b00aa9655bc22b31bac31150a8170dad9373b2aac734&"
+      type="audio/mpeg">
+    <!-- 若需替換檔案，請修改 above src -->
+    您的瀏覽器不支援 audio 元素。
+  </audio>
+
+
+
+
+  <script src="./js/script.js"></script>
+
+  <footer>
+    <p
+      style="text-align:center; color:#888888; padding:12px 0; font-size:14px; font-family: 微軟正黑體, Arial, sans-serif; user-select: none;">
+      © 2025 Nokia。網頁製作版權所有，並保留一切權利。
+    </p>
+  </footer>
+</body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBa0o3yWi986pRfDc2hAaZhT0gjLugctz8",
+    authDomain: "mgd222-bacc9.firebaseapp.com",
+    projectId: "mgd222-bacc9",
+    storageBucket: "mgd222-bacc9.firebasestorage.app",
+    messagingSenderId: "1093210117147",
+    appId: "1:1093210117147:web:2ebbf6384404dafcc694be",
+    measurementId: "G-XHTBTFXQ7B"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+</html>
