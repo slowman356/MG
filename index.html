@@ -59,7 +59,7 @@
     </div>
   </div>
 
-  <!-- 從 nav 外獨立出來 -->
+
   <a href="#" id="musicToggle" class="music-toggle" aria-pressed="false" title="背景音樂播放/暫停">
     <span id="musicIcon">▶</span>
     <span class="music-status" id="musicLabel">背景音樂</span>
@@ -294,7 +294,7 @@
             <p>羅文帕夫學生。</p>
           </div>
         </div>
-        <!-- 同理 -->
+       
         <div class="student-card" data-student="學生2" data-house="rowenpaf">
           <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
           <div class="student-info">
@@ -385,7 +385,7 @@
             <p>特威克勞學生。</p>
           </div>
         </div>
-        <!-- 同理 -->
+      
         <div class="student-card" data-student="學生2" data-house="twicklow">
           <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
           <div class="student-info">
@@ -604,7 +604,7 @@
   </div>
 
 
-  <!-- 地圖區：新增五個選項與預設圖片、文字 -->
+  <-- 地圖區 -->
   <div id="map" class="section">
     <h1>地圖</h1>
     <p style="max-width:800px;margin:auto;color:#dcd0a1;">選擇一個地點查看該地區簡介</p>
@@ -619,7 +619,6 @@
 
 
     <div class="map-content" id="mapContent">
-      <!-- 內容由 JS 注入 -->
       <div class="map-card">
         <div class="map-text">
           <h2>矮人城塞</h2>
@@ -678,16 +677,12 @@
 
 
 
-  <!-- 隱藏的背景音樂（可更換 src） -->
+
   <audio id="bgMusic" loop preload="auto">
     <source
       src="https://cdn.discordapp.com/attachments/843799477360918549/1403815862665740369/Magical_Fantasy_-_30_minutes_version_of_Magical_Fantasy_Music_by_Dmitriy_Sevostyanov_dspromusic_-_Dmitriy_Sevostyanov_youtube.mp3?ex=68d4e927&is=68d397a7&hm=7c2f6a70f2d730da97916b55acfd69c6822cf67e0a2022419528ce05f54f5dc7&"
       type="audio/mpeg">
-    <!-- 若需替換檔案，請修改 above src -->
-    您的瀏覽器不支援 audio 元素。
   </audio>
-
-
 
 
   <script src="./js/script.js"></script>
