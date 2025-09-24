@@ -4,28 +4,26 @@
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // 移除其他 active
             navLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
 
-            // 顯示對應學院，隱藏其他
+           
             const targetHouse = link.dataset.house;
             houseSections.forEach(section => {
                 section.style.display = section.id === 'house-' + targetHouse ? 'block' : 'none';
             });
 
-            // 隱藏分業詳細頁（切換學院時）
+           
             document.getElementById('division-detail').style.display = 'none';
         });
     });
 
-    // 學生點擊事件 - 顯示分業詳細內容
     const divisionData = {
         holfindo: {
 '學生1': {
   img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403854695944163439/image.png?...',
   text: '霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字...',
-  twitch: 'https://www.twitch.tv/your_channel' // 👈 新增（可選）
+  twitch: 'https://www.twitch.tv/your_channel' 
 },
 
     '學生2': {
@@ -280,11 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const divisionImg = document.getElementById('division-img');
   const divisionText = document.getElementById('division-text');
 
-  // ✅ 關閉用到的元素
+  // 關閉
   const closeDetailBtn = document.getElementById('close-detail');
   const contentWrapper = divisionDetail.querySelector('.content-wrapper');
 
-  // 統一關閉函式
+  // 統一關閉
   function closeDivisionDetail() {
     divisionDetail.style.display = 'none';
     if (studentListSection) studentListSection.style.display = 'block';
@@ -293,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (actions) actions.innerHTML = '';
   }
 
-  // 1) 按鈕關閉
+  //  按鈕關閉
   if (closeDetailBtn) {
     closeDetailBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -301,9 +299,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2) 點遮罩（content-wrapper 以外的區域）關閉
+  // 2遮罩關閉
   divisionDetail.addEventListener('click', (e) => {
-    // ① 新增：若點在 Twitch 按鈕固定區或其子元素，就不要關閉
     if (e.target.closest('#division-actions')) return;
 
     if (!contentWrapper.contains(e.target) && e.target !== closeDetailBtn) {
@@ -311,7 +308,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ② 新增：避免點擊 Twitch 按鈕向上冒泡造成誤關閉（雙保險）
   document.addEventListener('click', (e) => {
     const actions = document.getElementById('division-actions');
     if (actions && actions.contains(e.target)) {
@@ -319,14 +315,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, true);
 
-  // 3) 按 Esc 關閉
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && divisionDetail.style.display === 'block') {
       closeDivisionDetail();
     }
   });
 
-  // 學生卡點擊事件
+  // 學生卡點擊
   document.querySelectorAll('.student-card').forEach(card => {
     card.addEventListener('click', () => {
       const student = card.dataset.student;
@@ -338,25 +333,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // 基本內容
       divisionImg.src = detail.img || '';
       divisionImg.alt = (student || '') + ' 分業圖片';
       divisionText.textContent = detail.text || '';
 
-      // 生成/更新 Twitch 按鈕
       renderTwitchButton(detail.twitch);
 
-      // 顯示詳細頁，隱藏列表與選單
+      // 顯示詳細頁 隱藏列表與選單
       divisionDetail.style.display = 'block';
       if (studentListSection) studentListSection.style.display = 'none';
       if (studentSubNav) studentSubNav.style.display = 'none';
-
-      // 滾動到詳細區
       divisionDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
-  // ====== 工具：在 division-text 後方注入 Twitch 按鈕 ======
   function renderTwitchButton(url) {
     let actions = document.getElementById('division-actions');
     if (!actions) {
@@ -442,21 +432,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const academySelector = document.getElementById('academySelector');
     const academyContent = document.getElementById('academyContent');
 
-  // 初始化：綁定按鈕事件
   academySelector.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
             const key = btn.dataset.academy;
 
-            // 切換按鈕樣式
+            // 切換按鈕
             academySelector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // 顯示學院介紹
+            // 學院介紹
             showAcademy(key);
         });
   });
 
-    // 顯示學院內容函式
     function showAcademy(key) {
     const a = academies[key];
     if (!a) {
@@ -477,7 +465,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-    // 簡單的 HTML 字串轉義
     function escapeHtml(str) {
     if (!str) return '';
     return String(str)
@@ -488,7 +475,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/>/g, '&gt;');
   }
 
-// 頁面載入時顯示預設學院介紹
 document.addEventListener('DOMContentLoaded', () => {
     showAcademy('gryffindor');
 });
@@ -502,28 +488,25 @@ const homeSection = document.getElementById('home');
 function showEntryPage() {
     entryPage.style.display = 'flex';
     nav.style.display = 'none';
-    logo.style.display = 'none';  // 入口頁不顯示LOGO
+    logo.style.display = 'none';  
     document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
 }
 
 function showHomePage() {
     entryPage.style.display = 'none';
     nav.style.display = 'block';
-    logo.style.display = 'block'; // 其他頁顯示LOGO
+    logo.style.display = 'block'; 
     document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
     homeSection.classList.add('active');
 }
 
-// 頁面載入時先顯示入口頁
 showEntryPage();
 
-// LOGO 點擊回首頁
 logo.addEventListener('click', function (e) {
     e.preventDefault();
     showHomePage();
 });
 
-// ENTER 按鈕進入主頁
 document.getElementById('joinBtn').addEventListener('click', function () {
     showHomePage();
 });
@@ -538,23 +521,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const musicIcon = document.getElementById('musicIcon');
     const musicLabel = document.getElementById('musicLabel');
 
-    // --- 初始：設定音量、循環
-    bgMusic.volume = 0.18; // 初始音量（可自行調整）
+    // 音量、循環
+    bgMusic.volume = 0.18; // 
     bgMusic.loop = true;
 
-    // 入學按鈕點擊，顯示導航及首頁，並嘗試播放音樂（因為為使用者手勢，通常瀏覽器允許）
+
     joinBtn.addEventListener('click', () => {
         entryPage.style.display = 'none';
         nav.style.display = 'block';
         showSection('home');
 
-        // 嘗試播放音樂（在大多數瀏覽器中，點擊按鈕視為使用者互動，允許播放）
+
         bgMusic.play().then(() => {
             musicIcon.textContent = '⏸';
             musicToggle.setAttribute('aria-pressed', 'true');
             musicLabel.textContent = '音樂：播放中';
         }).catch((err) => {
-            // 若被瀏覽器阻擋，顯示可手動啟動的提示（但不打擾）
+
             musicIcon.textContent = '▶';
             musicToggle.setAttribute('aria-pressed', 'false');
             musicLabel.textContent = '音樂';
@@ -562,7 +545,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 音樂切換按鈕（播放/暫停）
     musicToggle.addEventListener('click', (e) => {
         e.preventDefault();
         if (bgMusic.paused) {
@@ -581,7 +563,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // 主導航點擊切換頁面（除了學生介紹會用特別處理）
     document.querySelectorAll('nav a[data-section]').forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
@@ -590,14 +571,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 學生介紹點擊
+    // 學生介紹
     document.getElementById('studentIntroNav').addEventListener('click', e => {
         e.preventDefault();
         showSection('students');
         setActiveHouse('holfindo');
     });
 
-    // 學院小選單切換
+    // 學院小選單
     const houseLinks = document.querySelectorAll('#studentSubNav a');
     houseLinks.forEach(link => {
         link.addEventListener('click', e => {
@@ -609,21 +590,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showSection(sectionId) {
         document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-        // 隱藏所有學院學生列表區
         document.querySelectorAll('.house-students').forEach(hs => hs.style.display = 'none');
-        // 學院小選單清除active
         houseLinks.forEach(link => link.classList.remove('active'));
 
         if (sectionId === 'students') {
             document.getElementById('students').classList.add('active');
-            // 預設顯示霍爾芬多
             setActiveHouse('holfindo');
         } else {
             const sec = document.getElementById(sectionId);
             if (sec) sec.classList.add('active');
-            // 如果切換到地圖分頁，確保地圖選單第一個為 active（以利顯示）
             if (sectionId === 'map') {
-                // 如果 mapContent 內沒有東西，初始化為第一個
                 const firstBtn = document.querySelector('#mapSelector button.active') || document.querySelector('#mapSelector button[data-map]');
                 if (firstBtn && !document.querySelector('#mapContent .map-card')) {
                     showMap(firstBtn.dataset.map);
@@ -635,12 +611,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setActiveHouse(houseKey) {
-        // 隱藏所有學院學生區
         document.querySelectorAll('.house-students').forEach(hs => hs.style.display = 'none');
-        // 顯示指定學院學生區
         const el = document.getElementById('house-' + houseKey);
         if (el) el.style.display = 'block';
-        // 更新小選單 active 樣式
         houseLinks.forEach(link => {
             if (link.dataset.house === houseKey) {
                 link.classList.add('active');
@@ -650,9 +623,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ----------------
-    // 地圖功能：五個地點與預設圖文
-    // ----------------
+
+    // 4個地點
     const maps = {
         school: {
             title: '麥格華茲',
@@ -702,26 +674,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const mapSelector = document.getElementById('mapSelector');
     const mapContent = document.getElementById('mapContent');
 
-    // 初始化：綁定選單按鈕
     mapSelector.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const key = btn.dataset.map;
-            // 樣式
             mapSelector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            // 顯示地圖內容
             showMap(key);
         });
     });
 
-    // 顯示地圖函式：注入 mapContent
     function showMap(key) {
         const m = maps[key];
         if (!m) {
             mapContent.innerHTML = '<p style="color:#d6c98b;">尚未設定此地圖內容。</p>';
             return;
         }
-        // 建議：文字放在左側，圖片放右側（符合要求）
         mapContent.innerHTML = `
       <div class="map-card" role="region" aria-label="${m.title}">
         <div class="map-text">
@@ -736,7 +703,6 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     }
 
-    // 輔助：避免簡單的 HTML 注入（把資料轉義）
     function escapeHtml(str) {
         if (!str) return '';
         return String(str)
@@ -747,8 +713,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .replace(/>/g, '&gt;');
     }
 
-    // 頁面初始：若使用者已按入學會顯示 nav（也可手動呼叫 showSection('home')）
-    // 預設不顯示任何 section，直到入學為止。
 });
+
 
 
