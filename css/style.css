@@ -743,3 +743,83 @@
 .twitch-btn[aria-disabled="true"] {
   opacity: .55; cursor: not-allowed; pointer-events: none;
 }
+/* ========= 手機版優化（≤640px） ========= */
+@media (max-width: 640px) {
+  /* 學生清單改單欄 */
+  .studentsSection,
+  #house-holfindo {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    gap: 12px;
+    padding: 0 10px;
+  }
+  .student-card {
+    padding: 12px 10px;
+  }
+
+  /* 導航條內縮 */
+  nav { left: 8px; right: 8px; padding: 8px; }
+
+  /* 學院卡片垂直排 */
+  .academy-card { flex-direction: column; gap: 16px; }
+  .academy-text { font-size: 16px; }
+  .academy-text h2 { font-size: 22px; }
+
+  /* 地圖卡片上下排，文字更大一點 */
+  .map-card { flex-direction: column-reverse; padding: 14px; }
+  .map-text { font-size: 1em; }
+  .map-image img { max-width: 100%; }
+
+  /* 分業詳細視窗改為底部浮層，較好閱讀與操作 */
+  #division-detail {
+    inset: auto 0 0 0;        /* 貼底 */
+    position: fixed;
+    width: 100%;
+    height: 75vh;
+    left: 0; bottom: 0;
+    border-radius: 16px 16px 0 0;
+    padding: 16px 14px 84px;  /* 底部預留給固定按鈕的安全距 */
+    z-index: 1100;            /* 蓋在大多數元素上 */
+    overflow: hidden;         /* 由內層控制滾動 */
+  }
+  #division-detail .content-wrapper{
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 4px; /* 避免捲動擠到文字 */
+  }
+  #division-img{
+    width: 180px; height: 180px;
+    margin-top: 6px;
+  }
+  #division-text{
+    font-size: 0.98em;
+    max-height: none; /* 交給容器滾動 */
+  }
+  #division-detail > button#close-detail{
+    font-size: 1.6em;
+    right: 8px; top: 8px;
+  }
+
+  /* ✅ 手機：Twitch 按鈕固定在右下角（FAB） */
+  #division-actions{
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1110;        /* 高於底部浮層 */
+    margin: 0;
+  }
+  .twitch-btn{
+    padding: 12px 16px;
+    border-radius: 999px; /* 圓角膠囊 */
+    box-shadow: 0 8px 18px rgba(145,70,255,.35);
+    font-size: 15px;
+  }
+}
+
+/* 可選：桌機時仍維持原本在文字下方的佈局 */
+@media (min-width: 641px){
+  #division-actions{
+    position: static; /* 回到原位 */
+  }
+}
+
