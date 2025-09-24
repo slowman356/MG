@@ -289,9 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
     divisionDetail.style.display = 'none';
     if (studentListSection) studentListSection.style.display = 'block';
     if (studentSubNav) studentSubNav.style.display = 'flex';
-    // 可選：清空舊內容
-    // divisionImg.src = '';
-    // divisionText.textContent = '';
     const actions = document.getElementById('division-actions');
     if (actions) actions.innerHTML = '';
   }
@@ -306,11 +303,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2) 點遮罩（content-wrapper 以外的區域）關閉
   divisionDetail.addEventListener('click', (e) => {
-    // 若點到的是遮罩（不是內文區）
+    // ① 新增：若點在 Twitch 按鈕固定區或其子元素，就不要關閉
+    if (e.target.closest('#division-actions')) return;
+
     if (!contentWrapper.contains(e.target) && e.target !== closeDetailBtn) {
       closeDivisionDetail();
     }
   });
+
+  // ② 新增：避免點擊 Twitch 按鈕向上冒泡造成誤關閉（雙保險）
+  document.addEventListener('click', (e) => {
+    const actions = document.getElementById('division-actions');
+    if (actions && actions.contains(e.target)) {
+      e.stopPropagation();
+    }
+  }, true);
 
   // 3) 按 Esc 關閉
   document.addEventListener('keydown', (e) => {
@@ -394,6 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return a;
   }
 });
+
 
 
 
@@ -742,3 +750,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // 頁面初始：若使用者已按入學會顯示 nav（也可手動呼叫 showSection('home')）
     // 預設不顯示任何 section，直到入學為止。
 });
+
