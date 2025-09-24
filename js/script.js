@@ -24,7 +24,7 @@
         holfindo: {
 '學生1': {
   img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403854695944163439/image.png?...',
-  text: '霍爾芬多學生的分業詳細介紹文字...',
+  text: '霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字...',
   twitch: 'https://www.twitch.tv/your_channel' // 👈 新增（可選）
 },
 
@@ -750,4 +750,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // 頁面初始：若使用者已按入學會顯示 nav（也可手動呼叫 showSection('home')）
     // 預設不顯示任何 section，直到入學為止。
 });
+
 
