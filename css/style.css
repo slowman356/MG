@@ -62,7 +62,7 @@
      border-bottom-left-radius: 10px;
      z-index: 2000;
      display: none;
-     /* 預設隱藏，入學後顯示 */
+     / 預設隱藏，入學後顯示 /
  }
 
  nav ul {
@@ -109,7 +109,7 @@
      transition: all 0.3s ease;
  }
 
- /* 滑鼠滑過 */
+ /滑鼠*/
  .music-toggle:hover {
      background: linear-gradient(135deg, rgba(246, 219, 135, 0.4), rgba(255, 255, 255, 0.15));
      box-shadow: 0 6px 20px rgba(246, 219, 135, 0.4);
@@ -121,13 +121,12 @@
      transform: scale(0.96);
  }
 
- /* 播放圖示美化 */
+ /* 播放圖示 */
  #musicIcon {
      font-size: 16px;
      transition: transform 0.3s ease;
  }
 
- /* 播放狀態時旋轉動畫 */
  .music-toggle[aria-pressed="true"] #musicIcon {
      transform: rotate(360deg);
  }
@@ -190,11 +189,9 @@
  #joinBtn {
      font-family: 'Cinzel Decorative', cursive;
      font-size: 2.2em;
-     /* 字體大小比標題小 */
      color: #f6db87;
      background: transparent;
      border: none;
-     /* 無邊框 */
      padding: 0;
      cursor: pointer;
      font-weight: 700;
@@ -209,7 +206,7 @@
  }
 
 
- /* 學生介紹的學院小選單 */
+ /* 學院小選單 */
  #studentSubNav {
      display: flex;
      justify-content: center;
@@ -242,10 +239,8 @@
 
      display: grid;
      grid-template-columns: repeat(2, 1fr);
-     /* 左右兩欄 */
      grid-auto-rows: minmax(80px, auto);
      gap: 15px 25px;
-     /* 行距和列距 */
  }
 
  .student-card {
@@ -281,19 +276,18 @@
  }
 
 
- /* 保留你原本academy區內容寬度統一 */
+
  #academy {
      max-width: 900px;
      margin: 0 auto;
      text-align: left;
  }
 
- /* 製作團隊新增大頭貼與文字卡 */
+
  #team {
      max-width: 900px;
      margin: 0 auto;
      text-align: center;
-     /* 標題置中 */
  }
 
  #team>h1 {
@@ -306,7 +300,6 @@
 
  .team-members-wrapper {
      max-width: 950px;
-     /* 比原本寬一點 */
      margin: 0 auto;
  }
 
@@ -321,9 +314,7 @@
      transition: box-shadow 0.3s ease;
      margin: 0;
      width: 100%;
-     /* 讓容器寬度撐滿可用空間 */
      max-width: 600px;
-     /* 設定最大寬度，根據需要調整 */
      margin-left: auto;
      margin-right: auto;
  }
@@ -336,7 +327,6 @@
  .team-member img {
      width: 130px;
      height: 130px;
-     /* 高度改成和寬度一樣 */
      border-radius: 14px;
      object-fit: cover;
      margin-right: 25px;
@@ -348,11 +338,8 @@
      font-size: 1.2em;
      line-height: 1.5;
      white-space: nowrap;
-     /* 不換行 */
      overflow: hidden;
-     /* 超出隱藏 */
      text-overflow: ellipsis;
-     /* 超出用省略號 */
      flex-grow: 1;
  }
 
@@ -498,9 +485,7 @@
  #house-holfindo {
      display: grid;
      grid-template-columns: repeat(2, 1fr);
-     /* 兩欄 */
      gap: 15px 25px;
-     /* 間距 */
      max-width: 720px;
      margin: 0 auto;
  }
@@ -542,12 +527,8 @@
      height: 600px;
      padding: 20px;
 
-     /* 暗紫色漸層背景 */
      background: linear-gradient(145deg, #2e004f, #120025);
-
-     /* 邊框與紫色魔法光暈 */
      border: 2px solid rgba(138, 43, 226, 0.8);
-     /* 紫羅蘭色 */
      box-shadow:
          0 0 15px rgba(138, 43, 226, 0.7),
          0 0 30px rgba(75, 0, 130, 0.5),
@@ -555,7 +536,6 @@
 
      border-radius: 12px;
      color: #d8b9ff;
-     /* 輕柔紫白色字 */
      font-size: 1em;
      line-height: 1.4;
 
@@ -565,7 +545,6 @@
      overflow-y: auto;
      z-index: 1001;
 
-     /* 魔法閃爍動畫 */
      animation: magicGlow 3s ease-in-out infinite;
  }
 
@@ -582,9 +561,7 @@
      50% {
          box-shadow:
              0 0 25px rgba(186, 85, 211, 0.9),
-             /* 亮紫色 */
              0 0 45px rgba(123, 104, 238, 0.7),
-             /* 淺紫光暈 */
              inset 0 0 30px rgba(186, 85, 211, 0.5);
      }
  }
@@ -603,7 +580,6 @@
      cursor: pointer;
      transition: color 0.3s ease;
      z-index: 1010;
-     /* 確保按鈕層級最高 */
  }
 
  #division-detail>button#close-detail:hover {
@@ -613,19 +589,15 @@
  #division-detail .content-wrapper {
      display: flex;
      flex-direction: column;
-     /* 改成上下排列 */
      align-items: center;
-     /* 置中對齊 */
      gap: 20px;
      text-align: center;
-     /* 文字置中 */
      padding-top: 0;
      position: relative;
  }
 
  #division-img {
      width: 280px;
-     /* 比之前小一點 */
      height: 280px;
      border-radius: 12px;
      object-fit: cover;
@@ -641,11 +613,9 @@
      white-space: normal;
      word-break: break-word;
      max-height: 260px;
-     /* 高度可調整 */
      overflow-y: auto;
      order: 1;
      width: 100%;
-     /* 文字寬度佔滿 */
  }
 
  #academies {
@@ -667,13 +637,11 @@
      border: 1px solid rgba(246, 219, 135, 0.14);
      color: #f6db87;
      padding: 10px 22px;
-     /* 左右 padding 調大 */
      border-radius: 18px;
      cursor: pointer;
      font-weight: bold;
      transition: all 0.3s ease;
      white-space: nowrap;
-     /* 防止文字換行 */
  }
 
  .academy-selector button.active {
@@ -730,7 +698,7 @@
   gap: 6px;
   padding: 10px 14px;
   border-radius: 10px;
-  background: #9146FF; /* Twitch 主色 */
+  background: #9146FF; 
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -743,9 +711,8 @@
 .twitch-btn[aria-disabled="true"] {
   opacity: .55; cursor: not-allowed; pointer-events: none;
 }
-/* ========= 手機版優化（≤640px） ========= */
+/*手機版優化 */
 @media (max-width: 640px) {
-  /* 學生清單改單欄 */
   .studentsSection,
   #house-holfindo {
     grid-template-columns: 1fr;
@@ -757,35 +724,33 @@
     padding: 12px 10px;
   }
 
-  /* 導航條內縮 */
+
   nav { left: 8px; right: 8px; padding: 8px; }
 
-  /* 學院卡片垂直排 */
   .academy-card { flex-direction: column; gap: 16px; }
   .academy-text { font-size: 16px; }
   .academy-text h2 { font-size: 22px; }
 
-  /* 地圖卡片上下排，文字更大一點 */
   .map-card { flex-direction: column-reverse; padding: 14px; }
   .map-text { font-size: 1em; }
   .map-image img { max-width: 100%; }
 
-  /* 分業詳細視窗改為底部浮層，較好閱讀與操作 */
+
   #division-detail {
-    inset: auto 0 0 0;        /* 貼底 */
+    inset: auto 0 0 0;       
     position: fixed;
     width: 100%;
     height: 75vh;
     left: 0; bottom: 0;
     border-radius: 16px 16px 0 0;
-    padding: 16px 14px 84px;  /* 底部預留給固定按鈕的安全距 */
-    z-index: 1100;            /* 蓋在大多數元素上 */
-    overflow: hidden;         /* 由內層控制滾動 */
+    padding: 16px 14px 84px; 
+    z-index: 1100;            
+    overflow: hidden;        
   }
   #division-detail .content-wrapper{
     height: 100%;
     overflow-y: auto;
-    padding-right: 4px; /* 避免捲動擠到文字 */
+    padding-right: 4px; 
   }
   #division-img{
     width: 180px; height: 180px;
@@ -793,19 +758,19 @@
   }
   #division-text{
     font-size: 0.98em;
-    max-height: none; /* 交給容器滾動 */
+    max-height: none;
   }
   #division-detail > button#close-detail{
     font-size: 1.6em;
     right: 8px; top: 8px;
   }
 
-/* ✅ 手機：Twitch 按鈕固定在左下角（FAB） */
+
 @media (max-width: 640px) {
   #division-actions{
     position: fixed;
-    left: 16px;          /* ← 改這行 */
-    right: auto;         /* ← 加這行，避免跟 right 衝突 */
+    left: 16px;         
+    right: auto;        
     bottom: 16px;
     z-index: 1110;
     margin: 0;
@@ -813,7 +778,7 @@
 
   .twitch-btn{
     padding: 12px 16px;
-    border-radius: 999px; /* 圓角膠囊 */
+    border-radius: 999px; 
     box-shadow: 0 8px 18px rgba(145,70,255,.35);
     font-size: 15px;
   }
@@ -827,6 +792,7 @@
     bottom: 20px;
   }
 }
+
 
 
 
