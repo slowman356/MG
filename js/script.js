@@ -638,14 +638,14 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '矮人城塞',
             desc: '矮人城塞位於高聳岩巒之中，石砌建築與鍛造作坊遍佈其間。這裡的矮人工匠擅長打造堅固盔甲與精密機械，城內常有金屬火花與悠揚的敲擊聲。來到此地，旅者會被深厚的歷史感與工藝魅力所吸引。',
             notes: '特色：地下鍛造坊、堅固城牆、古老礦道。',
-            img: 'https://media.discordapp.net/attachments/1382019503394652173/1420394380115705956/image.png?ex=68d53cd9&is=68d3eb59&hm=c29036cc353460899100a87a5ecc65aeaa55999e6ce03ebea032fc1dae158334&=&format=webp&quality=lossless&width=1376&height=915',
+            img: 'https://i.ytimg.com/vi/ldAjxdiAflk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCTXx-b9e6JS-A9Cene_Z9zl6e6RA',
             alt: '矮人城塞 圖片'
         },
         sakura: {
             title: '櫻花城',
             desc: '櫻花城以滿山的櫻花聞名，春季時整座城猶如粉色海洋。城中的古寺和茶屋保存了細緻的禮儀與傳統，吸引詩人與畫家長期駐足創作。',
             notes: '特色：櫻花大道、古寺、季節祭典。',
-            img: 'https://media.discordapp.net/attachments/1382019503394652173/1420394435983839402/image.png?ex=68d53ce7&is=68d3eb67&hm=001c942b6ed7f4b0f916b568fb3a4eda4d5b099e9e7cc1b05703c44cb24975c6&=&format=webp&quality=lossless&width=1376&height=935',
+            img: 'https://i.pinimg.com/736x/1d/1f/6f/1d1f6f0ce37fe7e989945753fd5f42d3.jpg',
             alt: '櫻花城 圖片'
         },
         elves: {
@@ -707,6 +707,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
 
 
 
