@@ -61,9 +61,15 @@
 
 
   <a href="#" id="musicToggle" class="music-toggle" aria-pressed="false" title="背景音樂播放/暫停">
-    <span id="musicIcon">▶</span>
-    <span class="music-status" id="musicLabel">背景音樂</span>
-  </a>
+  <span id="musicIcon">▶</span>
+  <span class="music-status" id="musicLabel">背景音樂</span>
+</a>
+
+<iframe id="scPlayer" 
+        style="display:none;" 
+        scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jie-lee-584207195/magical-fantasy-extended&auto_play=true&loop=true">
+</iframe>
 
 
   <div id="entryPage">
@@ -678,11 +684,13 @@
 
 
 
-  <audio id="bgMusic" loop preload="auto">
-    <source
-      src="https://soundcloud.com/jie-lee-584207195/magical-fantasy-extended?si=94facc857af449ca98da408705e6b582&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-      type="audio/mpeg">
-  </audio>
+  <iframe id="scPlayer" 
+    width="0" height="0" 
+    scrolling="no" frameborder="no" 
+    allow="autoplay" 
+    src="https://soundcloud.com/jie-lee-584207195/magical-fantasy-extended?si=80398ff3377140f0b52b0284f10dcd3a&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+</iframe>
+
 
 
   <script src="./js/script.js"></script>
