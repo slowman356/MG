@@ -7,23 +7,22 @@
             navLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
 
-           
             const targetHouse = link.dataset.house;
             houseSections.forEach(section => {
                 section.style.display = section.id === 'house-' + targetHouse ? 'block' : 'none';
             });
 
-           
             document.getElementById('division-detail').style.display = 'none';
         });
     });
 
+    // 學生點擊事件 - 顯示分業詳細內容
     const divisionData = {
         holfindo: {
 '學生1': {
   img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403854695944163439/image.png?...',
-  text: '霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字霍爾芬多學生的分業詳細介紹文字...',
-  twitch: 'https://www.twitch.tv/your_channel' 
+  text: '霍爾芬多學生的分業詳細介紹文字...',
+  twitch: 'https://www.twitch.tv/your_channel' // 👈 新增（可選）
 },
 
     '學生2': {
@@ -277,21 +276,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const divisionDetail = document.getElementById('division-detail');
   const divisionImg = document.getElementById('division-img');
   const divisionText = document.getElementById('division-text');
-
-  // 關閉
   const closeDetailBtn = document.getElementById('close-detail');
   const contentWrapper = divisionDetail.querySelector('.content-wrapper');
 
-  // 統一關閉
+
   function closeDivisionDetail() {
     divisionDetail.style.display = 'none';
     if (studentListSection) studentListSection.style.display = 'block';
     if (studentSubNav) studentSubNav.style.display = 'flex';
+    // 可選：清空舊內容
+    // divisionImg.src = '';
+    // divisionText.textContent = '';
     const actions = document.getElementById('division-actions');
     if (actions) actions.innerHTML = '';
   }
 
-  //  按鈕關閉
+
   if (closeDetailBtn) {
     closeDetailBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -299,21 +299,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2遮罩關閉
-  divisionDetail.addEventListener('click', (e) => {
-    if (e.target.closest('#division-actions')) return;
 
+  divisionDetail.addEventListener('click', (e) => {
     if (!contentWrapper.contains(e.target) && e.target !== closeDetailBtn) {
       closeDivisionDetail();
     }
   });
 
-  document.addEventListener('click', (e) => {
-    const actions = document.getElementById('division-actions');
-    if (actions && actions.contains(e.target)) {
-      e.stopPropagation();
-    }
-  }, true);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && divisionDetail.style.display === 'block') {
@@ -321,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 學生卡點擊
+
   document.querySelectorAll('.student-card').forEach(card => {
     card.addEventListener('click', () => {
       const student = card.dataset.student;
@@ -333,19 +325,23 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+  
       divisionImg.src = detail.img || '';
       divisionImg.alt = (student || '') + ' 分業圖片';
       divisionText.textContent = detail.text || '';
 
       renderTwitchButton(detail.twitch);
 
-      // 顯示詳細頁 隱藏列表與選單
+   
       divisionDetail.style.display = 'block';
       if (studentListSection) studentListSection.style.display = 'none';
       if (studentSubNav) studentSubNav.style.display = 'none';
+
+    
       divisionDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
 
   function renderTwitchButton(url) {
     let actions = document.getElementById('division-actions');
@@ -396,7 +392,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
     // 學院資料
     const academies = {
         gryffindor: {
@@ -432,15 +427,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const academySelector = document.getElementById('academySelector');
     const academyContent = document.getElementById('academyContent');
 
+  // 綁定按鈕事件
   academySelector.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', () => {
             const key = btn.dataset.academy;
 
-            // 切換按鈕
+            // 切換按鈕樣式
             academySelector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // 學院介紹
+            // 顯示學院介紹
             showAcademy(key);
         });
   });
@@ -479,15 +475,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showAcademy('gryffindor');
 });
 
-const volumeControl = document.getElementById('volumeControl');
-
-// 預設音量
-widget.setVolume(70);
-
-volumeControl.addEventListener('input', () => {
-  widget.setVolume(volumeControl.value);
-});
-
 
 const logo = document.getElementById('logo');
 const nav = document.querySelector('nav');
@@ -509,12 +496,15 @@ function showHomePage() {
     homeSection.classList.add('active');
 }
 
+
 showEntryPage();
+
 
 logo.addEventListener('click', function (e) {
     e.preventDefault();
     showHomePage();
 });
+
 
 document.getElementById('joinBtn').addEventListener('click', function () {
     showHomePage();
@@ -530,23 +520,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const musicIcon = document.getElementById('musicIcon');
     const musicLabel = document.getElementById('musicLabel');
 
-    // 音量、循環
+    // --- 初始：設定音量、循環
     bgMusic.volume = 0.18; // 
     bgMusic.loop = true;
-
 
     joinBtn.addEventListener('click', () => {
         entryPage.style.display = 'none';
         nav.style.display = 'block';
         showSection('home');
 
-
         bgMusic.play().then(() => {
             musicIcon.textContent = '⏸';
             musicToggle.setAttribute('aria-pressed', 'true');
             musicLabel.textContent = '音樂：播放中';
         }).catch((err) => {
-
+            // 若被瀏覽器阻擋，顯示可手動啟動的提示（但不打擾）
             musicIcon.textContent = '▶';
             musicToggle.setAttribute('aria-pressed', 'false');
             musicLabel.textContent = '音樂';
@@ -554,6 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // 音樂切換按鈕（播放/暫停）
     musicToggle.addEventListener('click', (e) => {
         e.preventDefault();
         if (bgMusic.paused) {
@@ -580,14 +569,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 學生介紹
+    // 學生介紹點擊
     document.getElementById('studentIntroNav').addEventListener('click', e => {
         e.preventDefault();
         showSection('students');
         setActiveHouse('holfindo');
     });
 
-    // 學院小選單
+    // 學院小選單切換
     const houseLinks = document.querySelectorAll('#studentSubNav a');
     houseLinks.forEach(link => {
         link.addEventListener('click', e => {
@@ -632,8 +621,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
-    // 4個地點
+    // ----------------
+    // 地圖功能：五個地點與預設圖文
+    // ----------------
     const maps = {
         school: {
             title: '麥格華茲',
@@ -647,14 +637,15 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '矮人城塞',
             desc: '矮人城塞位於高聳岩巒之中，石砌建築與鍛造作坊遍佈其間。這裡的矮人工匠擅長打造堅固盔甲與精密機械，城內常有金屬火花與悠揚的敲擊聲。來到此地，旅者會被深厚的歷史感與工藝魅力所吸引。',
             notes: '特色：地下鍛造坊、堅固城牆、古老礦道。',
-            img: 'https://i.ytimg.com/vi/ldAjxdiAflk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCTXx-b9e6JS-A9Cene_Z9zl6e6RA',
+            img: 'https://i.ytimg.com/vi/ldAjxdiAflk/maxresdefault.jpg',
             alt: '矮人城塞 圖片'
         },
+		
         sakura: {
             title: '櫻花城',
             desc: '櫻花城以滿山的櫻花聞名，春季時整座城猶如粉色海洋。城中的古寺和茶屋保存了細緻的禮儀與傳統，吸引詩人與畫家長期駐足創作。',
             notes: '特色：櫻花大道、古寺、季節祭典。',
-            img: 'https://i.pinimg.com/736x/1d/1f/6f/1d1f6f0ce37fe7e989945753fd5f42d3.jpg',
+            img: 'https://i.pinimg.com/originals/7a/6f/98/7a6f988f75514b5e97efc7affde9eb76.jpg',
             alt: '櫻花城 圖片'
         },
         elves: {
@@ -676,21 +667,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const mapSelector = document.getElementById('mapSelector');
     const mapContent = document.getElementById('mapContent');
 
+    // 初始化：綁定選單按鈕
     mapSelector.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const key = btn.dataset.map;
+            // 樣式
             mapSelector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            // 顯示地圖內容
             showMap(key);
         });
     });
 
+    // 顯示地圖函式：注入 mapContent
     function showMap(key) {
         const m = maps[key];
         if (!m) {
             mapContent.innerHTML = '<p style="color:#d6c98b;">尚未設定此地圖內容。</p>';
             return;
         }
+        // 建議：文字放在左側，圖片放右側（符合要求）
         mapContent.innerHTML = `
       <div class="map-card" role="region" aria-label="${m.title}">
         <div class="map-text">
@@ -705,6 +701,7 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
     }
 
+
     function escapeHtml(str) {
         if (!str) return '';
         return String(str)
@@ -715,14 +712,5 @@ document.addEventListener('DOMContentLoaded', function () {
             .replace(/>/g, '&gt;');
     }
 
+   
 });
-
-
-
-
-
-
-
-
-
-
