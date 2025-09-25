@@ -479,6 +479,15 @@ document.addEventListener('DOMContentLoaded', () => {
     showAcademy('gryffindor');
 });
 
+const volumeControl = document.getElementById('volumeControl');
+
+// 預設音量
+widget.setVolume(70);
+
+volumeControl.addEventListener('input', () => {
+  widget.setVolume(volumeControl.value);
+});
+
 
 const logo = document.getElementById('logo');
 const nav = document.querySelector('nav');
@@ -732,6 +741,7 @@ musicToggle.addEventListener('click', (e) => {
   }
   isPlaying = !isPlaying;
 });
+
 
 
 
