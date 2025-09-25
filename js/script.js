@@ -641,13 +641,6 @@ document.addEventListener('DOMContentLoaded', function () {
             img: 'https://media.discordapp.net/attachments/1382019503394652173/1420394380115705956/image.png?ex=68d53cd9&is=68d3eb59&hm=c29036cc353460899100a87a5ecc65aeaa55999e6ce03ebea032fc1dae158334&=&format=webp&quality=lossless&width=1376&height=915',
             alt: '矮人城塞 圖片'
         },
-        kingdom: {
-            title: '另一個王國',
-            desc: '另一個王國地處綠意平原與蜿蜒河川之間，王都城堡雄偉，人民以農耕與騎士文化聞名。城內市場熱鬧非凡，各式手工藝與特產林立，是旅行者補給的好去處。',
-            notes: '特色：王都、市集、豐富文化遺產。',
-            img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403777611376889958/20250224002416.png?ex=6898c947&is=689777c7&hm=a4b2ee088b69dc72a84ec55f0dcb046c3936fde458baec744ff8fd2e98f44bf3&',
-            alt: '另一個王國 圖片'
-        },
         sakura: {
             title: '櫻花城',
             desc: '櫻花城以滿山的櫻花聞名，春季時整座城猶如粉色海洋。城中的古寺和茶屋保存了細緻的禮儀與傳統，吸引詩人與畫家長期駐足創作。',
@@ -659,7 +652,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '精靈城邦',
             desc: '精靈城邦隱匿於古老森林的樹冠之上，以輕盈優雅的建築和自然魔法融合為特色。精靈們與自然和諧共處，擅長治癒與自然魔法，是求學與靈性修養的理想之地。',
             notes: '特色：樹屋建築、自然魔法、長生傳說。',
-            img: 'https://media.discordapp.net/attachments/1382019503394652173/1420395558375526460/17921699-cropped_xl.png?ex=68d53df2&is=68d3ec72&hm=52b83b459f8feee1a9e84f572131316c1da4f7380c17a6c180dd90e68f2f3728&=&format=webp&quality=lossless',
+            img: 'https://static.planetminecraft.com/files/image/minecraft/project/2024/480/17921699-cropped_l.webp',
             alt: '精靈城邦 圖片'
         },
         snow: {
@@ -714,6 +707,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
 
 
 
