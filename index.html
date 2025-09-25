@@ -59,29 +59,11 @@
     </div>
   </div>
 
-
-<!-- 隱藏的 SoundCloud 播放器 -->
-<iframe id="scPlayer"
-        style="display:none;"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/jie-lee-584207195/magical-fantasy-extended&auto_play=true&loop=true">
-</iframe>
-
-
-<a href="#" id="musicToggle" class="music-toggle" aria-pressed="false" title="背景音樂播放/暫停">
+  <!-- 從 nav 外獨立出來 -->
+  <a href="#" id="musicToggle" class="music-toggle" aria-pressed="false" title="背景音樂播放/暫停">
     <span id="musicIcon">▶</span>
     <span class="music-status" id="musicLabel">背景音樂</span>
   </a>
-  
-   <!-- 隱藏的背景音樂（可更換 src） -->
-  <audio id="bgMusic" loop preload="auto">
-    <source
-      src="https://cdn.discordapp.com/attachments/843799477360918549/1403790107927904297/Celtic_MusicBGM_-___Mono_Music_Box_youtube_online-audio-converter.com.mp3?ex=68d4d12a&is=68d37faa&hm=fcaeb67471ccdd24dfc1b00aa9655bc22b31bac31150a8170dad9373b2aac734&"
-      type="audio/mpeg">
-    <!-- 若需替換檔案，請修改 above src -->
-    您的瀏覽器不支援 audio 元素。
-  </audio>
-
 
 
   <div id="entryPage">
@@ -312,7 +294,7 @@
             <p>羅文帕夫學生。</p>
           </div>
         </div>
-       
+        <!-- 同理 -->
         <div class="student-card" data-student="學生2" data-house="rowenpaf">
           <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
           <div class="student-info">
@@ -403,7 +385,7 @@
             <p>特威克勞學生。</p>
           </div>
         </div>
-      
+        <!-- 同理 -->
         <div class="student-card" data-student="學生2" data-house="twicklow">
           <img src="https://via.placeholder.com/70" alt="學生2頭貼" />
           <div class="student-info">
@@ -622,7 +604,7 @@
   </div>
 
 
-
+  <!-- 地圖區：新增五個選項與預設圖片、文字 -->
   <div id="map" class="section">
     <h1>地圖</h1>
     <p style="max-width:800px;margin:auto;color:#dcd0a1;">選擇一個地點查看該地區簡介</p>
@@ -637,6 +619,7 @@
 
 
     <div class="map-content" id="mapContent">
+      <!-- 內容由 JS 注入 -->
       <div class="map-card">
         <div class="map-text">
           <h2>矮人城塞</h2>
@@ -645,7 +628,7 @@
         </div>
         <div class="map-image">
           <img
-            src="https://i.ytimg.com/vi/ldAjxdiAflk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCTXx-b9e6JS-A9Cene_Z9zl6e6RA"
+            src="https://media.discordapp.net/attachments/1382019503394652173/1420394380115705956/image.png?ex=68d53cd9&is=68d3eb59&hm=c29036cc353460899100a87a5ecc65aeaa55999e6ce03ebea032fc1dae158334&=&format=webp&quality=lossless&width=1376&height=915"
             alt="矮人城塞 圖片">
         </div>
       </div>
@@ -695,8 +678,15 @@
 
 
 
+  <!-- 隱藏的背景音樂（可更換 src） -->
+  <audio id="bgMusic" loop preload="auto">
+    <source
+      src="https://cdn.discordapp.com/attachments/843799477360918549/1403790107927904297/Celtic_MusicBGM_-___Mono_Music_Box_youtube_online-audio-converter.com.mp3?ex=68d4d12a&is=68d37faa&hm=fcaeb67471ccdd24dfc1b00aa9655bc22b31bac31150a8170dad9373b2aac734&"
+      type="audio/mpeg">
+    <!-- 若需替換檔案，請修改 above src -->
+    您的瀏覽器不支援 audio 元素。
+  </audio>
 
-  
 
 
 
