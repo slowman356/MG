@@ -659,7 +659,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '希臘城',
             desc: '希臘城依山傍海而建，白色大理石殿堂與藍頂圓塔林立，宛如眾神居所。街道間遍布石柱與壁畫，記錄著古老神話與英雄傳說。旅者能在此感受到濃厚的文化底蘊與神聖氛圍。',
             notes: '神殿建築、神話傳說、英雄紀念碑。',
-            img: 'https://media.discordapp.net/attachments/1382019503394652173/1420395654454317136/88906a0bb6c19.png?ex=68d53e09&is=68d3ec89&hm=0b5ede08822c60a2258916aed4ac211ad944dbd5c69a951954cac37be6b95067&=&format=webp&quality=lossless',
+            img: 'https://cdn.imweb.me/thumbnail/20230501/88906a0bb6c19.png',
             alt: '希臘城 圖片'
         }
     };
@@ -707,6 +707,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
 
 
 
