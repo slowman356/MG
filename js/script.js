@@ -708,6 +708,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+const iframeElement = document.getElementById('scPlayer');
+const widget = SC.Widget(iframeElement);
+
+const musicToggle = document.getElementById('musicToggle');
+const musicIcon = document.getElementById('musicIcon');
+const musicLabel = document.getElementById('musicLabel');
+
+let isPlaying = true; // 預設自動播放
+
+musicToggle.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (isPlaying) {
+    widget.pause();
+    musicIcon.textContent = '▶';
+    musicLabel.textContent = '已暫停';
+    musicToggle.setAttribute('aria-pressed', 'false');
+  } else {
+    widget.play();
+    musicIcon.textContent = '⏸';
+    musicLabel.textContent = '播放中';
+    musicToggle.setAttribute('aria-pressed', 'true');
+  }
+  isPlaying = !isPlaying;
+});
+
 
 
 
