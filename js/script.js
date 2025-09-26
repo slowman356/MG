@@ -16,7 +16,7 @@
         });
     });
 
-    // 學生點擊事件 - 顯示分業詳細內容
+    // 學生點擊事件
     const divisionData = {
         holfindo: {
 '學生1': {
@@ -520,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const musicIcon = document.getElementById('musicIcon');
     const musicLabel = document.getElementById('musicLabel');
 
-    // --- 初始：設定音量、循環
+   
     bgMusic.volume = 0.18; // 
     bgMusic.loop = true;
 
@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 音樂切換按鈕（播放/暫停）
+    // 音樂切換按鈕
     musicToggle.addEventListener('click', (e) => {
         e.preventDefault();
         if (bgMusic.paused) {
@@ -621,9 +621,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ----------------
-    // 地圖功能：五個地點與預設圖文
-    // ----------------
+    
+    // 地圖功能
+
     const maps = {
         school: {
             title: '麥格華茲',
@@ -667,26 +667,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const mapSelector = document.getElementById('mapSelector');
     const mapContent = document.getElementById('mapContent');
 
-    // 初始化：綁定選單按鈕
+
     mapSelector.querySelectorAll('button').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const key = btn.dataset.map;
-            // 樣式
             mapSelector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            // 顯示地圖內容
             showMap(key);
         });
     });
 
-    // 顯示地圖函式：注入 mapContent
+
     function showMap(key) {
         const m = maps[key];
         if (!m) {
             mapContent.innerHTML = '<p style="color:#d6c98b;">尚未設定此地圖內容。</p>';
             return;
         }
-        // 建議：文字放在左側，圖片放右側（符合要求）
+
         mapContent.innerHTML = `
       <div class="map-card" role="region" aria-label="${m.title}">
         <div class="map-text">
@@ -714,3 +712,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
