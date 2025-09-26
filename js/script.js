@@ -284,7 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
     divisionDetail.style.display = 'none';
     if (studentListSection) studentListSection.style.display = 'block';
     if (studentSubNav) studentSubNav.style.display = 'flex';
-    // 可選：清空舊內容
     // divisionImg.src = '';
     // divisionText.textContent = '';
     const actions = document.getElementById('division-actions');
@@ -435,8 +434,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // 切換按鈕樣式
             academySelector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            // 顯示學院介紹
             showAcademy(key);
         });
   });
@@ -534,7 +531,6 @@ document.addEventListener('DOMContentLoaded', function () {
             musicToggle.setAttribute('aria-pressed', 'true');
             musicLabel.textContent = '音樂：播放中';
         }).catch((err) => {
-            // 若被瀏覽器阻擋，顯示可手動啟動的提示（但不打擾）
             musicIcon.textContent = '▶';
             musicToggle.setAttribute('aria-pressed', 'false');
             musicLabel.textContent = '音樂';
@@ -664,7 +660,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         snow: {
             title: '希臘城',
-            desc: '希臘城依山傍海而建，白色大理石殿堂與藍頂圓塔林立，宛如眾神居所。街道間遍布石柱與壁畫，記錄著古老神話與英雄傳說。旅者能在此感受到濃厚的文化底蘊與神聖氛圍。',
+            desc: '希臘城依山傍海而建，白色大理石殿堂與橘頂圓塔林立，宛如眾神居所。街道間遍布石柱與壁畫，記錄著古老神話與英雄傳說。旅者能在此感受到濃厚的文化底蘊與神聖氛圍。',
             notes: '神殿建築、神話傳說、英雄紀念碑。',
             img: 'https://cdn.imweb.me/thumbnail/20230501/88906a0bb6c19.png',
             alt: '希臘城 圖片'
@@ -719,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
 
 
