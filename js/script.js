@@ -207,63 +207,63 @@
   },
     twicklow: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生1',
-    text: '特威克勞學生1的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生1',
+    text: '特威克羅學生1的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生2',
-    text: '特威克勞學生2的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生2',
+    text: '特威克羅學生2的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生3',
-    text: '特威克勞學生3的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生3',
+    text: '特威克羅學生3的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生4',
-    text: '特威克勞學生4的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生4',
+    text: '特威克羅學生4的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生5',
-    text: '特威克勞學生5的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生5',
+    text: '特威克羅學生5的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生6',
-    text: '特威克勞學生6的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生6',
+    text: '特威克羅學生6的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生7',
-    text: '特威克勞學生7的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生7',
+    text: '特威克羅學生7的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生8',
-    text: '特威克勞學生8的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生8',
+    text: '特威克羅學生8的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生9',
-    text: '特威克勞學生9的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生9',
+    text: '特威克羅學生9的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生10',
-    text: '特威克勞學生10的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生10',
+    text: '特威克羅學生10的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生11',
-    text: '特威克勞學生11的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生11',
+    text: '特威克羅學生11的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=特威克勞學生12',
-    text: '特威克勞學生12的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生12',
+    text: '特威克羅學生12的分業詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   }
@@ -408,11 +408,11 @@ document.addEventListener('DOMContentLoaded', () => {
     alt: '羅文帕夫 學院徽章'
     },
     ravenclaw: {
-        title: '特威克勞',
-    desc: '特威克勞學院以智慧、學術與創造力著稱。學生重視思考與求知，善於解決問題與提出新穎觀點。學院徽章是一隻鷹，象徵智慧與自由。',
+        title: '特威克羅',
+    desc: '特威克羅學院以智慧、學術與創造力著稱。學生重視思考與求知，善於解決問題與提出新穎觀點。學院徽章是一隻鷹，象徵智慧與自由。',
     notes: '特色：智慧、學術、創造力。',
     img: 'https://media.discordapp.net/attachments/843799477360918549/1403777635208794206/125075.png',
-    alt: '特威克勞 學院徽章'
+    alt: '特威克羅 學院徽章'
     },
     slytherin: {
         title: '史克瑪林',
@@ -715,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
 
 
