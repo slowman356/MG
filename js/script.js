@@ -411,7 +411,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: '特威克羅',
     desc: '特威克羅分院代表的是智慧與知識，學院中最為神秘與學術性的一個分院，這個分院的學生熱衷於探索魔法的理論與奧秘，他們相信，知識是解決世界所有問題的關鍵，他們的目標是推動魔法科學的邊界，並發掘那些被隱藏於世界之間的奧秘，特威克勞的校徽是一隻睿智的貓頭鷹，象徵著對知識的無窮渴求與探索的無畏精神。',
     notes: '特色：智慧、知識、創造力。',
-    img: 'https://media.discordapp.net/attachments/843799477360918549/1403777635208794206/125075.png',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/1%2FTwicklaw.png?alt=media&token=da5d4d92-a91f-4bdf-9fd7-a84190d94c1e',
     alt: '特威克羅 學院徽章'
     },
     slytherin: {
@@ -715,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
 
 
