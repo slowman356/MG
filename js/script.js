@@ -22,7 +22,7 @@
 '學生1': {
   img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403854695944163439/image.png?...',
   text: '霍爾芬多學生的分業詳細介紹文字...',
-  twitch: 'https://www.twitch.tv/your_channel' // 👈 新增（可選）
+  twitch: 'https://www.twitch.tv/your_channel' ）
 },
 
     '學生2': {
@@ -715,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
 
 
