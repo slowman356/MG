@@ -655,7 +655,7 @@ document.addEventListener('DOMContentLoaded', function () {
             title: '精靈城邦',
             desc: '精靈城邦隱匿於古老森林的樹冠之上，以輕盈優雅的建築和自然魔法融合為特色。精靈們與自然和諧共處，擅長治癒與自然魔法，是求學與靈性修養的理想之地。',
             notes: '特色：樹屋建築、自然魔法、長生傳說。',
-            img: 'https://static.planetminecraft.com/files/image/minecraft/project/2024/480/17921699-cropped_l.webp',
+            img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/1%2F08.png?alt=media&token=134955b8-2cdf-4673-9ff2-a3933f90b055',
             alt: '精靈城邦 圖片'
         },
         snow: {
@@ -715,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
 
 
