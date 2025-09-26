@@ -597,15 +597,22 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             const sec = document.getElementById(sectionId);
             if (sec) sec.classList.add('active');
-            if (sectionId === 'map') {
-                const firstBtn = document.querySelector('#mapSelector button.active') || document.querySelector('#mapSelector button[data-map]');
-                if (firstBtn && !document.querySelector('#mapContent .map-card')) {
-                    showMap(firstBtn.dataset.map);
-                    document.querySelectorAll('#mapSelector button').forEach(b => b.classList.remove('active'));
-                    firstBtn.classList.add('active');
-                }
-            }
-        }
+           if (sectionId === 'map') {
+    const mapContentHasCard = !!document.querySelector('#mapContent .map-card');
+
+    if (!mapContentHasCard) {
+        // 預設就是麥格華茲
+        showMap('school');
+
+        // 同步按鈕 active 樣式
+        const allBtns = document.querySelectorAll('#mapSelector button');
+        const schoolBtn = document.querySelector('#mapSelector button[data-map="school"]');
+
+        allBtns.forEach(b => b.classList.remove('active'));
+        if (schoolBtn) schoolBtn.classList.add('active');
+          }
+          }
+		}
     }
 
     function setActiveHouse(houseKey) {
@@ -712,4 +719,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
