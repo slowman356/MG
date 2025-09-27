@@ -748,6 +748,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 })();
 
+// === 手機漢堡選單切換 ===
+const nav = document.getElementById("mainNav");
+const toggleBtn = nav.querySelector(".nav-toggle");
+const mainMenu = document.getElementById("mainMenu");
+
+toggleBtn.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+  toggleBtn.setAttribute("aria-expanded", isOpen);
+});
+
 
 
 
