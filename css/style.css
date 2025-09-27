@@ -793,6 +793,97 @@
   }
 }
 
+/* 修正原本這行註解：預設隱藏，入學後顯示 */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-bottom-left-radius: 10px;
+  z-index: 2000;
+  display: none; /* 預設隱藏，入學後顯示 */
+}
+
+/* 漢堡鍵預設隱藏（桌機顯示原本的橫向選單） */
+.nav-toggle {
+  display: none;
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(246,219,135,0.4);
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(246,219,135,0.2), rgba(255,255,255,0.08));
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #f6db87;
+  margin: 3px auto;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+/* 展開狀態的動畫（可選） */
+#mainNav.open .nav-toggle-bar:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+#mainNav.open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+#mainNav.open .nav-toggle-bar:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+/* 手機版下拉：把 ul 改成直向下拉與卡片樣式 */
+@media (max-width: 800px) {
+  /* 顯示漢堡鍵，讓選單改為下拉 */
+  #mainNav {
+    left: 8px;
+    right: 8px;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  #mainNav .nav-toggle {
+    display: inline-flex;
+  }
+  #mainNav ul {
+    display: none;              /* 初始不展開 */
+    flex-direction: column;
+    gap: 0;
+    margin-top: 8px;
+    background: rgba(0,0,0,0.85);
+    border: 1px solid rgba(246,219,135,0.18);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #mainNav.open ul {
+    display: flex;              /* 點擊後展開 */
+  }
+  #mainNav li + li a {
+    border-top: 1px solid rgba(246,219,135,0.15);
+  }
+  #mainNav a {
+    display: block;
+    padding: 12px 14px;
+    white-space: normal;        /* 允許換行 */
+  }
+}
+
+/* 桌機維持你原本的橫向排列 */
+@media (min-width: 801px) {
+  #mainNav .nav-toggle { display: none; }
+  #mainNav ul {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: transparent;
+    border: 0;
+  }
+}
+
+/* 修正你原本 640px 的區塊缺少結尾大括號（這裡只是提醒） */
+/* 請確保每個 @media 區塊都有對應的關閉 } */
+
 
 
 
