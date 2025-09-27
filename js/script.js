@@ -759,12 +759,8 @@ toggleBtn.addEventListener("click", () => {
 });
 
 
-mainMenu.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    toggleBtn.setAttribute("aria-expanded", "false");
-  });
-});
+
+
 
 
 
