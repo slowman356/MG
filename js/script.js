@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: '坎普費爾',
     desc: '坎普費爾分院代表的是力量和權威，強調的是身體與心靈的鍛煉，這個分院的學生不僅擅長攻擊魔法與戰鬥技巧，更追求自我強化與對於力量的無限渴望，他們相信，唯有經歷過無數的挑戰與磨難，才能真正掌握強大的力量。坎普費爾分院的校徽是一條青蛇，象徵著強大的力量與狡詐之美',
     notes: '特色：野心、狡猾、領導力。',
-    img: 'https://media.discordapp.net/attachments/843799477360918549/1403777687918608484/E69CAAE591BDE5908DE8A8ADE8A888-9-809x455.png',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/1%2Fkampfer.png?alt=media&token=e0aeaf71-2f7d-46c6-9fce-14c44cf209ca',
     alt: '坎普費爾 學院徽章'
     }
   };
@@ -761,6 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeMenu();
   });
 });
+
 
 
 
