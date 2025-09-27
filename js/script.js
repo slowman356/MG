@@ -717,6 +717,51 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// ============ 主選單（手機漢堡下拉） ============
+document.addEventListener('DOMContentLoaded', () => {
+  const mainNav   = document.getElementById('mainNav');
+  const navToggle = mainNav?.querySelector('.nav-toggle');
+  const mainMenu  = document.getElementById('mainMenu');
+
+  if (!mainNav || !navToggle || !mainMenu) return;
+
+  function openMenu() {
+    mainNav.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    mainNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+  function toggleMenu() {
+    if (mainNav.classList.contains('open')) closeMenu();
+    else openMenu();
+  }
+
+  // 點漢堡開/關
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // 點任何選單連結就關閉
+  mainMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => closeMenu());
+  });
+
+  // 點選單外面關閉
+  document.addEventListener('click', (e) => {
+    if (mainNav.classList.contains('open') && !mainNav.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Esc 關閉
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+});
+
 
 
 
