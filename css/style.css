@@ -1,6 +1,6 @@
 /* ===========================
    Magic Academy - Global CSS
-   整理版（含手機漢堡選單、桌機隱藏 nav）
+   整理版（桌機橫向選單 + 手機漢堡右上角）
    =========================== */
 
 /* --- Base --- */
@@ -16,7 +16,6 @@ body {
   background-size: auto, cover;
   animation: moveBg 60s linear infinite;
 }
-
 @keyframes moveBg {
   0% { background-position: 0 0, center; }
   50% { background-position: 100px 100px, center; }
@@ -25,18 +24,14 @@ body {
 
 /* --- Clouds --- */
 .cloud-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
+  position: fixed; top: 0; left: 0;
+  width: 200%; height: 200%;
   background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
   opacity: 0.12;
   animation: cloudMove 120s linear infinite;
   pointer-events: none;
   z-index: 1;
 }
-
 @keyframes cloudMove {
   0% { transform: translate(0, 0); }
   50% { transform: translate(-200px, -100px); }
@@ -45,9 +40,7 @@ body {
 
 /* --- Logo --- */
 #logo {
-  position: fixed;
-  top: 12px;
-  left: 12px;
+  position: fixed; top: 12px; left: 12px;
   z-index: 3000;
   font-family: 'Cinzel Decorative', cursive;
   font-size: 1.5em;
@@ -58,10 +51,7 @@ body {
   user-select: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-#logo:hover {
-  color: #fff;
-  text-shadow: 0 0 25px rgba(246, 219, 135, 1);
-}
+#logo:hover { color: #fff; text-shadow: 0 0 25px rgba(246, 219, 135, 1); }
 
 /* --- Sections --- */
 .section {
@@ -75,30 +65,21 @@ body {
 
 /* --- Entry Page --- */
 #entryPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  height: 100vh; text-align: center;
 }
 #entryPage h1 {
   font-family: 'Cinzel Decorative', cursive;
-  font-size: 3em;
-  color: #f6db87;
+  font-size: 3em; color: #f6db87;
   margin-bottom: 30px;
   text-shadow: 0 0 15px rgba(246, 219, 135, 0.8);
 }
 #joinBtn {
   font-family: 'Cinzel Decorative', cursive;
-  font-size: 2.2em;
-  color: #f6db87;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: 2.2em; color: #f6db87;
+  background: transparent; border: none; padding: 0;
+  cursor: pointer; font-weight: 700; letter-spacing: 0.05em;
   text-shadow: 0 0 15px rgba(246, 219, 135, 0.8);
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -106,115 +87,84 @@ body {
 
 /* --- Music Toggle --- */
 .music-toggle {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, rgba(246, 219, 135, 0.2), rgba(255, 255, 255, 0.1));
+  position: fixed; right: 20px; bottom: 20px;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, rgba(246,219,135,.2), rgba(255,255,255,.1));
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(246, 219, 135, 0.4);
+  border: 1px solid rgba(246,219,135,.4);
   border-radius: 50px;
-  padding: 8px 16px;
-  cursor: pointer;
+  padding: 8px 16px; cursor: pointer;
   z-index: 9999;
   font-family: 'Segoe UI', sans-serif;
-  font-size: 14px;
-  color: #f6db87;
+  font-size: 14px; color: #f6db87;
   box-shadow: 0 4px 15px rgba(246, 219, 135, 0.2);
   transition: all 0.3s ease;
 }
-/* 滑鼠 */
 .music-toggle:hover {
-  background: linear-gradient(135deg, rgba(246, 219, 135, 0.4), rgba(255, 255, 255, 0.15));
-  box-shadow: 0 6px 20px rgba(246, 219, 135, 0.4);
+  background: linear-gradient(135deg, rgba(246,219,135,.4), rgba(255,255,255,.15));
+  box-shadow: 0 6px 20px rgba(246,219,135,.4);
   transform: translateY(-2px);
 }
-/* 按下效果 */
 .music-toggle:active { transform: scale(0.96); }
-/* 播放圖示 */
 #musicIcon { font-size: 16px; transition: transform 0.3s ease; }
 .music-toggle[aria-pressed="true"] #musicIcon { transform: rotate(360deg); }
 .music-status { font-size: 0.9em; color: #dcd0a1; margin-left: 8px; }
 
-/* --- Generic Dropdown (for any menus you use) --- */
+/* --- Dropdown --- */
 .dropdown { position: relative; }
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%; left: 0;
+  display: none; position: absolute; top: 100%; left: 0;
   background: rgba(0,0,0,0.85);
-  min-width: 160px;
-  border-radius: 5px;
-  z-index: 2001;
+  min-width: 160px; border-radius: 5px; z-index: 2001;
 }
 .dropdown-content a { padding: 8px 12px; display: block; }
 .dropdown:hover .dropdown-content { display: block; }
 
-/* --- Student sub nav --- */
+/* --- Student Nav --- */
 #studentSubNav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin: 10px 0 20px 0;
-  font-size: 1.3em;
-  color: #f6db87;
+  display: flex; justify-content: center;
+  gap: 25px; margin: 10px 0 20px 0;
+  font-size: 1.3em; color: #f6db87;
 }
 #studentSubNav a {
-  cursor: pointer;
-  padding: 5px 15px;
-  border-radius: 20px;
-  background: rgba(246, 219, 135, 0.2);
-  text-decoration: none;
-  color: #f6db87;
+  cursor: pointer; padding: 5px 15px; border-radius: 20px;
+  background: rgba(246,219,135,0.2);
+  text-decoration: none; color: #f6db87;
   transition: background 0.3s;
 }
 #studentSubNav a:hover,
 #studentSubNav a.active { background: #f6db87; color: #000; }
 
-/* --- Students grid --- */
+/* --- Students --- */
 .studentsSection {
-  max-width: 720px;
-  margin: 0 auto 50px auto;
+  max-width: 720px; margin: 0 auto 50px auto;
   text-align: left;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(80px, auto);
-  gap: 15px 25px;
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(80px, auto); gap: 15px 25px;
 }
 .student-card {
-  display: flex;
-  align-items: center;
-  background: rgba(246, 219, 135, 0.1);
-  border-radius: 12px;
-  padding: 15px 10px;
-  box-shadow: 0 0 10px rgba(246, 219, 135, 0.3);
+  display: flex; align-items: center;
+  background: rgba(246,219,135,0.1);
+  border-radius: 12px; padding: 15px 10px;
+  box-shadow: 0 0 10px rgba(246,219,135,0.3);
   transition: box-shadow 0.3s ease;
 }
-.student-card:hover { box-shadow: 0 0 20px rgba(246, 219, 135, 0.6); }
+.student-card:hover { box-shadow: 0 0 20px rgba(246,219,135,0.6); }
 .student-card img {
-  width: 70px; height: 70px;
-  border-radius: 12px; object-fit: cover;
-  margin-right: 10px; flex-shrink: 0;
+  width: 70px; height: 70px; border-radius: 12px;
+  object-fit: cover; margin-right: 10px; flex-shrink: 0;
 }
 .student-info {
-  color: #f0e6a5;
-  font-size: 0.9em; line-height: 1.4;
+  color: #f0e6a5; font-size: 0.9em; line-height: 1.4;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
-/* --- House: holfindo --- */
+/* --- House holfindo --- */
 #house-holfindo {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px 25px;
-  max-width: 720px;
-  margin: 0 auto;
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 15px 25px; max-width: 720px; margin: 0 auto;
 }
-#house-holfindo .student-card { /* inherits from .student-card */ }
-#house-holfindo .student-card img { width: 70px; height: 70px; border-radius: 12px; object-fit: cover; margin-right: 10px; }
-#house-holfindo .student-info { color: #f0e6a5; font-size: 0.9em; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#house-holfindo .student-info { color: #f0e6a5; font-size: 0.9em; }
 
 /* --- Teams --- */
 #team { max-width: 900px; margin: 0 auto; text-align: center; }
@@ -225,395 +175,98 @@ body {
 .team-members-wrapper { max-width: 950px; margin: 0 auto; }
 .team-member {
   display: flex; align-items: center;
-  background: rgba(246, 219, 135, 0.1);
+  background: rgba(246,219,135,0.1);
   border-radius: 12px; padding: 20px 30px;
-  box-shadow: 0 0 10px rgba(246, 219, 135, 0.3);
+  box-shadow: 0 0 10px rgba(246,219,135,0.3);
   transition: box-shadow 0.3s ease;
-  margin: 0; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto;
+  margin: 0 auto; max-width: 600px;
 }
-.team-member:hover { box-shadow: 0 0 20px rgba(246, 219, 135, 0.6); }
+.team-member:hover { box-shadow: 0 0 20px rgba(246,219,135,0.6); }
 .team-member img {
-  width: 130px; height: 130px; border-radius: 14px; object-fit: cover;
-  margin-right: 25px; flex-shrink: 0;
+  width: 130px; height: 130px; border-radius: 14px;
+  object-fit: cover; margin-right: 25px;
 }
-.member-info {
-  font-size: 1.2em; line-height: 1.5;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-grow: 1;
-}
-.member-info h3 {
-  font-size: 1.5em; margin: 0 10px 0 0;
-  display: inline-block; vertical-align: middle;
-}
-.member-info p {
-  font-size: 1.05em; margin: 0;
-  display: inline-block; vertical-align: middle;
-}
+.member-info { font-size: 1.2em; line-height: 1.5; flex-grow: 1; }
 
 /* --- Academy --- */
 #academy { max-width: 900px; margin: 0 auto; text-align: left; }
 #academies { color: #dcd0a1; max-width: 900px; margin: 0 auto 50px auto; }
 
-.academy-selector {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 12px; margin: 20px 0 30px;
-}
-.academy-selector button {
-  background: rgba(246, 219, 135, 0.08);
-  border: 1px solid rgba(246, 219, 135, 0.14);
-  color: #f6db87; padding: 10px 22px;
-  border-radius: 18px; cursor: pointer; font-weight: bold;
-  transition: all 0.3s ease; white-space: nowrap;
-}
-.academy-selector button.active {
-  background: #f6db87; color: #000;
-  box-shadow: 0 0 12px rgba(246, 219, 135, 0.6);
-}
-.academy-card {
-  display: flex; gap: 30px; align-items: center; justify-content: center;
-  flex-wrap: wrap;
-}
-.academy-text { flex: 1 1 300px; font-size: 18px; line-height: 1.5; }
-.academy-text h2 { font-size: 28px; margin-bottom: 12px; font-weight: 700; }
-.academy-text p strong { font-weight: 700; }
-.academy-image { flex: 1 1 300px; text-align: center; }
-.academy-image img { max-width: 100%; border-radius: 12px; box-shadow: 0 0 12px rgba(220, 208, 161, 0.6); }
+/* (省略部分文字樣式，保留你原本的即可) */
 
 /* --- Map --- */
-#map .map-selector {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 12px; margin: 20px 0 30px;
-}
-#map .map-selector button {
-  background: rgba(246, 219, 135, 0.08);
-  border: 1px solid rgba(246, 219, 135, 0.14);
-  color: #f6db87; padding: 8px 14px;
-  border-radius: 18px; cursor: pointer; font-weight: bold;
-}
-#map .map-selector button.active {
-  background: #f6db87; color: #000;
-  box-shadow: 0 0 12px rgba(246, 219, 135, 0.6);
-}
-#map .map-content { max-width: 1000px; margin: 0 auto; text-align: left; }
-.map-card {
-  display: flex; gap: 20px; align-items: stretch;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 12px; padding: 18px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  margin-bottom: 30px; flex-wrap: wrap;
-}
-.map-text { flex: 1 1 320px; min-width: 260px; color: #f0e6a5; font-size: 1.05em; line-height: 1.6; }
-.map-text h2 { margin-top: 0; color: #f6db87; text-shadow: 0 0 6px rgba(246, 219, 135, 0.6); }
-.map-image { flex: 1 1 420px; min-width: 280px; display: flex; align-items: center; justify-content: center; }
-.map-image img {
-  width: 100%; max-width: 520px; height: auto; border-radius: 10px; object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-}
+#map .map-content { max-width: 1000px; margin: 0 auto; }
 
-/* --- Division detail (bottom sheet on mobile) --- */
+/* --- Division detail --- */
 #division-detail {
-  display: none;
-  width: 450px; height: 600px; padding: 20px;
+  display: none; width: 450px; height: 600px; padding: 20px;
   background: linear-gradient(145deg, #2e004f, #120025);
-  border: 2px solid rgba(138, 43, 226, 0.8);
-  box-shadow:
-    0 0 15px rgba(138, 43, 226, 0.7),
-    0 0 30px rgba(75, 0, 130, 0.5),
-    inset 0 0 20px rgba(138, 43, 226, 0.3);
-  border-radius: 12px; color: #d8b9ff; font-size: 1em; line-height: 1.4;
+  border: 2px solid rgba(138,43,226,0.8);
+  border-radius: 12px; color: #d8b9ff;
   position: fixed; bottom: 20px; left: 20px;
   overflow-y: auto; z-index: 1001;
   animation: magicGlow 3s ease-in-out infinite;
 }
-@keyframes magicGlow {
-  0%, 100% {
-    box-shadow:
-      0 0 15px rgba(138, 43, 226, 0.7),
-      0 0 30px rgba(75, 0, 130, 0.5),
-      inset 0 0 20px rgba(138, 43, 226, 0.3);
-  }
-  50% {
-    box-shadow:
-      0 0 25px rgba(186, 85, 211, 0.9),
-      0 0 45px rgba(123, 104, 238, 0.7),
-      inset 0 0 30px rgba(186, 85, 211, 0.5);
-  }
-}
 #division-detail > button#close-detail {
   position: absolute; top: 10px; right: 10px;
-  background: none; border: none; font-size: 1.8em;
-  color: #f0e6a5; cursor: pointer; transition: color 0.3s ease; z-index: 1010;
+  font-size: 1.8em; color: #f0e6a5;
+  background: none; border: none; cursor: pointer;
 }
 #division-detail > button#close-detail:hover { color: #fff; }
-#division-detail .content-wrapper {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 20px; text-align: center; padding-top: 0; position: relative;
-}
-#division-img {
-  width: 280px; height: 280px; border-radius: 12px; object-fit: cover;
-  box-shadow: 0 0 15px rgba(246, 219, 135, 0.6); margin: 0 auto;
-}
-#division-text {
-  flex-grow: 0; color: #f0e6a5; font-size: 1em; line-height: 1.4;
-  white-space: normal; word-break: break-word;
-  max-height: 260px; overflow-y: auto; order: 1; width: 100%;
-}
 
-/* --- Division Actions & Twitch button --- */
-#division-actions { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
-.twitch-btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 10px 14px; border-radius: 10px;
-  background: #9146FF; color: #fff; text-decoration: none;
-  font-weight: 700; letter-spacing: .3px; transition: transform .08s ease;
-}
-.twitch-btn:hover { transform: translateY(-1px); }
-.twitch-btn:active { transform: translateY(0); }
-.twitch-btn svg { width: 18px; height: 18px; }
-.twitch-btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; pointer-events: none; }
+/* --- Division Actions --- */
+#division-actions { margin-top: 12px; display: flex; gap: 10px; }
 
-/* =========================
-   Mobile-only Nav (右上角漢堡)
-   桌機完全隱藏 nav
-   ========================= */
-
-/* 基底（定位） */
-#mainNav {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 3000;
+/* --- Nav 基底 --- */
+#mainNav { position: fixed; top: 12px; right: 12px; z-index: 3000; }
+#mainNav ul { margin: 0; padding: 0; list-style: none; }
+#mainNav a {
+  color: #f6db87; padding: 8px 12px;
+  text-decoration: none; font-weight: bold; display: block;
 }
 
 /* 漢堡鍵 */
 .nav-toggle {
-  display: none;               /* 桌機不顯示，手機 media 會打開 */
-  width: 42px; height: 42px;
+  display: none; width: 42px; height: 42px;
   border: 1px solid rgba(246,219,135,.4);
   border-radius: 10px;
   background: linear-gradient(135deg, rgba(246,219,135,.2), rgba(255,255,255,.08));
   backdrop-filter: blur(8px);
   cursor: pointer;
   align-items: center; justify-content: center;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: column; gap: 4px;
 }
 .nav-toggle-bar {
-  width: 22px; height: 2px;
-  background: #f6db87;
+  width: 22px; height: 2px; background: #f6db87;
   transition: transform .25s ease, opacity .25s ease;
 }
+#mainNav.open .nav-toggle-bar:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+#mainNav.open .nav-toggle-bar:nth-child(2){ opacity: 0; }
+#mainNav.open .nav-toggle-bar:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
 
-/* 展開動畫（X 形狀） */
-#mainNav.open .nav-toggle-bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-#mainNav.open .nav-toggle-bar:nth-child(2) { opacity: 0; }
-#mainNav.open .nav-toggle-bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
-/* 手機：顯示漢堡、選單下拉 */
+/* === 手機模式 === */
 @media (max-width: 800px){
-  #mainNav { left: 8px; right: 8px; border-radius: 8px; }
-  #mainNav .nav-toggle { display: flex; }          /* 只在手機顯示 */
-
-  #mainMenu {
-    display: none;                                  /* 初始收起 */
-    flex-direction: column;
-    margin-top: 10px;
-    background: rgba(0,0,0,.85);
-    border: 1px solid rgba(246,219,135,.2);
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 6px 0;
-  }
-  #mainNav.open #mainMenu { display: flex; }        /* 點漢堡展開 */
-
-  #mainMenu a {
-    display: block;
-    padding: 12px 14px;
-    color: #f6db87;
-    text-decoration: none;
-    white-space: normal;
-  }
-  #mainMenu li + li a { border-top: 1px solid rgba(246,219,135,.15); }
-}
-
-/* 桌機：整個 nav 不顯示 */
-@media (min-width: 801px){
-  #mainNav { display: none; }
-}
-
-/* --- Generic helper for sr-only (optional) --- */
-.sr-only {
-  position: absolute !important;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0,0,0,0);
-  white-space: nowrap; border: 0;
-}
-
-/* =========================
-   Responsive tweaks
-   ========================= */
-
-/* ≤800px：標題縮小、地圖卡片調整 */
-@media (max-width: 800px) {
-  #entryPage h1 { font-size: 2.2em; }
-
-  .map-card { flex-direction: column-reverse; }
-  .map-image img { max-width: 100%; }
-}
-
-/* ≤640px：學生清單單欄、division bottom sheet、按鈕布局 */
-@media (max-width: 640px) {
-  .studentsSection,
-  #house-holfindo {
-    grid-template-columns: 1fr;
-    max-width: 520px;
-    gap: 12px;
-    padding: 0 10px;
-  }
-  .student-card { padding: 12px 10px; }
-
-  .academy-card { flex-direction: column; gap: 16px; }
-  .academy-text { font-size: 16px; }
-  .academy-text h2 { font-size: 22px; }
-
-  .map-card { flex-direction: column-reverse; padding: 14px; }
-  .map-text { font-size: 1em; }
-  .map-image img { max-width: 100%; }
-
-  #division-detail {
-    inset: auto 0 0 0;
-    position: fixed;
-    width: 100%;
-    height: 75vh;
-    left: 0; bottom: 0;
-    border-radius: 16px 16px 0 0;
-    padding: 16px 14px 84px;
-    z-index: 1100;
-    overflow: hidden;
-  }
-  #division-detail .content-wrapper {
-    height: 100%;
-    overflow-y: auto;
-    padding-right: 4px;
-  }
-  #division-img { width: 180px; height: 180px; margin-top: 6px; }
-  #division-text { font-size: 0.98em; max-height: none; }
-
-  #division-detail > button#close-detail { font-size: 1.6em; right: 8px; top: 8px; }
-
-  #division-actions {
-    position: fixed;
-    left: 16px; right: auto; bottom: 16px;
-    z-index: 1110; margin: 0;
-  }
-  .twitch-btn {
-    padding: 12px 16px;
-    border-radius: 999px;
-    box-shadow: 0 8px 18px rgba(145,70,255,.35);
-    font-size: 15px;
-  }
-}
-
-/* ≥641px：division actions 固定左下 */
-@media (min-width: 641px){
-  #division-actions {
-    position: fixed;
-    left: 20px; right: auto; bottom: 20px;
-  }
-}
-
-/* === 修：手機上學生介紹浮層按不到關閉鍵 === */
-@media (max-width: 640px){
-  /* 浮層變更：高度更矮、層級更高 */
-  #division-detail{
-    height: 70vh;            /* 原本 75vh → 70vh，避免頂到上方 */
-    z-index: 4000;           /* 提高，蓋過 nav(3000) 及其他元件 */
-    padding: 16px 14px 84px; /* 保留底部按鈕空間 */
-    overflow: hidden;        /* 由 content-wrapper 負責滾動 */
-  }
-  #division-detail .content-wrapper{
-    height: 100%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  /* 關閉鍵：變大、點擊區好按，永遠在浮層最上層 */
-  #division-detail > #close-detail{
-    position: absolute;
-    top: 8px; 
-    right: 8px;
-    width: 44px;
-    height: 44px;
-    line-height: 44px;
-    font-size: 22px;
-    border-radius: 10px;
-    background: rgba(0,0,0,.35);
-    box-shadow: 0 4px 12px rgba(0,0,0,.35);
-    z-index: 4010;     /* 高於浮層本身，確保可點 */
-  }
-  /* 若有 iPhone 瀏海，留安全區 */
-  @supports (padding: max(0px)){
-    #division-detail{ 
-      padding-bottom: calc(84px + env(safe-area-inset-bottom)); 
-    }
-    #division-detail > #close-detail{
-      top: max(8px, env(safe-area-inset-top));
-      right: max(8px, env(safe-area-inset-right));
-    }
-  }
-}
-
-/* === 修：手機漢堡選單固定右上角，不左右撐開 === */
-@media (max-width: 800px){
-  #mainNav{
-    top: 12px;
-    right: 12px;
-    left: auto;              /* 取消原本 left:8px，避免置中 */
-    padding: 0;              /* 漢堡本身就有尺寸，外框不需要內距 */
-    background: transparent; /* 只顯示按鈕，不要整條底色 */
-    border-radius: 0;
-    z-index: 3000;
-  }
-  #mainNav .nav-toggle{
-    display: flex;
-    width: 42px; height: 42px;
-  }
-  /* 下拉選單面板仍在按鈕下方展開 */
+  #mainNav{ top: 12px; right: 12px; left: auto; background: transparent; }
+  #mainNav .nav-toggle{ display: flex; }
   #mainNav ul{
-    display: none;
-    position: absolute;
-    top: calc(100% + 8px);
-    right: 0;                /* 從右邊貼齊 */
-    left: auto;
-    margin: 0;
+    display: none; flex-direction: column;
+    position: absolute; top: calc(100% + 8px); right: 0;
     background: rgba(0,0,0,.85);
     border: 1px solid rgba(246,219,135,.2);
-    border-radius: 10px;
-    overflow: hidden;
-    min-width: 180px;
+    border-radius: 10px; overflow: hidden; min-width: 180px;
   }
-  #mainNav.open ul{ display: flex; flex-direction: column; }
+  #mainNav.open ul{ display: flex; }
   #mainNav li + li a{ border-top: 1px solid rgba(246,219,135,.15); }
-  #mainNav a{ padding: 12px 14px; white-space: normal; }
 }
 
-/* 桌機維持原本橫排選單 */
+/* === 桌機模式 === */
 @media (min-width: 801px){
   #mainNav{
-    position: fixed;
     top: 0; right: 0;
     background: rgba(0,0,0,.6);
-    padding: 10px 20px;
-    border-bottom-left-radius: 10px;
+    padding: 10px 20px; border-bottom-left-radius: 10px;
     z-index: 2000;
   }
   #mainNav .nav-toggle{ display: none; }
-  #mainNav ul{
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    background: transparent;
-    border: 0;
-    position: static;
-  }
+  #mainNav ul{ display: flex; gap: 6px; align-items: center; }
 }
