@@ -145,63 +145,63 @@
   },
     rowenpaf: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生1',
-    text: '羅文帕夫學生1的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生1',
+    text: '赫文帕夫學生1的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生2',
-    text: '羅文帕夫學生2的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生2',
+    text: '赫文帕夫學生2的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生3',
-    text: '羅文帕夫學生3的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生3',
+    text: '赫文帕夫學生3的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生4',
-    text: '羅文帕夫學生4的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生4',
+    text: '赫文帕夫學生4的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生5',
-    text: '羅文帕夫學生5的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生5',
+    text: '赫文帕夫學生5的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生6',
-    text: '羅文帕夫學生6的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生6',
+    text: '赫文帕夫學生6的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生7',
-    text: '羅文帕夫學生7的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生7',
+    text: '赫文帕夫學生7的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生8',
-    text: '羅文帕夫學生8的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生8',
+    text: '赫文帕夫學生8的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生9',
-    text: '羅文帕夫學生9的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生9',
+    text: '赫文帕夫學生9的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生10',
-    text: '羅文帕夫學生10的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生10',
+    text: '赫文帕夫學生10的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生11',
-    text: '羅文帕夫學生11的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生11',
+    text: '赫文帕夫學生11的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=羅文帕夫學生12',
-    text: '羅文帕夫學生12的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生12',
+    text: '赫文帕夫學生12的分業詳細說明。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
@@ -401,11 +401,11 @@ document.addEventListener('DOMContentLoaded', () => {
     alt: '霍爾芬多 學院徽章'
     },
     hufflepuff: {
-        title: '羅文帕夫',
-    desc: '羅文帕夫分院代表的是和諧與平衡，學院中最為和平與內斂的一個分院，這個分院的學生通常具有優雅的氣質與溫和的性格，他們更重視魔法對自然界與他人情感的影響，而不是單純的力量，羅文帕夫的校徽是一朵盛開的蓮花，象徵著潔淨與和諧的力量。',
+        title: '赫文帕夫',
+    desc: '赫文帕夫分院代表的是和諧與平衡，學院中最為和平與內斂的一個分院，這個分院的學生通常具有優雅的氣質與溫和的性格，他們更重視魔法對自然界與他人情感的影響，而不是單純的力量，赫文帕夫的校徽是一朵盛開的蓮花，象徵著潔淨與和諧的力量。',
     notes: '特色：潔淨、和諧。',
     img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403777611376889958/20250224002416.png',
-    alt: '羅文帕夫 學院徽章'
+    alt: '赫文帕夫 學院徽章'
     },
     ravenclaw: {
         title: '特威克羅',
@@ -715,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
 
 
