@@ -270,3 +270,132 @@ body {
   #mainNav .nav-toggle{ display: none; }
   #mainNav ul{ display: flex; gap: 6px; align-items: center; }
 }
+
+/************ NAV UI hotfix (put at the very end of style.css) ************/
+
+/* 通用：避免被其他規則撐滿整條 */
+#mainNav { width: auto; max-width: none; }
+
+/* ====== 桌機：回復右上角膠囊選單 ====== */
+@media (min-width: 801px){
+  #mainNav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;                 /* 重要：防止拉到左側 */
+    padding: 10px 20px;
+    background: rgba(0,0,0,.6);
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 12px 22px rgba(0,0,0,.35);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: inline-block;      /* 只包內容、不撐滿 */
+  }
+  #mainNav ul{
+    display: flex !important;   /* 水平排列 */
+    align-items: center;
+    gap: 14px;                  /* 適度間距 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: transparent;
+    border: 0;
+  }
+  #mainNav li{ position: relative; }
+  #mainNav a{
+    display: block;
+    padding: 10px 8px;
+    color: #f6db87;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 6px;
+    transition: background .2s ease, color .2s ease;
+  }
+  #mainNav a:hover{
+    background: rgba(246,219,135,.12);
+    color: #fff;
+  }
+  /* 桌機不顯示漢堡 */
+  #mainNav .nav-toggle{ display: none !important; }
+}
+
+/* ====== 手機：右上角漢堡 + 卡片式下拉 ====== */
+@media (max-width: 800px){
+  #mainNav{
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    left: auto !important;      /* 重要：避免居中變寬條 */
+    padding: 0;
+    background: transparent !important; /* 只顯示按鈕，不要整條底色 */
+    box-shadow: none;
+    display: block;
+    z-index: 3000;
+  }
+
+  /* 漢堡按鈕樣式微調：更好按 */
+  #mainNav .nav-toggle{
+    display: flex !important;
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    border: 1px solid rgba(246,219,135,.35);
+    background: linear-gradient(135deg, rgba(246,219,135,.22), rgba(255,255,255,.08));
+    box-shadow: 0 8px 18px rgba(0,0,0,.35);
+  }
+  #mainNav .nav-toggle:active{ transform: scale(.98); }
+
+  /* 下拉面板（卡片） */
+  #mainMenu{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    left: auto;
+    display: none;              /* 預設收合 */
+    flex-direction: column;
+    min-width: 220px;
+    margin: 0; padding: 6px 0;
+    background: rgba(0,0,0,.86);
+    border: 1px solid rgba(246,219,135,.22);
+    border-radius: 12px;
+    box-shadow: 0 16px 30px rgba(0,0,0,.45);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transform-origin: top right;
+    animation: none;
+  }
+  /* 展開狀態 */
+  #mainNav.open #mainMenu{ display: flex; }
+
+  /* 項目樣式 */
+  #mainMenu li{ list-style: none; }
+  #mainMenu a{
+    display: block;
+    padding: 12px 14px;
+    color: #f6db87;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  #mainMenu li + li a{ border-top: 1px solid rgba(246,219,135,.15); }
+  #mainMenu a:active{ background: rgba(246,219,135,.12); color: #fff; }
+
+  /* 漢堡三條線動畫（維持你原本的類型） */
+  #mainNav.open .nav-toggle-bar:nth-child(1){ transform: translateY(6px) rotate(45deg); }
+  #mainNav.open .nav-toggle-bar:nth-child(2){ opacity: 0; }
+  #mainNav.open .nav-toggle-bar:nth-child(3){ transform: translateY(-6px) rotate(-45deg); }
+}
+
+/* 讓三條線看起來更均勻 */
+.nav-toggle-bar{
+  width: 22px;
+  height: 2px;
+  background: #f6db87;
+  margin: 3px 0;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
