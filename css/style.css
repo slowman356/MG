@@ -522,3 +522,98 @@ body {
     left: 20px; right: auto; bottom: 20px;
   }
 }
+
+/* === 修：手機上學生介紹浮層按不到關閉鍵 === */
+@media (max-width: 640px){
+  /* 浮層變更：高度更矮、層級更高 */
+  #division-detail{
+    height: 70vh;            /* 原本 75vh → 70vh，避免頂到上方 */
+    z-index: 4000;           /* 提高，蓋過 nav(3000) 及其他元件 */
+    padding: 16px 14px 84px; /* 保留底部按鈕空間 */
+    overflow: hidden;        /* 由 content-wrapper 負責滾動 */
+  }
+  #division-detail .content-wrapper{
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* 關閉鍵：變大、點擊區好按，永遠在浮層最上層 */
+  #division-detail > #close-detail{
+    position: absolute;
+    top: 8px; 
+    right: 8px;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 22px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.35);
+    box-shadow: 0 4px 12px rgba(0,0,0,.35);
+    z-index: 4010;     /* 高於浮層本身，確保可點 */
+  }
+  /* 若有 iPhone 瀏海，留安全區 */
+  @supports (padding: max(0px)){
+    #division-detail{ 
+      padding-bottom: calc(84px + env(safe-area-inset-bottom)); 
+    }
+    #division-detail > #close-detail{
+      top: max(8px, env(safe-area-inset-top));
+      right: max(8px, env(safe-area-inset-right));
+    }
+  }
+}
+
+/* === 修：手機漢堡選單固定右上角，不左右撐開 === */
+@media (max-width: 800px){
+  #mainNav{
+    top: 12px;
+    right: 12px;
+    left: auto;              /* 取消原本 left:8px，避免置中 */
+    padding: 0;              /* 漢堡本身就有尺寸，外框不需要內距 */
+    background: transparent; /* 只顯示按鈕，不要整條底色 */
+    border-radius: 0;
+    z-index: 3000;
+  }
+  #mainNav .nav-toggle{
+    display: flex;
+    width: 42px; height: 42px;
+  }
+  /* 下拉選單面板仍在按鈕下方展開 */
+  #mainNav ul{
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;                /* 從右邊貼齊 */
+    left: auto;
+    margin: 0;
+    background: rgba(0,0,0,.85);
+    border: 1px solid rgba(246,219,135,.2);
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 180px;
+  }
+  #mainNav.open ul{ display: flex; flex-direction: column; }
+  #mainNav li + li a{ border-top: 1px solid rgba(246,219,135,.15); }
+  #mainNav a{ padding: 12px 14px; white-space: normal; }
+}
+
+/* 桌機維持原本橫排選單 */
+@media (min-width: 801px){
+  #mainNav{
+    position: fixed;
+    top: 0; right: 0;
+    background: rgba(0,0,0,.6);
+    padding: 10px 20px;
+    border-bottom-left-radius: 10px;
+    z-index: 2000;
+  }
+  #mainNav .nav-toggle{ display: none; }
+  #mainNav ul{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    position: static;
+  }
+}
