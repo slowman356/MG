@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: '赫文帕夫',
     desc: '赫文帕夫分院代表的是和諧與平衡，學院中最為和平與內斂的一個分院，這個分院的學生通常具有優雅的氣質與溫和的性格，他們更重視魔法對自然界與他人情感的影響，而不是單純的力量，赫文帕夫的校徽是一隻鹿，象徵著潔淨與和諧的力量。',
     notes: '特色：潔淨、和諧。',
-    img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403777611376889958/20250224002416.png',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/1%2FHuwenpaf.png?alt=media&token=97f74ad4-9929-44a3-8177-a2f88e47ee8e',
     alt: '赫文帕夫 學院徽章'
     },
     ravenclaw: {
@@ -715,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
    
 });
+
 
 
 
