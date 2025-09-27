@@ -83,63 +83,63 @@
   },
     skmalin: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生1',
-    text: '史克瑪林學生1的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生1',
+    text: '坎普費爾學生1的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生2',
-    text: '史克瑪林學生2的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生2',
+    text: '坎普費爾學生2的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生3',
-    text: '史克瑪林學生3的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生3',
+    text: '坎普費爾學生3的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生4',
-    text: '史克瑪林學生4的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生4',
+    text: '坎普費爾學生4的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生5',
-    text: '史克瑪林學生5的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生5',
+    text: '坎普費爾學生5的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生6',
-    text: '史克瑪林學生6的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生6',
+    text: '坎普費爾學生6的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生7',
-    text: '史克瑪林學生7的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生7',
+    text: '坎普費爾學生7的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生8',
-    text: '史克瑪林學生8的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生8',
+    text: '坎普費爾學生8的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生9',
-    text: '史克瑪林學生9的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生9',
+    text: '坎普費爾學生9的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生10',
-    text: '史克瑪林學生10的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生10',
+    text: '坎普費爾學生10的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生11',
-    text: '史克瑪林學生11的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生11',
+    text: '坎普費爾學生11的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=史克瑪林學生12',
-    text: '史克瑪林學生12的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生12',
+    text: '坎普費爾學生12的分業介紹文字。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
@@ -415,11 +415,11 @@ document.addEventListener('DOMContentLoaded', () => {
     alt: '特威克羅 學院徽章'
     },
     slytherin: {
-        title: '史克瑪林',
-    desc: '史克瑪林分院代表的是力量和權威，強調的是身體與心靈的鍛煉，這個分院的學生不僅擅長攻擊魔法與戰鬥技巧，更追求自我強化與對於力量的無限渴望，他們相信，唯有經歷過無數的挑戰與磨難，才能真正掌握強大的力量。史克瑪林分院的校徽是一條青蛇，象徵著強大的力量與狡詐之美',
+        title: '坎普費爾',
+    desc: '坎普費爾分院代表的是力量和權威，強調的是身體與心靈的鍛煉，這個分院的學生不僅擅長攻擊魔法與戰鬥技巧，更追求自我強化與對於力量的無限渴望，他們相信，唯有經歷過無數的挑戰與磨難，才能真正掌握強大的力量。坎普費爾分院的校徽是一條青蛇，象徵著強大的力量與狡詐之美',
     notes: '特色：野心、狡猾、領導力。',
     img: 'https://media.discordapp.net/attachments/843799477360918549/1403777687918608484/E69CAAE591BDE5908DE8A8ADE8A888-9-809x455.png',
-    alt: '史克瑪林 學院徽章'
+    alt: '坎普費爾 學院徽章'
     }
   };
 
@@ -761,6 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeMenu();
   });
 });
+
 
 
 
