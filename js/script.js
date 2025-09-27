@@ -716,47 +716,8 @@ document.addEventListener('DOMContentLoaded', function () {
    
 });
 
-(function(){
-  const nav = document.getElementById('mainNav');
-  const toggle = nav?.querySelector('.nav-toggle');
-  const menu = document.getElementById('mainMenu');
 
-  if(!nav || !toggle || !menu) return;
 
-  // 切換展開/收合
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-
-  // 點選單項自動收合（只有在小螢幕下才有意義）
-  menu.addEventListener('click', (e) => {
-    const a = e.target.closest('a');
-    if(!a) return;
-    if (window.matchMedia('(max-width: 800px)').matches) {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  // 按 ESC 收合（可選）
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && nav.classList.contains('open')){
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded','false');
-    }
-  });
-})();
-
-// === 手機漢堡選單切換 ===
-const nav = document.getElementById("mainNav");
-const toggleBtn = nav.querySelector(".nav-toggle");
-const mainMenu = document.getElementById("mainMenu");
-
-toggleBtn.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-  toggleBtn.setAttribute("aria-expanded", isOpen);
-});
 
 
 
