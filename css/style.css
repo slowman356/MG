@@ -16,6 +16,7 @@ body{
   background-size:auto,cover;
   animation:moveBg 60s linear infinite;
 }
+
 @keyframes moveBg{
   0%{background-position:0 0,center;}
   50%{background-position:100px 100px,center;}
@@ -266,20 +267,28 @@ body.use-image-title #entryPage .title-image{ display:block; }
   box-shadow:0 6px 20px rgba(0,0,0,.6); border:1px solid rgba(255,255,255,.04);
 }
 
-/* --- Division detail (bottom sheet on mobile) --- */
+/* --- Division detail（星雲法陣・桌機） --- */
 #division-detail{
-  display:none; width:450px; height:600px; padding:20px;
-  background:linear-gradient(145deg,#2e004f,#120025);
-  border:2px solid rgba(138,43,226,.8);
-  box-shadow:0 0 15px rgba(138,43,226,.7),0 0 30px rgba(75,0,130,.5), inset 0 0 20px rgba(138,43,226,.3);
-  border-radius:12px; color:#d8b9ff; font-size:1em; line-height:1.4;
+  display:none;
+  width:450px; height:600px; padding:20px;
   position:fixed; bottom:20px; left:20px;
+  border-radius:16px;
+  background: radial-gradient(80% 100% at 50% 0%, rgba(60,0,110,.55), rgba(8,0,24,.7)) padding-box;
+  border:2px solid rgba(158,92,255,.6);
+  box-shadow:
+    0 0 22px rgba(158,92,255,.45),
+    inset 0 0 28px rgba(158,92,255,.18);
+  color:#EED7FF; font-size:1em; line-height:1.4;
   overflow-y:auto; z-index:1001;
-  animation:magicGlow 3s ease-in-out infinite;
 }
-@keyframes magicGlow{
-  0%,100%{ box-shadow:0 0 15px rgba(138,43,226,.7),0 0 30px rgba(75,0,130,.5), inset 0 0 20px rgba(138,43,226,.3); }
-  50%{ box-shadow:0 0 25px rgba(186,85,211,.9),0 0 45px rgba(123,104,238,.7), inset 0 0 30px rgba(186,85,211,.5); }
+/* 魔法符文 ✦（角標） */
+#division-detail::after{
+  content:"✦"; position:absolute; font-size:18px; color:#F6DB87;
+  top:10px; left:12px; text-shadow:0 0 10px rgba(246,219,135,.8);
+}
+#division-detail::before{
+  content:"✦"; position:absolute; font-size:18px; color:#F6DB87;
+  bottom:10px; right:12px; text-shadow:0 0 10px rgba(246,219,135,.8);
 }
 #division-detail>button#close-detail{
   position:absolute; top:10px; right:10px;
@@ -294,6 +303,7 @@ body.use-image-title #entryPage .title-image{ display:block; }
 #division-img{
   width:280px; height:280px; border-radius:12px; object-fit:cover;
   box-shadow:0 0 15px rgba(246,219,135,.6); margin:0 auto;
+  border:1px solid rgba(246,219,135,.25);
 }
 #division-text{
   flex-grow:0; color:#f0e6a5; font-size:1em; line-height:1.4;
@@ -401,7 +411,7 @@ nav{ all:unset; }
    Responsive tweaks
    ========================= */
 
-/標題縮小、地圖卡片調整 */
+/* 標題縮小、地圖卡片調整 */
 @media (max-width:800px){
   #entryPage h1{ font-size:2.2em; }
   body.use-image-title #entryPage .title-image{ max-width:320px; }
@@ -424,15 +434,36 @@ nav{ all:unset; }
   .map-text{ font-size:1em; }
   .map-image img{ max-width:100%; }
 
+  /* --- Division detail（星雲法陣・手機 bottom sheet）--- */
   #division-detail{
     inset:auto 0 0 0; position:fixed; width:100%; height:70vh;
     left:0; bottom:0; border-radius:16px 16px 0 0;
     padding:16px 14px 84px; z-index:4000; overflow:hidden;
+
+    background: radial-gradient(80% 100% at 50% 0%, rgba(60,0,110,.58), rgba(8,0,24,.78)) padding-box;
+    border:2px solid rgba(158,92,255,.6);
+    box-shadow:0 -8px 28px rgba(158,92,255,.35), inset 0 0 24px rgba(158,92,255,.18);
+    color:#EED7FF;
   }
+  /* 符文角標（手機） */
+  #division-detail::after{
+    content:"✦"; position:absolute; font-size:18px; color:#F6DB87;
+    top:8px; left:10px; text-shadow:0 0 10px rgba(246,219,135,.8);
+  }
+  #division-detail::before{
+    content:"✦"; position:absolute; font-size:18px; color:#F6DB87;
+    bottom:10px; right:12px; text-shadow:0 0 10px rgba(246,219,135,.8);
+  }
+
   #division-detail .content-wrapper{
     height:100%; overflow-y:auto; padding-right:4px; -webkit-overflow-scrolling:touch;
   }
-  #division-img{ width:180px; height:180px; margin-top:6px; }
+  #division-img{
+    width:180px; height:180px; margin-top:6px;
+    border-radius:12px; object-fit:cover;
+    border:1px solid rgba(246,219,135,.25);
+    box-shadow:0 8px 22px rgba(0,0,0,.45);
+  }
   #division-text{ font-size:.98em; max-height:none; }
 
   #division-detail>#close-detail{
@@ -460,19 +491,17 @@ nav{ all:unset; }
   }
 }
 
-/* 固定左下 */
+/* ≥641px：division actions 固定左下 */
 @media (min-width:641px){
   #division-actions{ position:fixed; left:20px; right:auto; bottom:20px; }
 }
 
-
 #entryPage .title-image,
 #entryPage .title-image img,
 #entryPage h1.entry-title {
-  filter: none !important;         
-  box-shadow: none !important;    
-  text-shadow: none !important;   
-  animation: none !important;    
+  /* 常見發光做法一次清掉 */
+  filter: none !important;         /* drop-shadow / blur / url(#glow) */
+  box-shadow: none !important;     /* 外部陰影 */
+  text-shadow: none !重要;         /* 文字發光 */
+  animation: none !important;      /* 若有發光動畫 */
 }
-
-
