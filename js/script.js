@@ -721,16 +721,23 @@ document.addEventListener('DOMContentLoaded', function () {
    依教師名稱自動匹配，預設抓卡片內的 <h2> 文字
    =========================== */
 (function () {
-  // 1) 可自行填寫的師資資料（示範三類：教授 / 導師 / 其他人員）
-  //    key 為「顯示名稱」，要和卡片上的 <h2> 文字一致（或之後加 data-teacher 自訂）
+  // 1) 師資資料（教授 / 導師 / 其他人員）
+  // key 必須與 HTML 卡片上的 <h2> 名稱一致（或用 data-teacher 指定）
   const teacherData = {
-    // 教授
+    // === 教授 ===
     professor: {
       '教授1': {
-        img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%881',
-        text: '教授1的詳細介紹：專長於古代魔法史與禁咒理論，曾任遠征顧問。',
-        twitch: 'https://www.twitch.tv/example1'
-      },
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi.png?alt=media&token=d62b4e16-cf54-4575-ad5f-ec99193aaeb7',
+         text: `
+【角色】賽露菲
+【種族】精靈
+【年齡】外表約20~30歲左右（未知年齡）
+【職位】歷史學
+【個性】活潑、待人溫柔，臉上總是掛著淡淡的微笑、散發著一股悲傷的氣息，但不知為何。
+【能力】神聖魔法。
+`,
+  twitch: 'https://www.twitch.tv/deputy'
+},
       '教授2': {
         img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%882',
         text: '教授2的詳細介紹：研究元素調和與跨學科魔導工程。',
@@ -757,7 +764,7 @@ document.addEventListener('DOMContentLoaded', function () {
         text: '麥格華茲魔法學院現任校長，曾於黑暗紀元中統領守護軍團，以冷靜與遠見著稱，致力於促進種族和平與魔法教育的改革。',
         twitch: 'https://www.twitch.tv/headmaster'
       },
-     '副校長': {
+      '副校長': {
   img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2F123.png?alt=media&token=e6e45e2d-ab8e-4237-a268-e30c719053b9',
   text: `
 【角色】利維坦・艾爾瑟芙
@@ -768,6 +775,8 @@ document.addEventListener('DOMContentLoaded', function () {
 【能力】精通猩紅魔法、詛咒與戰鬥咒術；能以魔力感知夜間異動。
 `,
   twitch: 'https://www.twitch.tv/deputy'
+},
+
 
       '教務長': {
         img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E5%8B%99%E9%95%B7',
@@ -950,12 +959,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let block = null;
 
-
   window.lockDetail = function (lock) {
     if (lock) {
       modal.classList.add('no-scroll');
-
-
       block = function (e) { e.preventDefault(); e.stopPropagation(); };
 
 
@@ -991,9 +997,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-
+ 
 })();
-
 
 
 
