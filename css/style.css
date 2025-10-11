@@ -37,16 +37,40 @@ body{
   100%{transform:translate(0,0);}
 }
 
-/* --- Logo --- */
+/* --- Logo（支援圖片 + 文字回退）---
+   HTML 用法：
+   1) 圖片版：
+      <a id="logo" href="/"><img src="你的logo.png" alt="Magic Academy"></a>
+   2) 文字版（不放 img 也可）：
+      <a id="logo" href="/">Magic Academy</a>
+*/
 #logo{
   position:fixed; top:12px; left:12px; z-index:3000;
+  text-decoration:none; cursor:pointer; user-select:none;
+  transition:filter .3s ease, transform .2s ease;
+  display:inline-flex; align-items:center; gap:10px;
+  filter: drop-shadow(0 0 12px rgba(246,219,135,.45));
+}
+#logo:hover{ transform:translateY(-1px); filter: drop-shadow(0 0 18px rgba(246,219,135,.7)); }
+
+/* 文字回退樣式（當 #logo 裡沒有 img 時生效） */
+#logo:not(:has(img)){
   font-family:'Cinzel Decorative',cursive;
   font-size:1.5em; color:#f6db87;
   text-shadow:0 0 15px rgba(246,219,135,.8);
-  text-decoration:none; cursor:pointer; user-select:none;
   transition:color .3s ease,text-shadow .3s ease;
 }
-#logo:hover{ color:#fff; text-shadow:0 0 25px rgba(246,219,135,1); }
+#logo:not(:has(img)):hover{ color:#fff; text-shadow:0 0 25px rgba(246,219,135,1); }
+
+/* 圖片版 logo 尺寸 */
+#logo img{
+  height:42px;
+  width:auto; display:block; object-fit:contain;
+  border-radius:8px;
+}
+@media (max-width:800px){
+  #logo img{ height:36px; }
+}
 
 /* --- Sections --- */
 .section{
@@ -55,7 +79,13 @@ body{
 }
 .section.active{ display:block; }
 
-/* --- Entry Page --- */
+/* --- Entry Page（支援圖片標題）---
+   預設顯示 h1。
+   若要用圖片標題：
+   1) 在 <body> 加 class="use-image-title"
+   2) 在 #entryPage 內加入：
+      <img class="title-image" src="你的標題圖.png" alt="Magic Academy">
+*/
 #entryPage{
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   height:100vh; text-align:center;
@@ -65,6 +95,17 @@ body{
   font-size:3em; color:#f6db87; margin-bottom:30px;
   text-shadow:0 0 15px rgba(246,219,135,.8);
 }
+
+/* 圖片標題：預設隱藏，啟用 use-image-title 後顯示 */
+#entryPage .title-image{
+  display:none;
+  max-width:420px; width:90%; height:auto;
+  border-radius:12px;
+  box-shadow:0 6px 22px rgba(246,219,135,.25);
+}
+body.use-image-title #entryPage h1{ display:none; }
+body.use-image-title #entryPage .title-image{ display:block; }
+
 #joinBtn{
   font-family:'Cinzel Decorative',cursive; font-size:2.2em; color:#f6db87;
   background:transparent; border:none; padding:0; cursor:pointer;
@@ -365,6 +406,7 @@ nav{ all:unset; }
 /* ≤800px：標題縮小、地圖卡片調整 */
 @media (max-width:800px){
   #entryPage h1{ font-size:2.2em; }
+  body.use-image-title #entryPage .title-image{ max-width:320px; }
   .map-card{ flex-direction:column-reverse; }
   .map-image img{ max-width:100%; }
 }
