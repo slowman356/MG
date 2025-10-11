@@ -460,7 +460,7 @@ nav{ all:unset; }
   }
 }
 
-/* ≥641px：division actions 固定左下 */
+/* 固定左下 */
 @media (min-width:641px){
   #division-actions{ position:fixed; left:20px; right:auto; bottom:20px; }
 }
@@ -469,10 +469,10 @@ nav{ all:unset; }
 #entryPage .title-image,
 #entryPage .title-image img,
 #entryPage h1.entry-title {
-  /* 常見發光做法一次清掉 */
-  filter: none !important;         /* drop-shadow / blur / url(#glow) */
-  box-shadow: none !important;     /* 外部陰影 */
-  text-shadow: none !important;    /* 文字發光 */
-  animation: none !important;      /* 若有發光動畫 */
+  filter: none !important;         
+  box-shadow: none !important;    
+  text-shadow: none !important;   
+  animation: none !important;    
 }
+
 
