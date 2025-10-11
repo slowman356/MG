@@ -724,20 +724,21 @@ document.addEventListener('DOMContentLoaded', function () {
   // 1) 師資資料（教授 / 導師 / 其他人員）
   // key 必須與 HTML 卡片上的 <h2> 名稱一致（或用 data-teacher 指定）
   const teacherData = {
-    // === 教授 ===
-    professor: {
-      '教授1': {
-        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi.png?alt=media&token=d62b4e16-cf54-4575-ad5f-ec99193aaeb7',
-         text: `
-【角色】賽露菲
-【種族】精靈
-【年齡】外表約20~30歲左右（未知年齡）
-【職位】歷史學
-【個性】活潑、待人溫柔，臉上總是掛著淡淡的微笑、散發著一股悲傷的氣息，但不知為何。
-【能力】神聖魔法。
-`,
-  twitch: 'https://www.twitch.tv/deputy'
-},
+  professor: {
+    seruphi: {
+      name: '賽露菲', // 可選：若要顯示用
+      img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi.png?alt=media&token=7cbf80a3-1e2b-4583-9c9c-57e3cc6b68df',
+      text: `
+【角色】賽露菲（Seruphi）
+【種族】精靈  
+【年齡】外表約20~30歲左右（實際年齡未知）  
+【個性】活潑、待人溫柔，臉上總是掛著淡淡的微笑， 卻隱約散發一絲悲傷。  
+【能力】神聖魔法
+【領域】艾斯瑞達大陸古文明  
+      `,
+
+      twitch: 'https://www.twitch.tv/deputy'
+    },
       '教授2': {
         img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%882',
         text: '教授2的詳細介紹：研究元素調和與跨學科魔導工程。',
@@ -786,9 +787,16 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     // 其他人員（staff）
     staff: {
-      '保健室老師': {
-        img: 'https://via.placeholder.com/320x200?text=%E4%BF%9D%E5%81%A5%E5%AE%A4',
-        text: '保健室老師詳細介紹：負責急救處置、健康管理與藥劑諮詢。',
+      '餐廳姊姊': {
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2Fkitchen.png?alt=media&token=9264559c-b856-4ea3-b4f7-f48ec3636372',
+        text: `
+【角色】伊蘭蕾潔（Elanreje）
+【種族】墮星惡魔
+【年齡】不詳（傳聞時間尚未開始就已存在）
+【職位】餐廳
+【個性】傲嬌又認真，對料理與植物都極度講究，嘴硬但心軟。
+【能力】詛咒的黑暗魔法。
+`,
         twitch: 'https://www.twitch.tv/medic'
       }
     }
@@ -1002,7 +1010,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+const teacherCards = document.querySelectorAll('#teachers .teacher-card');
 
+teacherCards.forEach(card => {
+  card.addEventListener('click', () => {
+    const rawGroup = (card.getAttribute('data-group') || '').toLowerCase();
+    const group = rawGroup === 'club' ? 'mentor' : rawGroup;
+
+    // 只用 data-teacher 當查表鍵（穩定、不受顯示文字影響）
+    const key = (card.getAttribute('data-teacher') || '').trim();
+    const bucket = teacherData[group] || {};
+    const detail = bucket[key];
+
+    if (!detail) {
+      const keys = Object.keys(bucket).join('、') || '(此群組目前沒有鍵)';
+      alert(`找不到【${key}】的詳細資料。\n請確認：\n1) teacherData.${group} 是否有鍵：${key}\n2) 卡片 data-teacher 是否與鍵一致\n\n目前可用鍵：${keys}`);
+      return;
+    }
+
+    // 顯示
+    divisionImg.src = detail.img || '';
+    divisionImg.alt = `${detail.name || key} 詳細圖片`;
+    divisionText.textContent = detail.text || '';
+
+    if (typeof window.renderTwitchButton === 'function') {
+      window.renderTwitchButton(detail.twitch);
+    } else {
+      renderTwitchButtonLocal(detail.twitch);
+    }
+  });
+});
 
 
 
