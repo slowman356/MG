@@ -314,16 +314,14 @@ body.use-image-title #entryPage .title-image{ display:block; }
 .twitch-btn[aria-disabled="true"]{ opacity:.55; cursor:not-allowed; pointer-events:none; }
 
 /* =========================
-   NAV：桌機維持原樣、手機右上角漢堡
    ========================= */
 
-/* 先避免舊的通用 nav 規則干擾 */
 nav{ all:unset; }
 
 /* 基底（使用 #mainNav） */
 #mainNav{ position:fixed; z-index:3000; }
 
-/* --- 桌機（≥801px）：右上角膠囊、水平選單 --- */
+/*右上角膠囊、水平選單 --- */
 @media (min-width:801px){
   #mainNav{
     top:0; right:0; left:auto;
@@ -349,7 +347,7 @@ nav{ all:unset; }
   #mainNav a:hover{ background:rgba(246,219,135,.12); color:#fff; }
 }
 
-/* --- 手機（≤800px）：右上角漢堡 + 卡片式下拉 --- */
+/*手機右上角漢堡 + 卡片式下拉  */
 @media (max-width:800px){
   #mainNav{
     top:12px; right:12px; left:auto !important;
@@ -393,7 +391,7 @@ nav{ all:unset; }
   #mainMenu a:active{ background:rgba(246,219,135,.12); color:#fff; }
 }
 
-/* --- 無障礙輔助（可用） --- */
+
 .sr-only{
   position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
   overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
@@ -403,7 +401,7 @@ nav{ all:unset; }
    Responsive tweaks
    ========================= */
 
-/* ≤800px：標題縮小、地圖卡片調整 */
+/標題縮小、地圖卡片調整 */
 @media (max-width:800px){
   #entryPage h1{ font-size:2.2em; }
   body.use-image-title #entryPage .title-image{ max-width:320px; }
@@ -411,7 +409,7 @@ nav{ all:unset; }
   .map-image img{ max-width:100%; }
 }
 
-/* ≤640px：學生清單單欄、division bottom sheet、按鈕布局 */
+/*學生清單單欄、按鈕布局 */
 @media (max-width:640px){
   .studentsSection, #house-holfindo{
     grid-template-columns:1fr; max-width:520px; gap:12px; padding:0 10px;
@@ -466,3 +464,15 @@ nav{ all:unset; }
 @media (min-width:641px){
   #division-actions{ position:fixed; left:20px; right:auto; bottom:20px; }
 }
+
+
+#entryPage .title-image,
+#entryPage .title-image img,
+#entryPage h1.entry-title {
+  /* 常見發光做法一次清掉 */
+  filter: none !important;         /* drop-shadow / blur / url(#glow) */
+  box-shadow: none !important;     /* 外部陰影 */
+  text-shadow: none !important;    /* 文字發光 */
+  animation: none !important;      /* 若有發光動畫 */
+}
+
