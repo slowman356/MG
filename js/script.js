@@ -758,8 +758,8 @@ document.addEventListener('DOMContentLoaded', function () {
         twitch: 'https://www.twitch.tv/headmaster'
       },
       '副校長': {
-        img: 'https://via.placeholder.com/320x200?text=%E5%89%AF%E6%A0%A1%E9%95%B7',
-        text: '副校長為學院行政與教學兩大領域的重要支柱，負責學術評鑑與學生紀律事務，亦兼任高等符文課程講師。',
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2F123.png?alt=media&token=e6e45e2d-ab8e-4237-a268-e30c719053b9',
+        text: '副校長為學院行政與教學兩大領域的重要支柱，負責學術評鑑與學生紀律事務。',
         twitch: 'https://www.twitch.tv/deputy'
       },
       '教務長': {
@@ -933,6 +933,7 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach(card => grid.appendChild(card));
   filterBar.insertAdjacentElement('afterend', grid);
 })();
+
 
 
 
