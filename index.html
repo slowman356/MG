@@ -8,19 +8,24 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<!-- 若想用「圖片標題」，保留 use-image-title；若用文字標題，移除這個 class -->
 <body class="use-image-title">
 
+  <!-- 雲層背景 -->
   <div class="cloud-layer"></div>
 
-  <!-- 左上角 Logo：把 src 換成你的圖片連結即可；不想用圖片就刪掉 <img> 留文字 -->
+  <!-- ✅ 左上角 Logo（只保留圖片版） -->
   <a href="#" id="logo" title="回到首頁">
     <img src="https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/1%2Fminecraft_title.png?alt=media&token=e07cec77-4582-4358-ad05-a7bd1efc1912" alt="Magic Academy">
-    <!-- Magic Academy -->
   </a>
 
-  <div class="cloud-layer"></div>
-  <a href="#" id="logo" title="回到首頁">Magic Academy</a>
+  <!-- ✅ 進入頁面標題：使用圖片 -->
+  <div id="entryPage">
+    <img class="title-image"
+      src="https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/1%2Fminecraft_title.png?alt=media&token=e07cec77-4582-4358-ad05-a7bd1efc1912"
+      alt="Magic Academy">
+    <button id="joinBtn">ENTER</button>
+  </div>
+
 
  <nav id="mainNav" aria-label="主選單">
   <button class="nav-toggle" aria-expanded="false" aria-controls="mainMenu" aria-label="開啟選單">
