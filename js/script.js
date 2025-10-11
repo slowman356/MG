@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: '霍爾芬多',
     desc: '霍爾芬多分院代表的是忠誠與榮譽，以忠實守護他人與誓言為信條，這個分院的學生往往來自那些有著強烈責任感的家族，無論是人類、精靈還是矮人，對於他們來說，忠誠不僅僅是一種品德，更是一種力量，分院的座右銘是：“守護不僅是使命，更是信仰”。霍爾芬多分院的校徽是一隻展翅的雄鷹，象徵著勇氣和無畏的守護精神。',
     notes: '特色：勇氣、無畏、守護精神。',
-    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FHolfindo.png?alt=media&token=d13e790b-1dd8-47ad-bfdc-46233b12da78',
+    img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403777468221100243/1.png',
     alt: '霍爾芬多 學院徽章'
     },
     hufflepuff: {
@@ -757,7 +757,7 @@ document.addEventListener('DOMContentLoaded', function () {
         text: '麥格華茲魔法學院現任校長，曾於黑暗紀元中統領守護軍團，以冷靜與遠見著稱，致力於促進種族和平與魔法教育的改革。',
         twitch: 'https://www.twitch.tv/headmaster'
       },
-'副校長': {
+      '副校長': {
   img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2F123.png?alt=media&token=e6e45e2d-ab8e-4237-a268-e30c719053b9',
   text: `
 曾是魔王最信任的左右手，親手為他奪下無數疆土。
@@ -954,7 +954,56 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+(function () {
+  const modal = document.getElementById('division-detail');
+  if (!modal) return;
 
+
+  let block = null;
+
+
+  window.lockDetail = function (lock) {
+    if (lock) {
+      modal.classList.add('no-scroll');
+
+
+      block = function (e) { e.preventDefault(); e.stopPropagation(); };
+
+
+      const targets = [
+        modal,
+        modal.querySelector('.content-wrapper'),
+        modal.querySelector('#division-text')
+      ].filter(Boolean);
+
+      targets.forEach(el => {
+        el.addEventListener('wheel', block, { passive: false });
+        el.addEventListener('touchmove', block, { passive: false });
+        el.addEventListener('scroll', block, { passive: false });
+      });
+
+    } else {
+      modal.classList.remove('no-scroll');
+      if (!block) return;
+
+      const targets = [
+        modal,
+        modal.querySelector('.content-wrapper'),
+        modal.querySelector('#division-text')
+      ].filter(Boolean);
+
+      targets.forEach(el => {
+        el.removeEventListener('wheel', block);
+        el.removeEventListener('touchmove', block);
+        el.removeEventListener('scroll', block);
+      });
+
+      block = null;
+    }
+  };
+
+
+})();
 
 
 
