@@ -21,249 +21,249 @@
         holfindo: {
 '學生1': {
   img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403854695944163439/image.png?...',
-  text: '霍爾芬多學生的分業詳細介紹文字...',
+  text: '詳細介紹',
   twitch: 'https://www.twitch.tv/your_channel' 
 },
 
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生2',
-    text: '霍爾芬多學生的分業詳細介紹內容。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生3',
-    text: '霍爾芬多學生的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生4',
-    text: '霍爾芬多學生4的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生5',
-    text: '霍爾芬多學生5的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生6',
-    text: '霍爾芬多學生6的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生7',
-    text: '霍爾芬多學生7的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生8',
-    text: '霍爾芬多學生8的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生9',
-    text: '霍爾芬多學生9的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生10',
-    text: '霍爾芬多學生10的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生11',
-    text: '霍爾芬多學生11的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生12',
-    text: '霍爾芬多學生12的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
     skmalin: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生1',
-    text: '坎普費爾學生1的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生2',
-    text: '坎普費爾學生2的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生3',
-    text: '坎普費爾學生3的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生4',
-    text: '坎普費爾學生4的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生5',
-    text: '坎普費爾學生5的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生6',
-    text: '坎普費爾學生6的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生7',
-    text: '坎普費爾學生7的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生8',
-    text: '坎普費爾學生8的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生9',
-    text: '坎普費爾學生9的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生10',
-    text: '坎普費爾學生10的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生11',
-    text: '坎普費爾學生11的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生12',
-    text: '坎普費爾學生12的分業介紹文字。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
     rowenpaf: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生1',
-    text: '赫文帕夫學生1的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生2',
-    text: '赫文帕夫學生2的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生3',
-    text: '赫文帕夫學生3的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生4',
-    text: '赫文帕夫學生4的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生5',
-    text: '赫文帕夫學生5的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生6',
-    text: '赫文帕夫學生6的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生7',
-    text: '赫文帕夫學生7的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生8',
-    text: '赫文帕夫學生8的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生9',
-    text: '赫文帕夫學生9的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生10',
-    text: '赫文帕夫學生10的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生11',
-    text: '赫文帕夫學生11的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生12',
-    text: '赫文帕夫學生12的分業詳細說明。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
     twicklow: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生1',
-    text: '特威克羅學生1的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生2',
-    text: '特威克羅學生2的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生3',
-    text: '特威克羅學生3的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生4',
-    text: '特威克羅學生4的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生5',
-    text: '特威克羅學生5的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生6',
-    text: '特威克羅學生6的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生7',
-    text: '特威克羅學生7的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生8',
-    text: '特威克羅學生8的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生9',
-    text: '特威克羅學生9的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生10',
-    text: '特威克羅學生10的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生11',
-    text: '特威克羅學生11的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生12',
-    text: '特威克羅學生12的分業詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=學生',
+    text: '詳細介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   }
@@ -761,6 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeMenu();
   });
 });
+
 
 
 
