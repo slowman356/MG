@@ -786,7 +786,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     },
     // 其他人員（staff）
-    staff: {
+     staff: {
       '餐廳姊姊': {
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2Fkitchen.png?alt=media&token=9264559c-b856-4ea3-b4f7-f48ec3636372',
         text: `
@@ -1040,6 +1040,7 @@ teacherCards.forEach(card => {
     }
   });
 });
+
 
 
 
