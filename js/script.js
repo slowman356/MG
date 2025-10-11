@@ -21,249 +21,249 @@
         holfindo: {
 '學生1': {
   img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403854695944163439/image.png?...',
-  text: '詳細介紹',
+  text: '介紹',
   twitch: 'https://www.twitch.tv/your_channel' 
 },
 
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生2',
+    text: '介紹',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生3',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生4',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生5',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生6',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生7',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生8',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生9',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生10',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生11',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=霍爾芬多學生12',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
     skmalin: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生1',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生2',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生3',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生4',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生5',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生6',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生7',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生8',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生9',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生10',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生11',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=坎普費爾學生12',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
     rowenpaf: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生1',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生2',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生3',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生4',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生5',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生6',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生7',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生8',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生9',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生10',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生11',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=赫文帕夫學生12',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   },
     twicklow: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生1',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生2',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生3',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生4',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生5',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生6',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生7',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生8',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生9',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生10',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生11',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=學生',
-    text: '詳細介紹。',
+        img: 'https://via.placeholder.com/150?text=特威克羅學生12',
+    text: '介紹。',
 	twitch: 'https://www.twitch.tv/mobilmobil' 
     }
   }
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // 學院資料
-    const academies = {
+     const academies = {
         gryffindor: {
         title: '霍爾芬多',
     desc: '霍爾芬多分院代表的是忠誠與榮譽，以忠實守護他人與誓言為信條，這個分院的學生往往來自那些有著強烈責任感的家族，無論是人類、精靈還是矮人，對於他們來說，忠誠不僅僅是一種品德，更是一種力量，分院的座右銘是：“守護不僅是使命，更是信仰”。霍爾芬多分院的校徽是一隻展翅的雄鷹，象徵著勇氣和無畏的守護精神。',
@@ -431,7 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const key = btn.dataset.academy;
 
-            // 切換按鈕樣式
+            
             academySelector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             showAcademy(key);
@@ -716,8 +716,167 @@ document.addEventListener('DOMContentLoaded', function () {
    
 });
 
+/* ===========================
+   師資：點擊卡片 → 詳細介紹（含 Twitch）
+   依教師名稱自動匹配，預設抓卡片內的 <h2> 文字
+   =========================== */
+(function () {
+  // 1) 可自行填寫的師資資料（示範三類：教授 / 導師 / 其他人員）
+  //    key 為「顯示名稱」，要和卡片上的 <h2> 文字一致（或之後加 data-teacher 自訂）
+  const teacherData = {
+    // 教授
+    professor: {
+      '教授1': {
+        img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%881',
+        text: '教授1的詳細介紹：專長於古代魔法史與禁咒理論，曾任遠征顧問。',
+        twitch: 'https://www.twitch.tv/example1'
+      },
+      '教授2': {
+        img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%882',
+        text: '教授2的詳細介紹：研究元素調和與跨學科魔導工程。',
+        twitch: 'https://www.twitch.tv/example2'
+      },
+      '教授4': {
+        img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%884',
+        text: '教授4的詳細介紹：幻術、心靈學派與認知結界實務。',
+        twitch: 'https://www.twitch.tv/example4'
+      }
+    },
+    // 導師（這裡將你原本 data-group="club" 的卡片視為導師類）
+    mentor: {
+      '社團老師': {
+        img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E8%80%81%E5%B8%AB',
+        text: '社團老師詳細介紹：指導社團活動、競賽與對外交流。',
+        twitch: 'https://www.twitch.tv/clubmentor'
+      }
+    },
+	 // 學院領導層（leader）
+    leader: {
+      '校長': {
+        img: 'https://via.placeholder.com/320x200?text=%E6%A0%A1%E9%95%B7',
+        text: '麥格華茲魔法學院現任校長，曾於黑暗紀元中統領守護軍團，以冷靜與遠見著稱，致力於促進種族和平與魔法教育的改革。',
+        twitch: 'https://www.twitch.tv/headmaster'
+      },
+      '副校長': {
+        img: 'https://via.placeholder.com/320x200?text=%E5%89%AF%E6%A0%A1%E9%95%B7',
+        text: '副校長為學院行政與教學兩大領域的重要支柱，負責學術評鑑與學生紀律事務，亦兼任高等符文課程講師。',
+        twitch: 'https://www.twitch.tv/deputy'
+      },
+      '教務長': {
+        img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E5%8B%99%E9%95%B7',
+        text: '教務長負責協調各分院教授課程與學術研究方向，以嚴謹著稱，曾編撰《魔法教育綱要》。',
+        twitch: 'https://www.twitch.tv/academichead'
+      }
+    },
+    // 其他人員（staff）
+    staff: {
+      '保健室老師': {
+        img: 'https://via.placeholder.com/320x200?text=%E4%BF%9D%E5%81%A5%E5%AE%A4',
+        text: '保健室老師詳細介紹：負責急救處置、健康管理與藥劑諮詢。',
+        twitch: 'https://www.twitch.tv/medic'
+      }
+    }
+	
+  };
+  
+  
 
-// ============ 主選單（手機漢堡下拉） ============
+
+  const divisionDetail = document.getElementById('division-detail');
+  const divisionImg    = document.getElementById('division-img');
+  const divisionText   = document.getElementById('division-text');
+  const closeDetailBtn = document.getElementById('close-detail');
+
+  
+  const hasRenderTwitch = typeof window.renderTwitchButton === 'function';
+
+  function buildTwitchAnchor(href, disabled) {
+    const a = document.createElement('a');
+    a.className = 'twitch-btn';
+    a.setAttribute('role', 'button');
+
+    if (disabled) {
+      a.setAttribute('aria-disabled', 'true');
+      a.textContent = 'Twitch（未提供）';
+    } else {
+      a.href = href;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.innerHTML = `
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="width:18px;height:18px;vertical-align:-3px;margin-right:6px">
+          <path fill="currentColor" d="M4 3h16v10.5L16 17H12l-2.5 2.5H8V17H4V3zm14 2H6v9h3v2l2-2h4l3-3.5V5zM14 7h2v4h-2V7zm-5 0h2v4H9V7z"/>
+        </svg>
+        前往 Twitch
+      `;
+    }
+    return a;
+  }
+
+  function renderTwitchButtonLocal(url) {
+    let actions = document.getElementById('division-actions');
+    if (!actions) {
+      const wrapper = document.createElement('div');
+      wrapper.id = 'division-actions';
+      divisionText.after(wrapper);
+      actions = wrapper;
+    }
+    actions.innerHTML = '';
+
+    if (!url) {
+      const disabledBtn = buildTwitchAnchor('#', true);
+      disabledBtn.title = '尚未提供 Twitch 連結';
+      actions.appendChild(disabledBtn);
+      return;
+    }
+
+    const href = /^https?:\/\//i.test(url) ? url : `https://${url}`;
+    const btn = buildTwitchAnchor(href, false);
+    actions.appendChild(btn);
+  }
+
+  
+  const teacherCards = document.querySelectorAll('#teachers .teacher-card');
+
+  teacherCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const rawGroup = (card.getAttribute('data-group') || '').toLowerCase();
+      const group = rawGroup === 'club' ? 'mentor' : rawGroup; 
+      const nameFromAttr = card.getAttribute('data-teacher');
+      const nameFromH2 = (card.querySelector('h2')?.textContent || '').trim();
+      const displayName = (nameFromAttr || nameFromH2);
+
+      const bucket = teacherData[group] || {};
+      const detail = bucket[displayName];
+
+      if (!detail) {
+        alert(`找不到【${displayName}】的詳細資料，請在 teacherData.${group} 中補上。`);
+        return;
+      }
+
+      
+      divisionImg.src = detail.img || '';
+      divisionImg.alt = `${displayName} 詳細圖片`;
+      divisionText.textContent = detail.text || '';
+
+      
+      if (hasRenderTwitch) {
+        window.renderTwitchButton(detail.twitch);
+      } else {
+        renderTwitchButtonLocal(detail.twitch);
+      }     
+      divisionDetail.style.display = 'block';
+      divisionDetail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+ 
+  closeDetailBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    divisionDetail.style.display = 'none';
+  });
+})();
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const mainNav   = document.getElementById('mainNav');
   const navToggle = mainNav?.querySelector('.nav-toggle');
@@ -737,19 +896,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mainNav.classList.contains('open')) closeMenu();
     else openMenu();
   }
-
-  // 點漢堡開/關
+ 
   navToggle.addEventListener('click', (e) => {
     e.stopPropagation();
     toggleMenu();
   });
-
-  // 點任何選單連結就關閉
+  
   mainMenu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => closeMenu());
   });
 
-  // 點選單外面關閉
+ 
   document.addEventListener('click', (e) => {
     if (mainNav.classList.contains('open') && !mainNav.contains(e.target)) {
       closeMenu();
@@ -764,8 +921,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+(function(){
+  const teacherSec = document.getElementById('teachers');
+  if(!teacherSec) return;
+  const filterBar  = teacherSec.querySelector('.teacher-filter');
+  const cards      = teacherSec.querySelectorAll('.teacher-card');
+  if(!filterBar || !cards.length) return;
 
-
+  const grid = document.createElement('div');
+  grid.className = 'teacher-grid';
+  cards.forEach(card => grid.appendChild(card));
+  filterBar.insertAdjacentElement('afterend', grid);
+})();
 
 
 
