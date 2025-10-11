@@ -757,11 +757,29 @@ document.addEventListener('DOMContentLoaded', function () {
         text: '麥格華茲魔法學院現任校長，曾於黑暗紀元中統領守護軍團，以冷靜與遠見著稱，致力於促進種族和平與魔法教育的改革。',
         twitch: 'https://www.twitch.tv/headmaster'
       },
-      '副校長': {
-        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2F123.png?alt=media&token=e6e45e2d-ab8e-4237-a268-e30c719053b9',
-        text: '副校長為學院行政與教學兩大領域的重要支柱，負責學術評鑑與學生紀律事務。',
-        twitch: 'https://www.twitch.tv/deputy'
-      },
+'副校長': {
+  img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2F123.png?alt=media&token=e6e45e2d-ab8e-4237-a268-e30c719053b9',
+  text: `
+曾是魔王最信任的左右手，親手為他奪下無數疆土。
+在魔王戰死的那日，利維坦身負重傷、孤身逃入荒蕪的森林，陷入長眠。
+直到某日，一位半精靈女子——露米婭，發現了他，用盡心力照顧這位滿身傷痕的惡魔。
+原本視「非惡魔」為低等存在的他，在露米婭的溫柔中第一次感受到「被包容」的意義。
+從此，他對其他種族的敵意漸漸淡去，但那張嘴，依舊壞得讓人想揍。
+
+隨著歲月流逝，兩人終於相戀，並在林間舉行了古老的契誓儀式。
+後來，利維坦決定陪伴愛人一同回到她的母校——麥格華茲魔法學院。
+憑藉著他在法術知識與戰鬥魔法上的卓越才能，
+他受到了阿不思・鄧不利朵的賞識，並被任命為學院副校長。
+
+露米婭則在校外開設了「露米婭烘焙坊」，成為學生們最愛的甜點天堂；
+而利維坦則負責行政、學術與夜間巡查等任務。
+
+雖然他表面依舊帶著惡魔的傲氣與毒舌，
+但在夜裡若看到學院庭院亮起微紅的光，那是利維坦在默默守護這座學院。
+`,
+  twitch: 'https://www.twitch.tv/deputy'
+},
+
       '教務長': {
         img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E5%8B%99%E9%95%B7',
         text: '教務長負責協調各分院教授課程與學術研究方向，以嚴謹著稱，曾編撰《魔法教育綱要》。',
@@ -933,6 +951,7 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach(card => grid.appendChild(card));
   filterBar.insertAdjacentElement('afterend', grid);
 })();
+
 
 
 
