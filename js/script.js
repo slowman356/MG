@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: '霍爾芬多',
     desc: '霍爾芬多分院代表的是忠誠與榮譽，以忠實守護他人與誓言為信條，這個分院的學生往往來自那些有著強烈責任感的家族，無論是人類、精靈還是矮人，對於他們來說，忠誠不僅僅是一種品德，更是一種力量，分院的座右銘是：“守護不僅是使命，更是信仰”。霍爾芬多分院的校徽是一隻展翅的雄鷹，象徵著勇氣和無畏的守護精神。',
     notes: '特色：勇氣、無畏、守護精神。',
-    img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403777468221100243/1.png',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FHolfindo.png?alt=media&token=d13e790b-1dd8-47ad-bfdc-46233b12da78',
     alt: '霍爾芬多 學院徽章'
     },
     hufflepuff: {
@@ -933,6 +933,7 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach(card => grid.appendChild(card));
   filterBar.insertAdjacentElement('afterend', grid);
 })();
+
 
 
 
