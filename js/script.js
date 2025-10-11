@@ -768,7 +768,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '副校長': {
   img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2F123.png?alt=media&token=e6e45e2d-ab8e-4237-a268-e30c719053b9',
   text: `
-【角色】利維坦・艾爾瑟芙
+【角色】利維坦・艾爾瑟芙 (Leviathan Elserf)
 【種族】惡魔
 【年齡】外表約22左右（未知年齡）
 【職位】麥格華茲魔法學院 副校長
@@ -1040,6 +1040,7 @@ teacherCards.forEach(card => {
     }
   });
 });
+
 
 
 
