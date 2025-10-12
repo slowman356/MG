@@ -599,7 +599,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!mapContentHasCard) {
         showMap('school');
 
-        
+
         const allBtns = document.querySelectorAll('#mapSelector button');
         const schoolBtn = document.querySelector('#mapSelector button[data-map="school"]');
 
@@ -716,12 +716,16 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* ===========================
+   師資：點擊卡片 → 詳細介紹（含 Twitch）
+   依教師名稱自動匹配，預設抓卡片內的 <h2> 文字
    =========================== */
 (function () {
+  // 1) 師資資料（教授 / 導師 / 其他人員）
+  // key 必須與 HTML 卡片上的 <h2> 名稱一致（或用 data-teacher 指定）
   const teacherData = {
   professor: {
     seruphi: {
-      name: '賽露菲', 
+      name: '賽露菲', // 可選：若要顯示用
       img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi%202.png?alt=media&token=788261e3-799a-425c-85c3-1473f5bd8feb',
       text: `
 【角色】賽露菲（Seruphi）
@@ -734,7 +738,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       twitch: 'https://www.twitch.tv/nerukozwz'
     },
-      minasVeya: { 
+      minasVeya: { // ✅ 改成英文 key
         name: '米納斯·薇婭',
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMinas%20Veya.png?alt=media&token=108659f6-c445-4eb6-97f6-95a1d900f7ff',
         text: `
@@ -752,7 +756,7 @@ document.addEventListener('DOMContentLoaded', function () {
         twitch: 'https://www.twitch.tv/example4'
       }
     },
-    
+    // 導師（這裡將你原本 data-group="club" 的卡片視為導師類）
     mentor: {
       '社團老師': {
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FAiden%20Wesley.png?alt=media&token=dbfbdb57-e154-4880-a085-f0a7d49cc289',
@@ -802,8 +806,8 @@ document.addEventListener('DOMContentLoaded', function () {
     twitch: ''
   }
 },
-	 // 學院領導層
-    leader: {
+	 // 學院領導層（leader）
+   leader: {
       '校長': {
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FRB.png?alt=media&token=d402f940-7b6a-4c02-9695-8e89926dba2e',
         text: `
@@ -814,7 +818,7 @@ document.addEventListener('DOMContentLoaded', function () {
 【個性】嘮叨、熱情、老謀深算。
 【能力】深不可測。
 `,
-        twitch: 'https://www.twitch.tv/headmaster'
+        twitch: ''
       },
       '副校長': {
   img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2F123.png?alt=media&token=e6e45e2d-ab8e-4237-a268-e30c719053b9',
@@ -836,7 +840,7 @@ document.addEventListener('DOMContentLoaded', function () {
         twitch: 'https://www.twitch.tv/academichead'
       }
     },
-   // 其他人員
+   // 其他人員（staff）
 staff: {
   '餐廳姊姊': {
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2Fkitchen.png?alt=media&token=9264559c-b856-4ea3-b4f7-f48ec3636372',
@@ -851,7 +855,20 @@ staff: {
     twitch: 'https://www.twitch.tv/medic'
   },
   
-   '侍僕': {
+   '宿管': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FAsmode.png?alt=media&token=4cccf66f-ac8b-4727-ab31-2b3a5fcbeb88',
+    text: `
+【角色】阿斯莫德（Asmode）
+【種族】惡魔
+【年齡】不詳(看起來40~50歲，喜歡喬裝人類)
+【職位】宿管
+【個性】溫柔，但極具操控慾與誘惑性，討厭戀愛，因為母胎單身。
+【能力】黑魔法、心像魔法。
+`,
+    twitch: 'https://www.twitch.tv/hedfu'
+  },
+  
+  '侍僕': {
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FIris%20Nova.png?alt=media&token=cf75709d-4073-4e8e-8d53-79dd65d36eda',
     text: `
 【角色】伊莉絲・諾瓦（Iris Nova）
@@ -1095,7 +1112,7 @@ teacherCards.forEach(card => {
     const rawGroup = (card.getAttribute('data-group') || '').toLowerCase();
     const group = rawGroup === 'club' ? 'mentor' : rawGroup;
 
-    
+    // 只用 data-teacher 當查表鍵（穩定、不受顯示文字影響）
     const key = (card.getAttribute('data-teacher') || '').trim();
     const bucket = teacherData[group] || {};
     const detail = bucket[key];
@@ -1118,9 +1135,6 @@ teacherCards.forEach(card => {
     }
   });
 });
-
-
-
 
 
 
