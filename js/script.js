@@ -722,7 +722,7 @@ document.addEventListener('DOMContentLoaded', function () {
   professor: {
     seruphi: {
       name: '賽露菲', 
-      img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi.png?alt=media&token=7cbf80a3-1e2b-4583-9c9c-57e3cc6b68df',
+      img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi%202.png?alt=media&token=788261e3-799a-425c-85c3-1473f5bd8feb',
       text: `
 【角色】賽露菲（Seruphi）
 【種族】精靈  
@@ -1118,6 +1118,7 @@ teacherCards.forEach(card => {
     }
   });
 });
+
 
 
 
