@@ -644,3 +644,29 @@ nav{ all:unset; }
     transform: none;
   }
 }
+
+.teacher-filter {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 6px auto 24px;
+    }
+    .teacher-filter .filter-btn {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(246,219,135,.6);
+      background: rgba(246,219,135,.08);
+      color: #f0e6a5;
+      font-weight: 700;
+      letter-spacing: .02em;
+      cursor: pointer;
+      transition: transform .08s ease, background .2s ease, border-color .2s ease;
+      user-select: none;
+    }
+    .teacher-filter .filter-btn:hover { transform: translateY(-1px); }
+    .teacher-filter .filter-btn.active {
+      background: rgba(246,219,135,.22);
+      border-color: rgba(246,219,135,.95);
+    }
+    .is-hidden { display: none !important; }
