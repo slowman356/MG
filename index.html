@@ -601,17 +601,32 @@
       </div>
     </div>
 	
-   <div class="teacher-card"
-     data-group="professor"
-     data-teacher="seruphi"
-     style="display:flex;align-items:center;gap:20px;margin-bottom:30px;background:rgba(246,219,135,0.1);padding:15px 20px;border-radius:12px;box-shadow:0 0 10px rgba(246,219,135,0.3);">
+   <!-- 歷史學：賽露菲 -->
+<div class="teacher-card"
+  data-group="professor"
+  data-teacher="seruphi"
+  style="display:flex;align-items:center;gap:20px;margin-bottom:30px;background:rgba(246,219,135,0.1);padding:15px 20px;border-radius:12px;box-shadow:0 0 10px rgba(246,219,135,0.3);">
   <img src="https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi.png?alt=media&token=7cbf80a3-1e2b-4583-9c9c-57e3cc6b68df"
        alt="賽露菲" style="width:150px;height:150px;object-fit:cover;border-radius:12px;flex-shrink:0;">
   <div class="teacher-info" style="color:#f0e6a5;font-size:1.1em;line-height:1.5;">
-    <h2 style="margin:0 0 10px;">歷史學</h2> 
+    <h2 style="margin:0 0 10px;">歷史學</h2>
     <p>歷史不是遺忘的灰燼，而是尚未被理解的火焰。</p>
   </div>
 </div>
+
+<!-- 霍爾芬多班主任：米納斯·薇婭（關鍵：data-teacher 改成 minasVeya） -->
+<div class="teacher-card"
+  data-group="professor"
+  data-teacher="minasVeya"
+  style="display:flex;align-items:center;gap:20px;margin-bottom:30px;background:rgba(246,219,135,0.1);padding:15px 20px;border-radius:12px;box-shadow:0 0 10px rgba(246,219,135,0.3);">
+  <img src="https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMinas%20Veya.png?alt=media&token=108659f6-c445-4eb6-97f6-95a1d900f7ff"
+       alt="米納斯·薇婭" style="width:150px;height:150px;object-fit:cover;border-radius:12px;flex-shrink:0;">
+  <div class="teacher-info" style="color:#f0e6a5;font-size:1.1em;line-height:1.5;">
+    <h2 style="margin:0 0 10px;">霍爾芬多班主任</h2>
+    <p>負責指導與守護象徵「勇氣與榮耀」的學生們，不僅是導師，更是引導學生面對挑戰、磨練意志的榜樣。</p>
+  </div>
+</div>
+
 
 
     <div class="teacher-card" data-group="professor"
@@ -871,7 +886,7 @@
     </p>
   </footer>
 
-  <!-- Firebase  -->
+  <!-- Firebase 放在 body 內結束前 -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
