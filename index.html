@@ -8,36 +8,6 @@
   <link rel="stylesheet" href="./css/style.css">
 
 
-  <style>
-    .teacher-filter {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 6px auto 24px;
-    }
-    .teacher-filter .filter-btn {
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(246,219,135,.6);
-      background: rgba(246,219,135,.08);
-      color: #f0e6a5;
-      font-weight: 700;
-      letter-spacing: .02em;
-      cursor: pointer;
-      transition: transform .08s ease, background .2s ease, border-color .2s ease;
-      user-select: none;
-    }
-    .teacher-filter .filter-btn:hover { transform: translateY(-1px); }
-    .teacher-filter .filter-btn.active {
-      background: rgba(246,219,135,.22);
-      border-color: rgba(246,219,135,.95);
-    }
-   
-    .is-hidden { display: none !important; }
-  </style>
-</head>
-
 <body class="use-image-title">
 
 
@@ -98,7 +68,7 @@
           <p><strong>特色：</strong>勇氣、冒險、領導力。</p>
         </div>
         <div class="academy-image">
-          <img src="https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FHolfindo.png?alt=media&token=d13e790b-1dd8-47ad-bfdc-46233b12da78" alt="霍爾芬多 學院徽章">
+          <img src="https://example.com/gryffindor.png" alt="霍爾芬多 學院徽章">
         </div>
       </div>
     </div>
@@ -601,7 +571,6 @@
       </div>
     </div>
 	
- 
 <div class="teacher-card"
   data-group="professor"
   data-teacher="seruphi"
@@ -614,7 +583,7 @@
   </div>
 </div>
 
-<!-- 霍爾芬多班主任：米納斯·薇婭（關鍵：data-teacher 改成 minasVeya） -->
+<!-- 霍爾芬多班主任：米納斯·薇婭 -->
 <div class="teacher-card"
   data-group="professor"
   data-teacher="minasVeya"
@@ -783,6 +752,17 @@
       <div class="teacher-info" style="color: #f0e6a5; font-size: 1.1em; line-height: 1.5;">
         <h2 style="margin: 0 0 10px;">侍僕</h2>
         <p>魔法學院中最基礎、卻不可或缺的工作人員。負責維持校內的整潔與秩序，協助師生處理日常瑣事。</p>
+      </div>
+    </div>
+	
+	<div class="teacher-card" data-group="staff"
+      style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: rgba(246,219,135,0.1); padding: 15px 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(246,219,135,0.3);">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FAsmode.png?alt=media&token=4cccf66f-ac8b-4727-ab31-2b3a5fcbeb88"
+        alt="宿管" style="width: 150px; height: 150px; object-fit: cover; border-radius: 12px; flex-shrink: 0;">
+      <div class="teacher-info" style="color: #f0e6a5; font-size: 1.1em; line-height: 1.5;">
+        <h2 style="margin: 0 0 10px;">宿管</h2>
+        <p>學院內部秩序維護人員，負責學生宿舍的安全、生活管理與夜間監督。</p>
       </div>
     </div>
 	
