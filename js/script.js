@@ -739,9 +739,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       twitch: 'https://www.twitch.tv/nerukozwz'
     },
-      '教授2': {
-        img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%882',
-        text: '教授2的詳細介紹：研究元素調和與跨學科魔導工程。',
+      minasVeya: { // ✅ 改成英文 key
+        name: '米納斯·薇婭',
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMinas%20Veya.png?alt=media&token=108659f6-c445-4eb6-97f6-95a1d900f7ff',
+        text: `
+【角色】米納斯·薇婭（Minas Veya）
+【種族】精靈  
+【年齡】外表約25歲上下  
+【個性】溫柔理性，對學生總是語調平和、耐心十足，但絕不縱容欺騙行為。  
+【能力】變形學、化獸術、高階守護魔法  
+        `,
         twitch: 'https://www.twitch.tv/example2'
       },
       '教授4': {
