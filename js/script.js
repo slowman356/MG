@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: '霍爾芬多',
     desc: '霍爾芬多分院代表的是忠誠與榮譽，以忠實守護他人與誓言為信條，這個分院的學生往往來自那些有著強烈責任感的家族，無論是人類、精靈還是矮人，對於他們來說，忠誠不僅僅是一種品德，更是一種力量，分院的座右銘是：“守護不僅是使命，更是信仰”。霍爾芬多分院的校徽是一隻展翅的雄鷹，象徵著勇氣和無畏的守護精神。',
     notes: '特色：勇氣、無畏、守護精神。',
-    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FHolfindo.png?alt=media&token=d13e790b-1dd8-47ad-bfdc-46233b12da78',
+    img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403777468221100243/1.png',
     alt: '霍爾芬多 學院徽章'
     },
     hufflepuff: {
@@ -737,7 +737,7 @@ document.addEventListener('DOMContentLoaded', function () {
 【領域】艾斯瑞達大陸古文明  
       `,
 
-      twitch: 'https://www.twitch.tv/deputy'
+      twitch: 'https://www.twitch.tv/nerukozwz'
     },
       '教授2': {
         img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%882',
@@ -753,11 +753,53 @@ document.addEventListener('DOMContentLoaded', function () {
     // 導師（這裡將你原本 data-group="club" 的卡片視為導師類）
     mentor: {
       '社團老師': {
-        img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E8%80%81%E5%B8%AB',
-        text: '社團老師詳細介紹：指導社團活動、競賽與對外交流。',
-        twitch: 'https://www.twitch.tv/clubmentor'
-      }
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FAiden%20Wesley.png?alt=media&token=dbfbdb57-e154-4880-a085-f0a7d49cc289',
+        text: `
+【角色】艾登·衛斯理（Aiden Wesley）
+【種族】人類 （混血巫師 ）
+【年齡】31歲  
+【個性】溫柔且穩定、內向但堅定、高共感、低攻擊性、不爭主導權  
+【能力】專精【魔法生物飼育學】與【防禦魔法實作】
+      `,
+        twitch: 'https://www.twitch.tv/sakura_ryoshin'
     },
+
+  '社團導師二': {
+    img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E5%B0%8E%E5%B8%AB+2',
+    text: `
+【角色】——
+【種族】——
+【年齡】——
+【個性】——
+【能力】——
+    `,
+    twitch: ''
+  },
+
+  '社團導師三': {
+    img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E5%B0%8E%E5%B8%AB+3',
+    text: `
+【角色】——
+【種族】——
+【年齡】——
+【個性】——
+【能力】——
+    `,
+    twitch: ''
+  },
+
+  '社團導師四': {
+    img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E5%B0%8E%E5%B8%AB+4',
+    text: `
+【角色】——
+【種族】——
+【年齡】——
+【個性】——
+【能力】——
+    `,
+    twitch: ''
+  }
+},
 	 // 學院領導層（leader）
     leader: {
       '校長': {
@@ -785,11 +827,11 @@ document.addEventListener('DOMContentLoaded', function () {
         twitch: 'https://www.twitch.tv/academichead'
       }
     },
-    // 其他人員（staff）
-     staff: {
-      '餐廳姊姊': {
-        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2Fkitchen.png?alt=media&token=9264559c-b856-4ea3-b4f7-f48ec3636372',
-        text: `
+   // 其他人員（staff）
+staff: {
+  '餐廳姊姊': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2Fkitchen.png?alt=media&token=9264559c-b856-4ea3-b4f7-f48ec3636372',
+    text: `
 【角色】伊蘭蕾潔（Elanreje）
 【種族】墮星惡魔
 【年齡】不詳（傳聞時間尚未開始就已存在）
@@ -797,9 +839,36 @@ document.addEventListener('DOMContentLoaded', function () {
 【個性】傲嬌又認真，對料理與植物都極度講究，嘴硬但心軟。
 【能力】詛咒的黑暗魔法。
 `,
-        twitch: 'https://www.twitch.tv/medic'
-      }
-    }
+    twitch: 'https://www.twitch.tv/medic'
+  },
+  
+   '侍僕': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FIris%20Nova.png?alt=media&token=cf75709d-4073-4e8e-8d53-79dd65d36eda',
+    text: `
+【角色】伊莉絲・諾瓦（Iris Nova）
+【種族】獸人族
+【年齡】貓齡2歲（相當於人類24歲）
+【職位】侍僕
+【個性】有點迷糊、喜歡碎碎念、愛偷懶
+【能力】水魔法。
+`,
+    twitch: 'https://www.twitch.tv/hanfeicat'
+  },
+
+ 
+  'Lily': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FLily.png?alt=media&token=6ed8898e-360b-4be9-ad00-29e5b99fb909', // 放角色圖片連結
+    text: `
+【角色】 Lily
+【種族】 犬
+【年齡】 不詳 
+【個性】 捉摸不定
+【能力】 來無影去無蹤
+`,
+    twitch: '' // 若無可留空字串
+  }
+}
+
 	
   };
   
@@ -1040,9 +1109,6 @@ teacherCards.forEach(card => {
     }
   });
 });
-
-
-
 
 
 
