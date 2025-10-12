@@ -805,8 +805,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	 // 學院領導層
     leader: {
       '校長': {
-        img: 'https://via.placeholder.com/320x200?text=%E6%A0%A1%E9%95%B7',
-        text: '麥格華茲魔法學院現任校長，曾於黑暗紀元中統領守護軍團，以冷靜與遠見著稱，致力於促進種族和平與魔法教育的改革。',
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FRB.png?alt=media&token=d402f940-7b6a-4c02-9695-8e89926dba2e',
+        text: `
+【角色】阿布斯．鄧不利朵
+【種族】人類
+【年齡】（未知年齡）
+【職位】麥格華茲魔法學院 校長
+【個性】嘮叨、熱情、老謀深算。
+【能力】深不可測。
+`,
         twitch: 'https://www.twitch.tv/headmaster'
       },
       '副校長': {
@@ -819,7 +826,7 @@ document.addEventListener('DOMContentLoaded', function () {
 【個性】傲慢毒舌、理智冷靜，對學生嚴厲但極具保護心；嘴上壞但心地極善。
 【能力】精通猩紅魔法、詛咒與戰鬥咒術；能以魔力感知夜間異動。
 `,
-  twitch: 'https://www.twitch.tv/deputy'
+  twitch: ''
 },
 
 
@@ -1111,6 +1118,7 @@ teacherCards.forEach(card => {
     }
   });
 });
+
 
 
 
