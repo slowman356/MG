@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: '霍爾芬多',
     desc: '霍爾芬多分院代表的是忠誠與榮譽，以忠實守護他人與誓言為信條，這個分院的學生往往來自那些有著強烈責任感的家族，無論是人類、精靈還是矮人，對於他們來說，忠誠不僅僅是一種品德，更是一種力量，分院的座右銘是：“守護不僅是使命，更是信仰”。霍爾芬多分院的校徽是一隻展翅的雄鷹，象徵著勇氣和無畏的守護精神。',
     notes: '特色：勇氣、無畏、守護精神。',
-    img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403777468221100243/1.png',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FHolfindo.png?alt=media&token=d13e790b-1dd8-47ad-bfdc-46233b12da78',
     alt: '霍爾芬多 學院徽章'
     },
     hufflepuff: {
@@ -597,10 +597,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const mapContentHasCard = !!document.querySelector('#mapContent .map-card');
 
     if (!mapContentHasCard) {
-        // 預設就是麥格華茲
         showMap('school');
 
-        // 同步按鈕 active 樣式
+        
         const allBtns = document.querySelectorAll('#mapSelector button');
         const schoolBtn = document.querySelector('#mapSelector button[data-map="school"]');
 
@@ -717,16 +716,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* ===========================
-   師資：點擊卡片 → 詳細介紹（含 Twitch）
-   依教師名稱自動匹配，預設抓卡片內的 <h2> 文字
    =========================== */
 (function () {
-  // 1) 師資資料（教授 / 導師 / 其他人員）
-  // key 必須與 HTML 卡片上的 <h2> 名稱一致（或用 data-teacher 指定）
   const teacherData = {
   professor: {
     seruphi: {
-      name: '賽露菲', // 可選：若要顯示用
+      name: '賽露菲', 
       img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi.png?alt=media&token=7cbf80a3-1e2b-4583-9c9c-57e3cc6b68df',
       text: `
 【角色】賽露菲（Seruphi）
@@ -739,7 +734,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       twitch: 'https://www.twitch.tv/nerukozwz'
     },
-      minasVeya: { // ✅ 改成英文 key
+      minasVeya: { 
         name: '米納斯·薇婭',
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMinas%20Veya.png?alt=media&token=108659f6-c445-4eb6-97f6-95a1d900f7ff',
         text: `
@@ -757,7 +752,7 @@ document.addEventListener('DOMContentLoaded', function () {
         twitch: 'https://www.twitch.tv/example4'
       }
     },
-    // 導師（這裡將你原本 data-group="club" 的卡片視為導師類）
+    
     mentor: {
       '社團老師': {
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FAiden%20Wesley.png?alt=media&token=dbfbdb57-e154-4880-a085-f0a7d49cc289',
@@ -807,7 +802,7 @@ document.addEventListener('DOMContentLoaded', function () {
     twitch: ''
   }
 },
-	 // 學院領導層（leader）
+	 // 學院領導層
     leader: {
       '校長': {
         img: 'https://via.placeholder.com/320x200?text=%E6%A0%A1%E9%95%B7',
@@ -834,7 +829,7 @@ document.addEventListener('DOMContentLoaded', function () {
         twitch: 'https://www.twitch.tv/academichead'
       }
     },
-   // 其他人員（staff）
+   // 其他人員
 staff: {
   '餐廳姊姊': {
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2Fkitchen.png?alt=media&token=9264559c-b856-4ea3-b4f7-f48ec3636372',
@@ -1093,7 +1088,7 @@ teacherCards.forEach(card => {
     const rawGroup = (card.getAttribute('data-group') || '').toLowerCase();
     const group = rawGroup === 'club' ? 'mentor' : rawGroup;
 
-    // 只用 data-teacher 當查表鍵（穩定、不受顯示文字影響）
+    
     const key = (card.getAttribute('data-teacher') || '').trim();
     const bucket = teacherData[group] || {};
     const detail = bucket[key];
@@ -1116,6 +1111,7 @@ teacherCards.forEach(card => {
     }
   });
 });
+
 
 
 
