@@ -716,12 +716,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* ===========================
-   師資：點擊卡片 → 詳細介紹（含 Twitch）
-   依教師名稱自動匹配，預設抓卡片內的 <h2> 文字
    =========================== */
 (function () {
-  // 1) 師資資料（教授 / 導師 / 其他人員）
-  // key 必須與 HTML 卡片上的 <h2> 名稱一致（或用 data-teacher 指定）
   const teacherData = {
   professor: {
     seruphi: {
@@ -771,13 +767,13 @@ document.addEventListener('DOMContentLoaded', function () {
     },
 
   '社團導師二': {
-    img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E5%B0%8E%E5%B8%AB+2',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FLumiah.png?alt=media&token=58c5a0dc-a7e1-465c-a961-a1e4db7e97ce',
     text: `
-【角色】——
-【種族】——
-【年齡】——
-【個性】——
-【能力】——
+【角色】露米婭・艾爾瑟芙（Lumiah Elserf）
+【種族】半精靈
+【年齡】26歲（實際年齡700-800歲左右）
+【個性】甜美、活潑、開朗，像糖一樣能融化人心
+【能力】魔法增幅、情緒與魔力的微光魔法
     `,
     twitch: ''
   },
@@ -814,7 +810,6 @@ document.addEventListener('DOMContentLoaded', function () {
 【角色】阿布斯．鄧不利朵
 【種族】人類
 【年齡】（未知年齡）
-【職位】麥格華茲魔法學院 校長
 【個性】嘮叨、熱情、老謀深算。
 【能力】深不可測。
 `,
@@ -826,9 +821,8 @@ document.addEventListener('DOMContentLoaded', function () {
 【角色】利維坦・艾爾瑟芙 (Leviathan Elserf)
 【種族】惡魔
 【年齡】外表約22左右（未知年齡）
-【職位】麥格華茲魔法學院 副校長
-【個性】傲慢毒舌、理智冷靜，對學生嚴厲但極具保護心；嘴上壞但心地極善。
-【能力】精通猩紅魔法、詛咒與戰鬥咒術；能以魔力感知夜間異動。
+【個性】傲慢毒舌、理智冷靜，嘴巴很壞。
+【能力】猩紅魔法、契約、魔力感知夜間異動。
 `,
   twitch: ''
 },
@@ -848,7 +842,6 @@ staff: {
 【角色】伊蘭蕾潔（Elanreje）
 【種族】墮星惡魔
 【年齡】不詳（傳聞時間尚未開始就已存在）
-【職位】餐廳
 【個性】傲嬌又認真，對料理與植物都極度講究，嘴硬但心軟。
 【能力】詛咒的黑暗魔法。
 `,
@@ -861,7 +854,6 @@ staff: {
 【角色】阿斯莫德（Asmode）
 【種族】惡魔
 【年齡】不詳(看起來40~50歲，喜歡喬裝人類)
-【職位】宿管
 【個性】溫柔，但極具操控慾與誘惑性，討厭戀愛，因為母胎單身。
 【能力】黑魔法、心像魔法。
 `,
@@ -874,7 +866,6 @@ staff: {
 【角色】伊莉絲・諾瓦（Iris Nova）
 【種族】獸人族
 【年齡】貓齡2歲（相當於人類24歲）
-【職位】侍僕
 【個性】有點迷糊、喜歡碎碎念、愛偷懶
 【能力】水魔法。
 `,
@@ -1135,6 +1126,7 @@ teacherCards.forEach(card => {
     }
   });
 });
+
 
 
 
