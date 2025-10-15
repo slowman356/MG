@@ -1,8 +1,3 @@
-/* ===========================
-   Magic Academy - Global CSS
-   （桌機維持原樣；手機右上角漢堡選單）
-   =========================== */
-
 /* --- Base --- */
 body{
   margin:0;
@@ -46,7 +41,7 @@ body{
   filter: drop-shadow(0 0 12px rgba(246,219,135,.45));
 }
 #logo:hover{ transform:translateY(-1px); filter: drop-shadow(0 0 18px rgba(246,219,135,.7)); }
-/* 文字回退 */
+
 #logo:not(:has(img)){
   font-family:'Cinzel Decorative',cursive;
   font-size:1.5em; color:#f6db87;
@@ -54,7 +49,7 @@ body{
   transition:color .3s ease,text-shadow .3s ease;
 }
 #logo:not(:has(img)):hover{ color:#fff; text-shadow:0 0 25px rgba(246,219,135,1); }
-/* 圖片版 logo 尺寸 */
+
 #logo img{ height:42px; width:auto; display:block; object-fit:contain; border-radius:8px; }
 @media (max-width:800px){ #logo img{ height:36px; } }
 
@@ -154,11 +149,11 @@ body.use-image-title #entryPage .title-image{ display:block; }
   gap:15px 25px; max-width:720px; margin:0 auto;
 }
 
-/* --- Team (製作團隊) 改為兩欄卡片、避免重疊 --- */
+
 #team{ max-width:1100px; margin:0 auto; text-align:center; }
 #team>h1{ font-size:2.8em; font-weight:bold; color:#f6db87; margin-bottom:30px; }
 
-/* 兩欄自適應網格 + 中央淡色分隔線（桌機） */
+
 .team-members-wrapper{
   position:relative;
   display:grid;
@@ -182,13 +177,13 @@ body.use-image-title #entryPage .title-image{ display:block; }
   }
 }
 
-/* 手機／平板改為單欄並移除分隔線 */
+
 @media (max-width:1024px){
   .team-members-wrapper{ grid-template-columns:1fr; gap:18px; }
   .team-members-wrapper::before{ display:none; }
 }
 
-/* 單張卡片（避免重疊） */
+
 .team-member{
   display:flex; align-items:center; gap:18px;
   background:rgba(246,219,135,.10);
@@ -277,7 +272,7 @@ body.use-image-title #entryPage .title-image{ display:block; }
   box-shadow:0 6px 20px rgba(0,0,0,.6); border:1px solid rgba(255,255,255,.04);
 }
 
-/* --- 詳細視窗（桌機） --- */
+
 #division-detail{
   display:none;
   width:450px; height:600px; padding:20px;
@@ -299,7 +294,7 @@ body.use-image-title #entryPage .title-image{ display:block; }
 #division-detail::-webkit-scrollbar{ width:0 !important; height:0 !important; background:transparent !important; }
 #division-detail::-webkit-scrollbar-thumb{ background:transparent !important; }
 
-/* 若要恢復可捲動（含細金色卷軸），在元素上加 .scrollable */
+
 #division-detail.scrollable{
   overflow: auto !important;
   touch-action: auto !important;
@@ -327,7 +322,7 @@ body.use-image-title #entryPage .title-image{ display:block; }
   border:1px solid rgba(246,219,135,.25);
 }
 
-/* ✅ 詳細視窗：文字區（預設不捲動；.scrollable 時才限制高度＋出現卷軸） */
+
 #division-text {
   white-space: pre-line; /* 保留 \n 換行 */
   font-family: 'Noto Sans TC', sans-serif;
@@ -341,9 +336,8 @@ body.use-image-title #entryPage .title-image{ display:block; }
   border-radius: 10px;
   box-shadow: inset 0 0 12px rgba(246,219,135,0.15);
   word-break: break-word;
-  /* 不設 max-height/overflow，跟隨外層策略 */
 }
-/* 外層允許捲動時，才啟用文字區的高度限制與卷軸樣式 */
+
 #division-detail.scrollable #division-text{
   overflow-y: auto;
   max-height: 340px;
@@ -373,12 +367,11 @@ body.use-image-title #entryPage .title-image{ display:block; }
 .twitch-btn[aria-disabled="true"]{ opacity:.55; cursor:not-allowed; pointer-events:none; }
 
 /* =========================
-   Nav（重新排版）
    ========================= */
 nav{ all:unset; }
 #mainNav{ position:fixed; z-index:3000; }
 
-/* 桌機水平選單 */
+
 @media (min-width:801px){
   #mainNav{
     top:0; right:0; left:auto;
@@ -670,3 +663,4 @@ nav{ all:unset; }
       border-color: rgba(246,219,135,.95);
     }
     .is-hidden { display: none !important; }
+
