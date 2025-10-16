@@ -20,251 +20,395 @@
     const divisionData = {
         holfindo: {
 '學生1': {
-  img: 'https://cdn.discordapp.com/attachments/843799477360918549/1403854695944163439/image.png?...',
-  text: '介紹',
-  twitch: 'https://www.twitch.tv/your_channel' 
+  img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+  text: `
+ 未註冊
+【扮演者】Peggy
+`,
+  twitch: 'https://www.twitch.tv/peggy_030' 
 },
 
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生2',
-    text: '介紹',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】丹丹丹尼
+`,
+	twitch: 'https://www.twitch.tv/dandanny1026' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生3',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】水天酋長
+`,
+	twitch: 'https://www.twitch.tv/waterday0930' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生4',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】老婆
+`,
+	twitch: 'https://www.twitch.tv/s73225200' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生5',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】鋪許
+`,
+	twitch: 'https://www.twitch.tv/pushxrp' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生6',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】RVin
+`,
+	twitch: 'https://www.twitch.tv/r_vin310' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生7',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】柳丁丁丁
+`,
+	twitch: 'https://www.twitch.tv/mama0321' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生8',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】流傳派
+`,
+	twitch: 'https://www.twitch.tv/zweizz' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生9',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】ㄚ布丁丁
+`,
+	twitch: 'https://www.twitch.tv/hipudding1223' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生10',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】俊俏王
+`,
+	twitch: 'https://www.twitch.tv/join90328' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生11',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】Ume
+`,
+	twitch: 'https://www.twitch.tv/ume_zz' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=霍爾芬多學生12',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】可口奶凍
+`,
+	twitch: 'https://www.twitch.tv/yoyo30108' 
     }
   },
     skmalin: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生1',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】羽落
+`,
+	twitch: 'https://www.twitch.tv/yulo1025' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生2',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】永發
+`,
+	twitch: 'https://www.twitch.tv/yongfafa' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生3',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】五十鈴抹茶糰子
+`,
+	twitch: 'https://www.twitch.tv/isuzumaccha' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生4',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】貓白
+`,
+	twitch: 'https://www.twitch.tv/nekoa_o' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生5',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】唯唯兒
+`,
+	twitch: 'https://www.twitch.tv/kazehaya_yui' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生6',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】襪子わつ
+`,
+	twitch: 'https://www.twitch.tv/zerowatu' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生7',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】裘嗨嗨
+`,
+	twitch: 'https://www.twitch.tv/iamnivea' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生8',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】歐練
+`,
+	twitch: 'https://www.twitch.tv/olan300' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生9',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】振宇
+`,
+	twitch: 'https://www.twitch.tv/da0aaa' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生10',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】諾櫻
+`,
+	twitch: 'https://www.twitch.tv/re_noe_' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生11',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】梅林
+`,
+	twitch: 'https://www.twitch.tv/mer1ins' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=坎普費爾學生12',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】阡狐
+`,
+	twitch: 'https://www.twitch.tv/senkitsune_huni' 
     }
   },
     rowenpaf: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生1',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】易閒
+`,
+	twitch: 'https://www.twitch.tv/yiknower0102' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生2',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】夜某
+`,
+	twitch: 'https://www.twitch.tv/yamouo' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生3',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】嘎旋
+`,
+	twitch: 'https://www.twitch.tv/shen_0828' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生4',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】Misuzu
+`,
+	twitch: 'https://www.twitch.tv/misuzu0x0' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生5',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】小丞丞
+`,
+	twitch: 'https://www.twitch.tv/cheng_1210' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生6',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】秋澤恭介
+`,
+	twitch: 'https://www.twitch.tv/akizkke0328' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生7',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】源犬太
+`,
+	twitch: 'https://www.twitch.tv/minamoto__kenta' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生8',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】Shoyu
+`,
+	twitch: 'https://www.twitch.tv/shoyu0526' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生9',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】猫羽うみ
+`,
+	twitch: 'https://www.twitch.tv/umii_u' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生10',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】沐沐菟栮
+`,
+	twitch: 'https://www.twitch.tv/mutuer' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生11',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'hhttps://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】伊德海拉
+`,
+	twitch: 'https://www.twitch.tv/yidhra0727' 
     },
     '學生12': {
-        img: 'https://via.placeholder.com/150?text=赫文帕夫學生12',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】馬魯
+`,
+	twitch: 'https://www.twitch.tv/anninmaru0402' 
     }
   },
     twicklow: {
         '學生1': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生1',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】罐罐
+`,
+	twitch: 'https://www.twitch.tv/can1021' 
     },
     '學生2': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生2',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】我大歪頭
+`,
+	twitch: 'https://www.twitch.tv/waitou1117' 
     },
     '學生3': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生3',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】轉蛋姬
+`,
+	twitch: 'https://www.twitch.tv/homete416' 
     },
     '學生4': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生4',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】鴨鴨二
+`,
+	twitch: 'https://www.twitch.tv/yaya6315341' 
     },
     '學生5': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生5',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】補路
+`,
+	twitch: 'https://www.twitch.tv/blue_kao' 
     },
     '學生6': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生6',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】魯波 Lupo
+`,
+	twitch: 'https://www.twitch.tv/lupo_relive' 
     },
     '學生7': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生7',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】來希
+`,
+	twitch: 'https://www.twitch.tv/raiki_raibao' 
     },
     '學生8': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生8',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】踏雪嗚哇
+`,
+	twitch: 'https://www.twitch.tv/sunohamster' 
     },
     '學生9': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生9',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】捏波絲姬
+`,
+	twitch: 'https://www.twitch.tv/neboskey' 
     },
     '學生10': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生10',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20F.png?alt=media&token=109a784c-0ed9-489b-b3d5-765b41a3e05f',
+    text: `
+【未登記學生資料】
+【扮演者】踢踢
+`,
+	twitch: 'https://www.twitch.tv/ttspoon' 
     },
     '學生11': {
-        img: 'https://via.placeholder.com/150?text=特威克羅學生11',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
+    text: `
+【未登記學生資料】
+【扮演者】
+`,
+	twitch: '' 
     },
     '學生12': {
         img: 'https://via.placeholder.com/150?text=特威克羅學生12',
-    text: '介紹。',
-	twitch: 'https://www.twitch.tv/mobilmobil' 
+    text: `
+【未登記學生資料】
+【扮演者】
+`,
+	twitch: '' 
     }
   }
 };
@@ -597,7 +741,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mapContentHasCard = !!document.querySelector('#mapContent .map-card');
 
     if (!mapContentHasCard) {
-        showMap('school');
+        showMap('aldrun');
 
 
         const allBtns = document.querySelectorAll('#mapSelector button');
@@ -627,6 +771,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // 地圖功能
 
     const maps = {
+		 aldrun: {
+            title: '奧德倫王國',
+            desc: '奧德倫以魔法與奧術傳統並立而聞名於世。自建國以來，魔導學識便被視為貴族修養與王權象徵，每位王室成員皆受嚴格的法術教育，以確保血脈中流動的，不僅是統治的權威，更是「秩序與光」的祝福。王族視自己為「光之代言人」，肩負維持世界平衡與驅逐黑暗之責。',
+            notes: '特色：傳承奧秘、多元共融、卓越教育。',
+            img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FKG.png?alt=media&token=424aff46-5fee-4966-b9ad-1f5ae068f2eb',
+            alt: '奧德倫王國 圖片'
+        },
         school: {
             title: '麥格華茲',
             desc: '麥格華茲學院座落於神秘的萊卡城，這是一座融合多種族文化與歷史的魔法都市。學院致力於培養年輕一代的魔法師，促進不同種族間的理解與合作，共同維護大陸的和平與繁榮。學院最獨特之處在於它的四個分院，每個分院代表著不同的價值觀與特質，讓學生能依照自身天賦與性格獲得最適合的指導與成長環境。透過這樣的分院制度，學生不僅能學習強大的魔法技能，更能培養出領導力、勇氣與智慧。',
@@ -657,12 +808,13 @@ document.addEventListener('DOMContentLoaded', function () {
             img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/map%2FElf.png?alt=media&token=46f4a272-299b-4203-abe5-9b9e4f1b3e2e',
             alt: '精靈城邦 圖片'
         },
+		
         snow: {
-            title: '希臘城',
-            desc: '希臘城依山傍海而建，白色大理石殿堂與橘頂圓塔林立，宛如眾神居所。街道間遍布石柱與壁畫，記錄著古老神話與英雄傳說。旅者能在此感受到濃厚的文化底蘊與神聖氛圍。',
+            title: '聖塔瑞斯城',
+            desc: '聖塔瑞斯城依山傍海而建，白色大理石殿堂與橘頂圓塔林立，宛如眾神居所。街道間遍布石柱與壁畫，記錄著古老神話與英雄傳說。旅者能在此感受到濃厚的文化底蘊與神聖氛圍。',
             notes: '神殿建築、神話傳說、英雄紀念碑。',
             img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/map%2FGreece.png?alt=media&token=2e93d562-1355-480c-90e1-a18d9091c261',
-            alt: '希臘城 圖片'
+            alt: '聖塔瑞斯城 圖片'
         }
     };
 
@@ -716,6 +868,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* ===========================
+  
    =========================== */
 (function () {
   const teacherData = {
@@ -730,6 +883,7 @@ document.addEventListener('DOMContentLoaded', function () {
 【個性】活潑、待人溫柔，臉上總是掛著淡淡的微笑， 卻隱約散發一絲悲傷。  
 【能力】神聖魔法
 【領域】艾斯瑞達大陸古文明  
+【扮演者】小內
       `,
 
       twitch: 'https://www.twitch.tv/nerukozwz'
@@ -743,6 +897,7 @@ document.addEventListener('DOMContentLoaded', function () {
 【年齡】外表約25歲上下  
 【個性】溫柔理性，對學生總是語調平和、耐心十足，但絕不縱容欺騙行為。  
 【能力】變形學、化獸術、高階守護魔法  
+【扮演者】巴哥
         `,
         twitch: 'https://www.twitch.tv/example2'
       },
@@ -762,36 +917,41 @@ document.addEventListener('DOMContentLoaded', function () {
 【年齡】31歲  
 【個性】溫柔且穩定、內向但堅定、高共感、低攻擊性、不爭主導權  
 【能力】專精【魔法生物飼育學】與【防禦魔法實作】
+【扮演者】櫻花
+
       `,
         twitch: 'https://www.twitch.tv/sakura_ryoshin'
     },
 
-  '社團導師二': {
+  '社團導師一': {
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FLumiah.png?alt=media&token=58c5a0dc-a7e1-465c-a961-a1e4db7e97ce',
     text: `
 【角色】露米婭・艾爾瑟芙（Lumiah Elserf）
 【種族】半精靈
 【年齡】26歲（實際年齡700-800歲左右）
-【個性】甜美、活潑、開朗，像糖一樣能融化人心
-【能力】魔法增幅、情緒與魔力的微光魔法
+【個性】甜美、活潑、開朗，喜歡照顧他人
+【能力】魔法增幅、微光魔法
+【扮演者】阿曼
     `,
     twitch: ''
   },
 
   '社團導師三': {
-    img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E5%B0%8E%E5%B8%AB+3',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FAsmode.png?alt=media&token=4cccf66f-ac8b-4727-ab31-2b3a5fcbeb88',
     text: `
-【角色】——
-【種族】——
-【年齡】——
-【個性】——
-【能力】——
-    `,
+【角色】阿斯莫德（Asmode）
+【種族】惡魔
+【年齡】不詳(看起來40~50歲，喜歡喬裝人類)
+【職位】宿管
+【個性】溫柔，但極具操控慾與誘惑性，討厭戀愛，因為母胎單身。
+【能力】黑魔法、心像魔法。
+【扮演者】龍蝦
+`,
     twitch: ''
   },
 
   '社團導師四': {
-    img: 'https://via.placeholder.com/320x200?text=%E7%A4%BE%E5%9C%98%E5%B0%8E%E5%B8%AB+4',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20T.png?alt=media&token=de39f27e-f9e7-4d41-9b6e-88861fd5655e',
     text: `
 【角色】——
 【種族】——
@@ -810,8 +970,10 @@ document.addEventListener('DOMContentLoaded', function () {
 【角色】阿布斯．鄧不利朵
 【種族】人類
 【年齡】（未知年齡）
+【職位】麥格華茲魔法學院 校長
 【個性】嘮叨、熱情、老謀深算。
 【能力】深不可測。
+【扮演者】賈霸
 `,
         twitch: ''
       },
@@ -821,8 +983,10 @@ document.addEventListener('DOMContentLoaded', function () {
 【角色】利維坦・艾爾瑟芙 (Leviathan Elserf)
 【種族】惡魔
 【年齡】外表約22左右（未知年齡）
-【個性】傲慢毒舌、理智冷靜，嘴巴很壞。
-【能力】猩紅魔法、契約、魔力感知夜間異動。
+【職位】麥格華茲魔法學院 副校長
+【個性】傲慢毒舌、理智冷靜，嘴上壞。
+【能力】精通猩紅魔法、詛咒；魔力感知夜間異動。
+【扮演者】Nokia	
 `,
   twitch: ''
 },
@@ -842,8 +1006,10 @@ staff: {
 【角色】伊蘭蕾潔（Elanreje）
 【種族】墮星惡魔
 【年齡】不詳（傳聞時間尚未開始就已存在）
+【職位】餐廳
 【個性】傲嬌又認真，對料理與植物都極度講究，嘴硬但心軟。
 【能力】詛咒的黑暗魔法。
+【扮演者】咬耳多
 `,
     twitch: 'https://www.twitch.tv/medic'
   },
@@ -854,8 +1020,10 @@ staff: {
 【角色】阿斯莫德（Asmode）
 【種族】惡魔
 【年齡】不詳(看起來40~50歲，喜歡喬裝人類)
+【職位】宿管
 【個性】溫柔，但極具操控慾與誘惑性，討厭戀愛，因為母胎單身。
 【能力】黑魔法、心像魔法。
+【扮演者】龍蝦
 `,
     twitch: 'https://www.twitch.tv/hedfu'
   },
@@ -866,8 +1034,10 @@ staff: {
 【角色】伊莉絲・諾瓦（Iris Nova）
 【種族】獸人族
 【年齡】貓齡2歲（相當於人類24歲）
+【職位】侍僕
 【個性】有點迷糊、喜歡碎碎念、愛偷懶
 【能力】水魔法。
+【扮演者】霏Fei
 `,
     twitch: 'https://www.twitch.tv/hanfeicat'
   },
@@ -1126,7 +1296,6 @@ teacherCards.forEach(card => {
     }
   });
 });
-
 
 
 
