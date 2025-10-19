@@ -398,9 +398,9 @@
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
     text: `
 【未登記學生資料】
-【扮演者】
+【扮演者】天瀨
 `,
-	twitch: '' 
+	twitch: 'https://www.twitch.tv/ranamase' 
     },
     '學生12': {
         img: 'https://via.placeholder.com/150?text=特威克羅學生12',
@@ -1296,6 +1296,7 @@ teacherCards.forEach(card => {
     }
   });
 });
+
 
 
 
