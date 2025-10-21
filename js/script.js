@@ -1653,7 +1653,7 @@ teacherCards.forEach(card => {
     const rawGroup = (card.getAttribute('data-group') || '').toLowerCase();
     const group = rawGroup === 'club' ? 'mentor' : rawGroup;
 
-    // 只用 data-teacher 當查表鍵（穩定、不受顯示文字影響）
+   ）
     const key = (card.getAttribute('data-teacher') || '').trim();
     const bucket = teacherData[group] || {};
     const detail = bucket[key];
@@ -1684,15 +1684,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainMenu  = document.getElementById('mainMenu');
   if (!mainNav || !mainMenu) return;
 
-  // 找到「學院總攬」下拉的按鈕
+  
   const ddWrap   = mainMenu.querySelector('.menu-has-dropdown');
   const ddToggle = ddWrap?.querySelector('.dropdown-toggle');
   const ddMenu   = ddWrap?.querySelector('.dropdown');
 
   if (ddToggle && ddMenu) {
-    // 手機：點擊切換展開/收合
+    
     ddToggle.addEventListener('click', (e) => {
-      // 在桌機上用 hover，不處理 click
+      
       if (window.matchMedia('(max-width: 800px)').matches) {
         e.preventDefault();
         e.stopPropagation();
@@ -1702,7 +1702,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // 點外面關閉（手機）
+    ）
     document.addEventListener('click', (e) => {
       if (!mainNav.classList.contains('open')) return; // 只在手機開單時作用
       if (!ddWrap.contains(e.target)) {
@@ -1711,7 +1711,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Esc 關閉（手機）
+    
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         ddToggle.setAttribute('aria-expanded', 'false');
@@ -1723,7 +1723,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// === Dropdown: 學院總攬 點擊展開/收合 ===
+// === Dropdown ===
 (function(){
   const mainNav = document.getElementById('mainNav');
   const ddHost  = mainNav?.querySelector('.menu-has-dropdown');
@@ -1745,20 +1745,20 @@ document.addEventListener('DOMContentLoaded', () => {
     else openDD();
   }
 
-  // 點按鈕開/關
+  
   toggle.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     toggleDD();
   });
 
-  // 點子選單不關閉（可自行調整）
+  
   panel.addEventListener('click', (e) => e.stopPropagation());
 
-  // 點外面關閉
+ 
   document.addEventListener('click', () => closeDD());
 
-  // ESC 關閉
+ 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDD();
   });
@@ -1774,9 +1774,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const buttons = Array.from(filterBar.querySelectorAll('.filter-btn'));
   const cards   = Array.from(document.querySelectorAll('.teacher-card'));
 
-  // 套用篩選
+  
   function applyFilter(filter) {
-    // 切換按鈕樣式與 ARIA
+    
     buttons.forEach(btn => {
       const isActive = btn.dataset.filter === filter;
       btn.classList.toggle('active', isActive);
@@ -1784,7 +1784,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.tabIndex = isActive ? 0 : -1;
     });
 
-    // 顯示 / 隱藏卡片（支援多分類：用逗號或空白分隔）
+  
     cards.forEach(card => {
       const raw = (card.dataset.group || '').toLowerCase().trim();
       const groups = raw.split(/[\s,]+/).filter(Boolean);
@@ -1793,12 +1793,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 點擊
+ 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
   });
 
-  // 鍵盤操作（左右鍵巡覽；Enter/Space 套用）
+
   filterBar.addEventListener('keydown', (e) => {
     const currentIndex = buttons.findIndex(b => b.classList.contains('active'));
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
@@ -1815,7 +1815,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 預設從 .active 的按鈕讀取；若沒有則用第一個
+ 
   const initial = (buttons.find(b => b.classList.contains('active')) || buttons[0])?.dataset.filter || 'leader';
   applyFilter(initial);
 });
@@ -1829,7 +1829,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const isMobile = () => window.matchMedia('(max-width: 800px)').matches;
 
-  /** 關閉所有已展開的 li（含一、二層） */
+  /** ） */
   function closeAll(container = mainMenu) {
     container.querySelectorAll('.open').forEach(li => li.classList.remove('open'));
     container.querySelectorAll('.dropdown-toggle[aria-expanded="true"]').forEach(btn => {
@@ -1837,7 +1837,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /** 關閉指定 li 的兄弟節點（避免同層多個同時打開） */
+  /** ） */
   function closeSiblings(li) {
     const parent = li.parentElement;
     if (!parent) return;
@@ -1850,7 +1850,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* === 手機：漢堡按鈕 === */
+  /* === 漢堡按鈕 === */
   if (navToggle) {
     navToggle.addEventListener('click', () => {
       const nowOpen = !mainNav.classList.contains('open');
@@ -1860,24 +1860,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* === 手機：點擊展開/收合（事件委派）=== */
+  /* ===）=== */
   mainMenu.addEventListener('click', (e) => {
     const btn = e.target.closest('.dropdown-toggle');
     if (!btn) return;
 
     const li = btn.closest('li');
-    // 桌機用 CSS hover 控制；手機用 JS
+  
     if (isMobile()) {
       e.preventDefault();
       const willOpen = !li.classList.contains('open');
-      // 同層只保留一個開啟
+    
       closeSiblings(li);
       li.classList.toggle('open', willOpen);
       btn.setAttribute('aria-expanded', String(willOpen));
     }
   });
 
-  /* === 鍵盤可用性（桌機 + 手機）：Enter/Space 開關，Esc 關閉 === */
+  /* === === */
   mainMenu.addEventListener('keydown', (e) => {
     const onToggle = e.target.closest('.dropdown-toggle');
     if (!onToggle) {
@@ -1892,7 +1892,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       const li = onToggle.closest('li');
-      // 桌機也允許用鍵盤打開
+     
       const willOpen = !li.classList.contains('open');
       closeSiblings(li);
       li.classList.toggle('open', willOpen);
@@ -1905,7 +1905,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* === 點擊外部：關閉所有 === */
+  /* ===  === */
   document.addEventListener('click', (e) => {
     if (!mainNav.contains(e.target)) {
       closeAll();
@@ -1916,12 +1916,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* === 視窗尺寸變化：狀態重置，避免切換 RWD 後殘留 === */
+  /* ===  === */
   let lastIsMobile = isMobile();
   window.addEventListener('resize', () => {
     const nowIsMobile = isMobile();
     if (nowIsMobile !== lastIsMobile) {
-      // 切換斷點時關閉所有展開狀態
+
       mainNav.classList.remove('open');
       navToggle?.setAttribute('aria-expanded', 'false');
       closeAll();
@@ -1940,5 +1940,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   */
 })();
+
 
 
