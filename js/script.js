@@ -471,7 +471,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
       divisionImg.src = detail.img || '';
       divisionImg.alt = (student || '') + ' 分業圖片';
-      divisionText.textContent = detail.text || '';
+      divisionText.innerHTML = detail.text || '';
+
 
       renderTwitchButton(detail.twitch);
 
@@ -539,28 +540,36 @@ document.addEventListener('DOMContentLoaded', () => {
      const academies = {
         gryffindor: {
         title: '霍爾芬多',
-    desc: '霍爾芬多分院代表的是忠誠與榮譽，以忠實守護他人與誓言為信條，這個分院的學生往往來自那些有著強烈責任感的家族，無論是人類、精靈還是矮人，對於他們來說，忠誠不僅僅是一種品德，更是一種力量，分院的座右銘是：“守護不僅是使命，更是信仰”。霍爾芬多分院的校徽是一隻展翅的雄鷹，象徵著勇氣和無畏的守護精神。',
+   desc: `霍爾芬多分院代表的是忠誠與榮譽，以守護他人與誓言為信條。這個分院的學生往往來自具有強烈責任感的家族——無論是人類、精靈或矮人，對他們而言，忠誠不僅是一種品德，更是一種力量。<br><br>
+分院的座右銘是：「守護不僅是使命，更是信仰」。霍爾芬多的校徽是一隻展翅的雄鷹，象徵勇氣與無畏的守護精神。`,
+
     notes: '特色：勇氣、無畏、守護精神。',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FHolfindo.png?alt=media&token=d13e790b-1dd8-47ad-bfdc-46233b12da78',
     alt: '霍爾芬多 學院徽章'
     },
     hufflepuff: {
         title: '赫文帕夫',
-    desc: '赫文帕夫分院代表的是和諧與平衡，學院中最為和平與內斂的一個分院，這個分院的學生通常具有優雅的氣質與溫和的性格，他們更重視魔法對自然界與他人情感的影響，而不是單純的力量，赫文帕夫的校徽是一隻鹿，象徵著潔淨與和諧的力量。',
+    desc: `赫文帕夫分院代表和諧與平衡，是學院中最為和平與內斂的分院。學生多半擁有優雅的氣質與溫和的性格，崇尚安寧與心靈的純淨。<br><br>
+他們重視魔法對自然與情感的影響，而非追求力量本身。赫文帕夫的校徽是一隻鹿，象徵潔淨、溫柔與和諧之力。`,
+
     notes: '特色：潔淨、和諧。',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FHuwenpaf.png?alt=media&token=54556e65-5bf8-4c66-beab-259955e6e785',
     alt: '赫文帕夫 學院徽章'
     },
     ravenclaw: {
         title: '特威克羅',
-    desc: '特威克羅分院代表的是智慧與知識，學院中最為神秘與學術性的一個分院，這個分院的學生熱衷於探索魔法的理論與奧秘，他們相信，知識是解決世界所有問題的關鍵，他們的目標是推動魔法科學的邊界，並發掘那些被隱藏於世界之間的奧秘，特威克勞的校徽是一隻睿智的貓頭鷹，象徵著對知識的無窮渴求與探索的無畏精神。',
+   desc: `特威克羅分院代表智慧與知識，是學院中最神秘且最重視學術研究的分院。學生熱衷於探索魔法理論與世界真理，相信知識是解開萬物之鎖的唯一鑰匙。<br><br>
+他們致力於推進魔法科學的邊界，揭露隱藏於世界縫隙間的奧秘。特威克羅的校徽是一隻貓頭鷹，象徵對知識的無盡渴望與探索未知的勇氣。`,
+
     notes: '特色：智慧、知識、創造力。',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2FTwicklaw.png?alt=media&token=272163f0-24fd-4aee-86c0-f2dd0dc6202b',
     alt: '特威克羅 學院徽章'
     },
     slytherin: {
         title: '坎普費爾',
-    desc: '坎普費爾分院代表的是力量和權威，強調的是身體與心靈的鍛煉，這個分院的學生不僅擅長攻擊魔法與戰鬥技巧，更追求自我強化與對於力量的無限渴望，他們相信，唯有經歷過無數的挑戰與磨難，才能真正掌握強大的力量。坎普費爾分院的校徽是一條青蛇，象徵著強大的力量與狡詐之美',
+   desc: `坎普費爾分院代表力量與權威，主張身體與心靈皆必須歷經鍛鍊與試煉。這個分院的學生擅長攻擊魔法與戰鬥技巧，並追求自我強化與無盡的力量。<br><br>
+他們相信唯有經歷無數挑戰與磨難，才能真正掌握強大的力量。坎普費爾分院的校徽是一條青蛇，象徵強勢的力量、意志與狡詐之美。`,
+
     notes: '特色：野心、狡猾、領導力。',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/badge%2Fkampfer.png?alt=media&token=bc24f915-c784-45fb-ba84-e9a64f24fd57',
     alt: '坎普費爾 學院徽章'
@@ -582,25 +591,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
   });
 
-    function showAcademy(key) {
-    const a = academies[key];
-    if (!a) {
-        academyContent.innerHTML = '<p style="color:#d6c98b;">尚未設定此學院內容。</p>';
+   function showAcademy(key) {
+  const a = academies[key];
+  if (!a) {
+    academyContent.innerHTML = '<p style="color:#d6c98b;">尚未設定此學院內容。</p>';
     return;
-    }
-    academyContent.innerHTML = `
-    <div class="academy-card" role="region" aria-label="${escapeHtml(a.title)}">
-        <div class="academy-text">
-            <h2>${escapeHtml(a.title)}</h2>
-            <p>${escapeHtml(a.desc)}</p>
-            <p><strong>${escapeHtml(a.notes)}</strong></p>
-        </div>
-        <div class="academy-image">
-            <img src="${escapeHtml(a.img)}" alt="${escapeHtml(a.alt)}">
-        </div>
-    </div>
-    `;
   }
+  academyContent.innerHTML = `
+    <div class="academy-card" role="region" aria-label="${escapeHtml(a.title)}">
+      <div class="academy-text">
+        <h2>${escapeHtml(a.title)}</h2>
+        <p class="academy-desc"></p>
+        <p><strong>${escapeHtml(a.notes)}</strong></p>
+      </div>
+      <div class="academy-image">
+        <img src="${escapeHtml(a.img)}" alt="${escapeHtml(a.alt)}">
+      </div>
+    </div>
+  `;
+  
+  academyContent.querySelector('.academy-desc').innerHTML = a.desc;
+}
+
 
     function escapeHtml(str) {
     if (!str) return '';
@@ -892,21 +904,27 @@ const eras = {
   },
   dark: {
     title: '黑暗紀元',
-    desc: '地獄之門被打開，惡魔族降臨大地。魔王薩爾格洛斯率領魔族大軍席捲世界，精靈森林化為焦土，矮人城塞被烈焰吞噬，龍族幾近滅絕，野獸族被迫流亡荒原。長達五百年的戰火將文明推向崩潰，世界陷入永夜與絕望之中。',
+    desc: `地獄之門被打開，惡魔族降臨大地。魔王薩爾格洛斯率領魔族大軍席捲世界，精靈森林化為焦土，矮人城塞被烈焰吞噬，龍族幾近滅絕，而獸裔被迫流亡荒原。<br><br>
+長達五百年的戰火將文明推向崩潰，世界陷入永夜與絕望之中。`,
+
     notes: '禁忌、魔族、戰爭。',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%BB%91%E6%9A%97.png?alt=media&token=0625625f-4251-49b6-89ec-e560b3b1ca1d',
     alt: '黑暗紀元 圖像'
   },
   darkend: {
     title: '黑暗紀元的浩劫',
-    desc: ' 在黑暗紀元4497年， 創世三主神降臨凡界，聯合最後的人類、精靈與矮人聯軍，於「靈魂荒原」展開最終決戰。魔王的咆哮吞噬天際，而神之光撕裂了永夜。 最終，薩爾格洛斯被擊殺，靈魂四分五裂，封印於四件聖物之中。此戰後，大陸陷入漫長的沉眠期。 種族凋零，知識失傳，唯有學院的火焰仍微弱閃爍。',
+    desc: `在黑暗紀元4497年，創世三主神降臨凡界，聯合最後的人類、精靈與矮人聯軍，於「靈魂荒原」展開最終決戰。魔王的咆哮吞噬天際，而神之光撕裂了永夜。<br><br>
+最終，薩爾格洛斯被擊殺，靈魂四分五裂，封印於四件聖物之中。此戰後，大陸陷入漫長的沉眠期——種族凋零、知識失傳，唯有學院的火焰仍微弱閃爍。`,
+
     notes: '戰爭結束、封印、勝利。',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%BB%91%E6%9A%97%E6%9C%AB.png?alt=media&token=64f8cfc8-4331-407c-baf5-e887c735577e',
     alt: '黑暗紀元 圖像'
   },
   rebirth: {
     title: '新生紀元',
-    desc: ' 三主神修復世界秩序，封印地獄之門。倖存的種族開始重建家園，麥格華茲魔法學院在廢墟中再度點燃知識之火。 新生紀元象徵著和平與重生，但陰影仍潛伏於大地的縫隙之間—— 魔族殘黨、純血家族與禁忌魔法的低語， 正悄然醞釀新的風暴。',
+  desc: `三主神修復世界秩序、封印地獄之門；倖存的種族開始重建家園，而麥格華茲魔法學院也在廢墟之上，再度點燃知識之火。<br><br>
+新生紀元象徵和平與重生，但陰影仍潛伏於大地的縫隙之間——魔族殘黨、純血家族與禁忌魔法的低語，正悄然醞釀新的風暴。`,
+
     notes: '重建、聯盟、新生。',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E6%96%B0%E7%94%9F.png?alt=media&token=4dcb19f1-10e0-4d9c-b729-dc2778f74426',
     alt: '新生紀元 圖像'
@@ -1017,14 +1035,18 @@ function renderGod(key) {
 const religionData = {
   astrion: {
     title: '曙光聖環教',
-    desc: '信奉光明主神。 主張「魔力即神恩，光明即秩序」。 信徒以魔法祈禱維持和平與救贖。 教團設有審光院與聖環騎士團，負責審查黑魔法與異端。「唯有被光照亮的知識，才值得傳承。」',
+    desc: `信奉光明主神。主張「魔力即神恩，光明即秩序」。信徒以魔法祈禱維持和平與救贖。教團設有審光院與聖環騎士團，負責審查黑魔法與異端。<br><br>
+「唯有被光照亮的知識，才值得傳承。」`,
+
     domain: '秩序、誓約、循環',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E5%B1%AC%E5%85%89.png?alt=media&token=6a550949-8630-47d2-a360-1aeaec2a4d56',
     alt: '聖光灑落的大地'
   },
   noctalis: {
-    title: '灰月秘儀會',
-    desc: '信奉黑暗主神。 主張「黑暗是光的回聲，死亡是生命的延續」。 儀式於月蝕之夜舉行，以血墨繪製月之符文，召喚亡靈對話。 其信徒多為靈魂法師與夜行者。「光能照亮世界，但唯有影子，能讓世界有形。」',
+    title: '灰月秘儀會（',
+    desc: `信奉黑暗主神。主張「黑暗是光的回聲，死亡是生命的延續」。儀式於月蝕之夜舉行，以血墨繪製月之符文，召喚亡靈對話。其信徒多為靈魂法師與夜行者。<br><br>
+「光能照亮世界，但唯有影子能讓世界有形。」`,
+
     domain: '夢境、影、憐憫',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E7%81%B0%E9%BB%91.png?alt=media&token=a80b9442-1569-4be7-9c4b-ca1187cbc437',
     alt: '星空下的靜夜'
@@ -1070,35 +1092,51 @@ function renderReligion(godKey) {
 const racesData = {
   human: {
     title: '人類（Human）',
-    desc: '人類被視為最具變化性的種族，既能墮落也能超越。他們擁有強烈的好奇心與適應力，文明遍布世界各地他們不像精靈擁有永恆的壽命，也不像矮人擁有天生的力量，但正因如此，人類的生命如火般短促卻璀璨。人類歷史是戰爭與重建的循環。他們建立王國、締結聯盟，又因權力與信仰而互相爭戰。',
+   desc: `人類被視為最具變化性的種族，既能墮落也能超越。他們擁有強烈的好奇心與適應力，文明遍布世界各地；不像精靈擁有永恆的壽命，也不像矮人擁有天生的力量。<br><br>
+但正因如此，人類的生命如火般短促卻璀璨。人類歷史是一場場戰爭與重建的循環——建立王國、締結聯盟，也因權力與信仰而彼此爭戰。`,
+
     trait: '適應力、野心、多元文化',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E4%BA%BA%E9%A1%9E.png?alt=media&token=22c2ea7c-16cf-4d77-8bac-22a98d303ec7',
     alt: '人類城市'
   },
   elf: {
     title: '精靈（Elf）',
-    desc: '精靈，乃星之後裔、光之子民。他們自遠古的「黎明之森」誕生，以優雅的容貌、長久的壽命與天賦魔力聞名於世。精靈之血被視為世界樹的延續，每一滴都流淌著自然與魔力的純粹共鳴。他們居於遠離凡塵的森域之都，以詩、魔法與禮制構築文明。精靈族群高度重視血統純淨與靈魂傳承。',
+  desc: `精靈，乃星之後裔、光之子民。他們自遠古的「黎明之森」誕生，以優雅的容貌、長久的壽命與天賦魔力聞名於世。<br><br>
+精靈之血被視為世界樹的延續，每一滴都流淌著自然與魔力的純粹共鳴。他們居於遠離凡塵的森域之都，以詩、魔法與禮制構築文明。精靈族群高度重視血統純淨與靈魂傳承。<br><br>
+古代精靈語言：ᛖᛚᚨᚱ ᛋᛁᛚᚱᚨ ᚦᚨᛚᚨᚾᛁᚱ ᚹᚨᛖᛚ ᛗᛁᚱ ᛋᛁᚱᚨᛖ`,
+
     trait: '魔力親和、優雅、長壽',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2Felf.png?alt=media&token=efe88dd3-831d-4379-9891-e2db7ecc8f39',
     alt: '精靈森林'
   },
   dwarf: {
     title: '矮人（Dwarf）',
-    desc: '鑄造與堡壘的宗師，火與土的子嗣。他們是符文與鍛造的守護者，擁有無與倫比的耐性與手工技藝。矮人誕生於大地最深處的火脈之中，傳說最初由地母神以岩石與火焰所塑，賦予他們堅韌的軀體與永不熄滅的創造之心。他們的血液流淌著熔金與鐵砂，心臟如同熔爐般炙熱。他們的城市建於山腹之中，層層巨廊、火光長明，每一根石柱與鐵門上都刻滿古老符文，象徵不滅的榮耀與家族血脈。',
+ desc: `鑄造與堡壘的宗師，火與土的子嗣。他們是符文與鍛造的守護者，擁有無與倫比的耐性與工藝天賦。<br><br>
+矮人誕生於大地最深處的火脈之中，城市建於山腹，符文刻滿石柱，烈焰終年不熄。他們以榮譽、家族與契約為生命根基。<br><br>
+遠古矮人語：Dûrm khaldun grok thar.`,
+
+
     trait: '鍛造、韌性、工藝文明',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E7%9F%AE%E4%BA%BA.png?alt=media&token=365ae3bd-ad79-44d4-8736-916346c019f3',
     alt: '矮人堡壘'
   },
   orc: {
     title: '魔族（Demon）',
-    desc: '黑暗意志、原初詛咒與混沌能量凝聚而成的高等種族。他們不以生命繁衍，而以靈魂吞噬、契印與腐化儀式延續血脈。他們的身軀由魔能構成，可化為人形、獸形，或煙霧與影焰。每一位魔族皆以「真名（True Name）」為核心，真名即靈魂之印，失去它便形體崩解、意志消散。魔族的「血脈」並非由繁衍而生，而是經由契印與吞噬。他們能以儀式吸收他者靈魂，將其本質融入自身。',
+   desc: `黑暗意志、原初詛咒與混沌能量所凝聚的高等種族。他們並不以生命繁衍，而以靈魂吞噬、契印與腐化儀式延續血脈，每個魔族的軀體皆由魔能構成，可化為人形、獸形，或煙霧與影焰。<br><br>
+每一位魔族皆以「真名（True Name）」為核心——真名即靈魂之印，失去它便形體崩解、意志消散。魔族的血脈並非由繁衍延續，而是經由契印與吞噬儀式，他們能以魔法奪取他者靈魂，將其本質融入自身，使力量代代積累並永無止境。<br><br>
+遠古魔族語言：Azrak morduun ska’ra thu’kai.`,
+
     trait: '力量、血統、階級',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%AD%94%E6%97%8F.png?alt=media&token=ed7e1daa-f512-47f7-8415-a177405d283c',
     alt: '半獸族部落'
   },
   beastkin: {
     title: '獸裔（Beastkin）',
-    desc: '融合自然靈與獸之血的原生種。他們以強大的感知與身體能力著稱，並擁有「原始魔法（Primal Magic）」的直覺天賦。傳說他們是自然之靈與遠古巨獸的後裔，血液中流淌著純粹的生命力與靈脈共鳴。對獸裔而言，世界並非冷漠的土地，而是一個會呼吸、會傾聽的整體。他們與自然共生，不崇拜神，而崇敬「原始意志（Primal Will）」那股連結風、火、水、獸與生命的古老力量。',
+   desc: `融合自然靈與獸之血的原生種。他們以強大的感知、本能與身體能力著稱，並擁有「原始魔法（Primal Magic）」的直覺天賦。傳說他們是自然之靈與遠古巨獸的後裔，血液中流淌著純粹的生命力與靈脈共鳴。<br><br>
+對獸裔而言，世界並非冷漠的土地，而是一個會呼吸、會傾聽的整體。他們與自然共生，不崇拜神，而崇敬「原始意志（Primal Will）」——那股連結風、火、水、獸與生命的古老力量。<br><br>
+古代獸裔語言：⟁ ⌖ ⌯ 𐌗 𐌚 𐌢 𐌋 ⌾ 𐌝`,
+
+
     trait: '敏捷、本能、自然共鳴',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%87%8E%E7%8D%B8.png?alt=media&token=d142c7a5-7dbb-48d0-8a39-d1fbca2e8990',
     alt: '獸裔領地'
@@ -1516,7 +1554,8 @@ staff: {
       
       divisionImg.src = detail.img || '';
       divisionImg.alt = `${displayName} 詳細圖片`;
-      divisionText.textContent = detail.text || '';
+      divisionText.innerHTML = detail.text || '';
+
 
       
       if (hasRenderTwitch) {
@@ -1692,7 +1731,7 @@ teacherCards.forEach(card => {
     // 顯示
     divisionImg.src = detail.img || '';
     divisionImg.alt = `${detail.name || key} 詳細圖片`;
-    divisionText.textContent = detail.text || '';
+    divisionText.innerHTML = detail.text || '';
 
     if (typeof window.renderTwitchButton === 'function') {
       window.renderTwitchButton(detail.twitch);
@@ -1965,6 +2004,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   */
 })();
-
 
 
