@@ -1998,11 +1998,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!isMobile()) return;
     const linkInDropdown = e.target.closest('.menu-has-dropdown .dropdown a, .submenu-has-dropdown .dropdown a');
     if (linkInDropdown) {
-      // 預設行為是會跳轉或切換內容；若要保持展開可取消這段
       // mainNav.classList.remove('open'); closeAll();
     }
   });
   */
 })();
+
 
 
