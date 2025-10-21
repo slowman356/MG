@@ -1653,7 +1653,7 @@ teacherCards.forEach(card => {
     const rawGroup = (card.getAttribute('data-group') || '').toLowerCase();
     const group = rawGroup === 'club' ? 'mentor' : rawGroup;
 
-   ）
+   
     const key = (card.getAttribute('data-teacher') || '').trim();
     const bucket = teacherData[group] || {};
     const detail = bucket[key];
@@ -1692,7 +1692,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (ddToggle && ddMenu) {
     
     ddToggle.addEventListener('click', (e) => {
-      
+     
       if (window.matchMedia('(max-width: 800px)').matches) {
         e.preventDefault();
         e.stopPropagation();
@@ -1702,7 +1702,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    ）
+    
     document.addEventListener('click', (e) => {
       if (!mainNav.classList.contains('open')) return; // 只在手機開單時作用
       if (!ddWrap.contains(e.target)) {
@@ -1711,7 +1711,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    
+    // Esc 關閉（手機）
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         ddToggle.setAttribute('aria-expanded', 'false');
@@ -1745,7 +1745,7 @@ document.addEventListener('DOMContentLoaded', () => {
     else openDD();
   }
 
-  
+  // 點按鈕開/關
   toggle.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -1755,10 +1755,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   panel.addEventListener('click', (e) => e.stopPropagation());
 
- 
+  
   document.addEventListener('click', () => closeDD());
 
- 
+  // ESC 關閉
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDD();
   });
@@ -1774,7 +1774,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const buttons = Array.from(filterBar.querySelectorAll('.filter-btn'));
   const cards   = Array.from(document.querySelectorAll('.teacher-card'));
 
-  
+ 
   function applyFilter(filter) {
     
     buttons.forEach(btn => {
@@ -1784,7 +1784,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.tabIndex = isActive ? 0 : -1;
     });
 
-  
+    // 顯示 / 隱藏卡片
     cards.forEach(card => {
       const raw = (card.dataset.group || '').toLowerCase().trim();
       const groups = raw.split(/[\s,]+/).filter(Boolean);
@@ -1793,12 +1793,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
- 
+  
   buttons.forEach(btn => {
     btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
   });
 
-
+  
   filterBar.addEventListener('keydown', (e) => {
     const currentIndex = buttons.findIndex(b => b.classList.contains('active'));
     if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
@@ -1815,7 +1815,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
- 
+  // 預設
   const initial = (buttons.find(b => b.classList.contains('active')) || buttons[0])?.dataset.filter || 'leader';
   applyFilter(initial);
 });
@@ -1829,7 +1829,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const isMobile = () => window.matchMedia('(max-width: 800px)').matches;
 
-  /** ） */
+  /**  */
   function closeAll(container = mainMenu) {
     container.querySelectorAll('.open').forEach(li => li.classList.remove('open'));
     container.querySelectorAll('.dropdown-toggle[aria-expanded="true"]').forEach(btn => {
@@ -1837,7 +1837,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /** ） */
+  /** 關閉指定  */
   function closeSiblings(li) {
     const parent = li.parentElement;
     if (!parent) return;
@@ -1860,29 +1860,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===）=== */
+  /* === 手機）=== */
   mainMenu.addEventListener('click', (e) => {
     const btn = e.target.closest('.dropdown-toggle');
     if (!btn) return;
 
     const li = btn.closest('li');
-  
+    
     if (isMobile()) {
       e.preventDefault();
       const willOpen = !li.classList.contains('open');
-    
+     
       closeSiblings(li);
       li.classList.toggle('open', willOpen);
       btn.setAttribute('aria-expanded', String(willOpen));
     }
   });
 
-  /* === === */
+  /* ===  === */
   mainMenu.addEventListener('keydown', (e) => {
     const onToggle = e.target.closest('.dropdown-toggle');
     if (!onToggle) {
       if (e.key === 'Escape') {
-        // 按 Esc 關閉全部
+       
         closeAll();
         if (isMobile()) mainNav.classList.remove('open');
       }
@@ -1892,7 +1892,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       const li = onToggle.closest('li');
-     
+    
       const willOpen = !li.classList.contains('open');
       closeSiblings(li);
       li.classList.toggle('open', willOpen);
@@ -1905,7 +1905,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ===  === */
+
   document.addEventListener('click', (e) => {
     if (!mainNav.contains(e.target)) {
       closeAll();
@@ -1916,12 +1916,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ===  === */
+
   let lastIsMobile = isMobile();
   window.addEventListener('resize', () => {
     const nowIsMobile = isMobile();
     if (nowIsMobile !== lastIsMobile) {
-
+    
       mainNav.classList.remove('open');
       navToggle?.setAttribute('aria-expanded', 'false');
       closeAll();
@@ -1929,17 +1929,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* === ）===
+  /* === ===
   mainMenu.addEventListener('click', (e) => {
     if (!isMobile()) return;
     const linkInDropdown = e.target.closest('.menu-has-dropdown .dropdown a, .submenu-has-dropdown .dropdown a');
     if (linkInDropdown) {
-    
+      // 預設行為是會跳轉或切換內容；若要保持展開可取消這段
       // mainNav.classList.remove('open'); closeAll();
     }
   });
   */
 })();
-
 
 
