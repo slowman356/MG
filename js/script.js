@@ -1023,7 +1023,7 @@ const religionData = {
     alt: '聖光灑落的大地'
   },
   noctalis: {
-    title: '灰月秘儀會（',
+    title: '灰月秘儀會',
     desc: '信奉黑暗主神。 主張「黑暗是光的回聲，死亡是生命的延續」。 儀式於月蝕之夜舉行，以血墨繪製月之符文，召喚亡靈對話。 其信徒多為靈魂法師與夜行者。「光能照亮世界，但唯有影子，能讓世界有形。」',
     domain: '夢境、影、憐憫',
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E7%81%B0%E9%BB%91.png?alt=media&token=a80b9442-1569-4be7-9c4b-ca1187cbc437',
@@ -1965,5 +1965,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   */
 })();
+
 
 
