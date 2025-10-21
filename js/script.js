@@ -1043,7 +1043,7 @@ const religionData = {
     alt: '聖光灑落的大地'
   },
   noctalis: {
-    title: '灰月秘儀會',
+    title: '灰月秘儀會（',
     desc: `信奉黑暗主神。主張「黑暗是光的回聲，死亡是生命的延續」。儀式於月蝕之夜舉行，以血墨繪製月之符文，召喚亡靈對話。其信徒多為靈魂法師與夜行者。<br><br>
 「光能照亮世界，但唯有影子能讓世界有形。」`,
 
@@ -1323,6 +1323,8 @@ function renderRace(rKey) {
 【年齡】28歲
 【個性】表面沉靜、禮貌，真誠傾聽
 【能力】魔藥學
+【扮演者】七七
+
     `,
     twitch: 'https://www.twitch.tv/chichi5118'
   }
@@ -1374,7 +1376,7 @@ staff: {
 【職位】餐廳
 【個性】傲嬌又認真，對料理與植物都極度講究，嘴硬但心軟。
 【能力】詛咒的黑暗魔法。
-【扮演者】咬耳多
+【扮演者】咬耳朵
 `,
     twitch: 'https://www.twitch.tv/medic'
   },
@@ -1442,6 +1444,7 @@ staff: {
 【職位】霍爾芬多學院主任
 【宗旨】我是霍爾芬多分院的主任。忠誠是力量，榮譽是信仰。守護不是義務，而是誓言為家園、為夥伴、為世界的安寧。我們如雄鷹展翼，守望天空，永不退卻。
 【擅長】防禦與騎士魔法
+【扮演者】巴哥
 `,
     twitch: 'https://www.twitch.tv/medic'
   },
@@ -1450,8 +1453,9 @@ staff: {
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FDavid.png?alt=media&token=231081e4-6cce-4727-adfc-cab79a28a22e',
     text: `
 【角色】大衛．羅曼
-【職位】斯卡瑪林班主任
-【宗旨】我是斯卡瑪林分院的主任。力量，是意志與磨練的結晶。唯有讓身體與心靈都承受試煉，力量才會回應並臣服於你。正如我們的徽章青蛇，沉著、致命、無懼挑戰。我們不逃避痛苦，我們征服它。
+【職位】坎普費爾班主任
+【宗旨】我是坎普費爾分院的主任。力量，是意志與磨練的結晶。唯有讓身體與心靈都承受試煉，力量才會回應並臣服於你。正如我們的徽章青蛇，沉著、致命、無懼挑戰。我們不逃避痛苦，我們征服它。
+【扮演者】早八都有到
 `,
     twitch: ''
   },
@@ -1462,6 +1466,7 @@ staff: {
 【角色】優莉安娜・貝娜
 【職位】特威克羅學院主任
 【宗旨】我是特威克羅分院的主任。我們以智慧為刃、以知識為燈，追尋深藏於世界背後的真理。世人畏懼未知，而我們選擇直視並解讀它。只要答案仍被遮蔽，我們的探索便不會停止。
+【扮演者】-U-U-
 `,
     twitch: ''
   },
@@ -1472,6 +1477,8 @@ staff: {
 【角色】西追・普萊特
 【職位】赫文帕夫學院主任
 【宗旨】我是赫文帕夫分院的主任。和諧是力量，平衡是道路。魔法能療癒世界，如蓮綻放，以溫柔止息混亂。
+【扮演者】緩而
+
 `,
     twitch: 'https://www.twitch.tv/cheese_prime_ham'
   }
@@ -2040,17 +2047,17 @@ document.addEventListener('DOMContentLoaded', () => {
     else openNav();
   });
 
-  
+  // 手機下拉：只在手機寬度啟用點擊展開
   mainMenu.addEventListener('click', (e) => {
     const btn = e.target.closest('.dropdown-toggle');
     if (!btn) return;
-    if (!isMobile()) return; 
+    if (!isMobile()) return; // 桌機交給 CSS :hover or 你的桌機邏輯
 
     e.preventDefault();
     const li = btn.closest('li');
     const willOpen = !li.classList.contains('open');
 
-   
+    // 關閉兄弟節點
     const parent = li.parentElement;
     parent.querySelectorAll(':scope > li.open').forEach(sib => sib.classList.remove('open'));
     parent.querySelectorAll(':scope > li .dropdown-toggle[aria-expanded="true"]').forEach(b => {
@@ -2061,18 +2068,18 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('aria-expanded', String(willOpen));
   });
 
-  
+  // 點外面關閉（僅手機時）
   document.addEventListener('click', (e) => {
     if (!isMobile()) return;
     if (!mainNav.contains(e.target)) closeNav();
   });
 
-  
+  // ESC 關閉
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeNav();
   });
 
- 
+  // 尺寸切換重置
   let last = isMobile();
   window.addEventListener('resize', () => {
     const now = isMobile();
@@ -2083,8 +2090,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-
-
-
-
-
+// === Section 切換 ===
+document.querySelectorAll('[data-section]').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const sec = btn.dataset.section;
+    if (sec) {
+      e.preventDefault();
+      showSection(sec);
+    }
+  });
+});
