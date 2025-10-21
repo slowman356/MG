@@ -2040,17 +2040,17 @@ document.addEventListener('DOMContentLoaded', () => {
     else openNav();
   });
 
-  // 手機下拉：只在手機寬度啟用點擊展開
+  
   mainMenu.addEventListener('click', (e) => {
     const btn = e.target.closest('.dropdown-toggle');
     if (!btn) return;
-    if (!isMobile()) return; // 桌機交給 CSS :hover or 你的桌機邏輯
+    if (!isMobile()) return; 
 
     e.preventDefault();
     const li = btn.closest('li');
     const willOpen = !li.classList.contains('open');
 
-    // 關閉兄弟節點
+   
     const parent = li.parentElement;
     parent.querySelectorAll(':scope > li.open').forEach(sib => sib.classList.remove('open'));
     parent.querySelectorAll(':scope > li .dropdown-toggle[aria-expanded="true"]').forEach(b => {
@@ -2061,18 +2061,18 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('aria-expanded', String(willOpen));
   });
 
-  // 點外面關閉（僅手機時）
+  
   document.addEventListener('click', (e) => {
     if (!isMobile()) return;
     if (!mainNav.contains(e.target)) closeNav();
   });
 
-  // ESC 關閉
+  
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeNav();
   });
 
-  // 尺寸切換重置
+ 
   let last = isMobile();
   window.addEventListener('resize', () => {
     const now = isMobile();
@@ -2082,6 +2082,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 })();
+
 
 
 
