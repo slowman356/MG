@@ -398,9 +398,9 @@
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20M.png?alt=media&token=0ff85749-aca1-4460-b989-d3757417ef38',
     text: `
 【未登記學生資料】
-【扮演者】天瀨
+【扮演者】
 `,
-	twitch: 'https://www.twitch.tv/ranamase' 
+	twitch: '' 
     },
     '學生12': {
         img: 'https://via.placeholder.com/150?text=特威克羅學生12',
@@ -867,6 +867,278 @@ document.addEventListener('DOMContentLoaded', function () {
    
 });
 
+
+const eras = {
+  primordial: {
+    title: '太初紀元',
+    desc: ' 世界初開，七大元素自虛空誕生。 獸人首先踏上大地，成為自然原力的化身。 山川開始流動，風與火首次交織，艾斯瑞達迎來最原始的生命之歌。',
+    notes: '創世、古誓。',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E5%A4%AA%E5%88%9D%E7%B4%80%E5%85%83_768x768.png?alt=media&token=b91c713b-643b-40f1-8320-ef3ed6f43af5',
+    alt: '太初紀元 圖像'
+  },
+  ironfire: {
+    title: '鐵與火之紀元',
+    desc: '精靈、矮人與龍族的黃金時代。 山嶺中響起工坊的鐵擊聲，而天空之上，龍族以烈焰劃出古代榮光的軌跡。 這是一個力量與技藝共存的年代——被稱為「鍛造之世」。',
+    notes: '鍛造、城塞、盟約。',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%90%B5%E8%88%87%E7%81%AB.png?alt=media&token=73cd4b2d-c6c3-40d3-b3e1-b3470c0fc7d4',
+    alt: '鐵與火之紀元 圖像'
+  },
+  sea_man: {
+    title: '海與人之紀元',
+    desc: '人類崛起的時代。他們乘著風帆穿越海洋，建立王國與信仰，並創立第一批魔法學院，使知識成為力量的新象徵。宗教與學術並行，世界的秩序開始以「理性」而非「血統」為核心重構。',
+    notes: '航海、星圖、學院。',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E6%B5%B7%E8%88%87%E4%BA%BA.png?alt=media&token=7b662b24-6fd8-4bdf-a3f4-3d592ab39138',
+    alt: '海與人之紀元 圖像'
+  },
+  dark: {
+    title: '黑暗紀元',
+    desc: '地獄之門被打開，惡魔族降臨大地。魔王薩爾格洛斯率領魔族大軍席捲世界，精靈森林化為焦土，矮人城塞被烈焰吞噬，龍族幾近滅絕，野獸族被迫流亡荒原。長達五百年的戰火將文明推向崩潰，世界陷入永夜與絕望之中。',
+    notes: '禁忌、魔族、戰爭。',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%BB%91%E6%9A%97.png?alt=media&token=0625625f-4251-49b6-89ec-e560b3b1ca1d',
+    alt: '黑暗紀元 圖像'
+  },
+  darkend: {
+    title: '黑暗紀元的浩劫',
+    desc: ' 在黑暗紀元4497年， 創世三主神降臨凡界，聯合最後的人類、精靈與矮人聯軍，於「靈魂荒原」展開最終決戰。魔王的咆哮吞噬天際，而神之光撕裂了永夜。 最終，薩爾格洛斯被擊殺，靈魂四分五裂，封印於四件聖物之中。此戰後，大陸陷入漫長的沉眠期。 種族凋零，知識失傳，唯有學院的火焰仍微弱閃爍。',
+    notes: '戰爭結束、封印、勝利。',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%BB%91%E6%9A%97%E6%9C%AB.png?alt=media&token=64f8cfc8-4331-407c-baf5-e887c735577e',
+    alt: '黑暗紀元 圖像'
+  },
+  rebirth: {
+    title: '新生紀元',
+    desc: ' 三主神修復世界秩序，封印地獄之門。倖存的種族開始重建家園，麥格華茲魔法學院在廢墟中再度點燃知識之火。 新生紀元象徵著和平與重生，但陰影仍潛伏於大地的縫隙之間—— 魔族殘黨、純血家族與禁忌魔法的低語， 正悄然醞釀新的風暴。',
+    notes: '重建、聯盟、新生。',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E6%96%B0%E7%94%9F.png?alt=media&token=4dcb19f1-10e0-4d9c-b729-dc2778f74426',
+    alt: '新生紀元 圖像'
+  }
+};
+
+
+const eraSelector = document.getElementById('eraSelector');
+const eraContent  = document.getElementById('eraContent');
+
+function renderEra(key) {
+  const e = eras[key];
+  if (!e) return;
+
+  eraContent.innerHTML = `
+    <div class="map-card">
+      <div class="map-text">
+        <h2>${e.title}</h2>
+        <p>${e.desc}</p>
+        <p><strong>重點：</strong>${e.notes}</p>
+      </div>
+      <div class="map-image">
+        <img src="${e.img}" alt="${e.alt}">
+      </div>
+    </div>
+  `;
+}
+
+
+if (eraSelector) {
+  eraSelector.addEventListener('click', (ev) => {
+    const btn = ev.target.closest('button[data-era]');
+    if (!btn) return;
+    [...eraSelector.querySelectorAll('button')].forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderEra(btn.dataset.era);
+  });
+}
+
+
+renderEra('primordial');
+
+const gods = {
+  astrion: {
+    title: '光明主神・奧爾菲恩（Orpheon）',
+    desc: ' 祂的光明是萬物的起始，賜予靈魂與希望。祂曾以神火燃盡魔王的肉身，使大地重獲新生。 信徒多為聖職者與治癒系魔導師。',
+    domains: '生命、重生',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2FOrpheon.png?alt=media&token=02997bd5-1f77-4226-935f-07662463fd8c',
+    alt: '光照群山的湖面'
+  },
+  noctalis: {
+    title: '黑暗主神・納斐爾（Naphiel）',
+    desc: '祂是靈魂歸途的守望者，審視生者之罪與亡者之願。 在魔王死後，納斐爾將其靈魂粉碎，使其永不得輪迴。 祂的信仰象徵平衡，而非邪惡。',
+    domains: '死亡與審判',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2FNaphiel.png?alt=media&token=cbf9ad6e-6cc6-45ad-bb0d-df313a42c2e2',
+    alt: '星空與夜色'
+  },
+  aetherion: {
+    title: '時間之主・伊多斯（Idoth）',
+    desc: '祂是世界規律的織者，讓時間、命運與魔力流轉不息。 在終極之戰中，祂以時光鎖鏈封印魔族之門，使世界再次歸於穩定。所有關於魔法理論與智慧之書，皆以祂為源。',
+    domains: '秩序與循環',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2FIdoth.png?alt=media&token=6a409617-3c0b-40de-aa6b-f75f79aee17e',
+    alt: '金色晨光中的森林'
+  }
+};
+
+
+function renderGod(key) {
+  const data = gods[key];
+  if (!data) return;
+
+  const html = `
+    <div class="god-card">
+      <div class="god-text">
+        <h2>${data.title}</h2>
+        <p>${data.desc}</p>
+        <p><strong>領域：</strong>${data.domains}</p>
+      </div>
+      <div class="god-image">
+        <img src="${data.img}" alt="${data.alt}">
+      </div>
+    </div>
+  `;
+  document.getElementById('godContent').innerHTML = html;
+}
+
+
+(function setupGodUI(){
+  const selector = document.getElementById('godSelector');
+  if (!selector) return;
+
+  selector.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-god]');
+    if (!btn) return;
+
+  
+    selector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    renderGod(btn.dataset.god);
+  });
+
+  // 預設
+  renderGod('astrion');
+})();
+
+// ====== 宗教資料 ======
+const religionData = {
+  astrion: {
+    title: '曙光聖環教',
+    desc: '信奉光明主神。 主張「魔力即神恩，光明即秩序」。 信徒以魔法祈禱維持和平與救贖。 教團設有審光院與聖環騎士團，負責審查黑魔法與異端。「唯有被光照亮的知識，才值得傳承。」',
+    domain: '秩序、誓約、循環',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E5%B1%AC%E5%85%89.png?alt=media&token=6a550949-8630-47d2-a360-1aeaec2a4d56',
+    alt: '聖光灑落的大地'
+  },
+  noctalis: {
+    title: '灰月秘儀會（',
+    desc: '信奉黑暗主神。 主張「黑暗是光的回聲，死亡是生命的延續」。 儀式於月蝕之夜舉行，以血墨繪製月之符文，召喚亡靈對話。 其信徒多為靈魂法師與夜行者。「光能照亮世界，但唯有影子，能讓世界有形。」',
+    domain: '夢境、影、憐憫',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E7%81%B0%E9%BB%91.png?alt=media&token=a80b9442-1569-4be7-9c4b-ca1187cbc437',
+    alt: '星空下的靜夜'
+  }
+};
+
+
+function renderReligion(godKey) {
+  const g = religionData[godKey];
+  if (!g) return;
+  document.getElementById('religionContent').innerHTML = `
+    <div class="religion-card">
+      <div class="religion-text">
+        <h2>${g.title}</h2>
+        <p>${g.desc}</p>
+        <p><strong>領域：</strong>${g.domain}</p>
+      </div>
+      <div class="religion-image">
+        <img src="${g.img}" alt="${g.alt}">
+      </div>
+    </div>`;
+}
+
+
+(function setupReligionUI(){
+  const selector = document.getElementById('religionSelector');
+  if (!selector) return;
+
+  selector.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-god]');
+    if (!btn) return;
+
+    selector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    renderReligion(btn.dataset.god);
+  });
+
+
+  renderReligion('astrion');
+})();
+// ====== 種族資料 ======
+const racesData = {
+  human: {
+    title: '人類（Human）',
+    desc: '人類被視為最具變化性的種族，既能墮落也能超越。他們擁有強烈的好奇心與適應力，文明遍布世界各地他們不像精靈擁有永恆的壽命，也不像矮人擁有天生的力量，但正因如此，人類的生命如火般短促卻璀璨。人類歷史是戰爭與重建的循環。他們建立王國、締結聯盟，又因權力與信仰而互相爭戰。',
+    trait: '適應力、野心、多元文化',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E4%BA%BA%E9%A1%9E.png?alt=media&token=22c2ea7c-16cf-4d77-8bac-22a98d303ec7',
+    alt: '人類城市'
+  },
+  elf: {
+    title: '精靈（Elf）',
+    desc: '精靈，乃星之後裔、光之子民。他們自遠古的「黎明之森」誕生，以優雅的容貌、長久的壽命與天賦魔力聞名於世。精靈之血被視為世界樹的延續，每一滴都流淌著自然與魔力的純粹共鳴。他們居於遠離凡塵的森域之都，以詩、魔法與禮制構築文明。精靈族群高度重視血統純淨與靈魂傳承。',
+    trait: '魔力親和、優雅、長壽',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2Felf.png?alt=media&token=efe88dd3-831d-4379-9891-e2db7ecc8f39',
+    alt: '精靈森林'
+  },
+  dwarf: {
+    title: '矮人（Dwarf）',
+    desc: '鑄造與堡壘的宗師，火與土的子嗣。他們是符文與鍛造的守護者，擁有無與倫比的耐性與手工技藝。矮人誕生於大地最深處的火脈之中，傳說最初由地母神以岩石與火焰所塑，賦予他們堅韌的軀體與永不熄滅的創造之心。他們的血液流淌著熔金與鐵砂，心臟如同熔爐般炙熱。他們的城市建於山腹之中，層層巨廊、火光長明，每一根石柱與鐵門上都刻滿古老符文，象徵不滅的榮耀與家族血脈。',
+    trait: '鍛造、韌性、工藝文明',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E7%9F%AE%E4%BA%BA.png?alt=media&token=365ae3bd-ad79-44d4-8736-916346c019f3',
+    alt: '矮人堡壘'
+  },
+  orc: {
+    title: '魔族（Demon）',
+    desc: '黑暗意志、原初詛咒與混沌能量凝聚而成的高等種族。他們不以生命繁衍，而以靈魂吞噬、契印與腐化儀式延續血脈。他們的身軀由魔能構成，可化為人形、獸形，或煙霧與影焰。每一位魔族皆以「真名（True Name）」為核心，真名即靈魂之印，失去它便形體崩解、意志消散。魔族的「血脈」並非由繁衍而生，而是經由契印與吞噬。他們能以儀式吸收他者靈魂，將其本質融入自身。',
+    trait: '力量、血統、階級',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%AD%94%E6%97%8F.png?alt=media&token=ed7e1daa-f512-47f7-8415-a177405d283c',
+    alt: '半獸族部落'
+  },
+  beastkin: {
+    title: '獸裔（Beastkin）',
+    desc: '融合自然靈與獸之血的原生種。他們以強大的感知與身體能力著稱，並擁有「原始魔法（Primal Magic）」的直覺天賦。傳說他們是自然之靈與遠古巨獸的後裔，血液中流淌著純粹的生命力與靈脈共鳴。對獸裔而言，世界並非冷漠的土地，而是一個會呼吸、會傾聽的整體。他們與自然共生，不崇拜神，而崇敬「原始意志（Primal Will）」那股連結風、火、水、獸與生命的古老力量。',
+    trait: '敏捷、本能、自然共鳴',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E9%87%8E%E7%8D%B8.png?alt=media&token=d142c7a5-7dbb-48d0-8a39-d1fbca2e8990',
+    alt: '獸裔領地'
+  }
+};
+
+
+function renderRace(rKey) {
+  const r = racesData[rKey];
+  if (!r) return;
+  document.getElementById('racesContent').innerHTML = `
+    <div class="races-card">
+      <div class="races-text">
+        <h2>${r.title}</h2>
+        <p>${r.desc}</p>
+        <p><strong>特性：</strong>${r.trait}</p>
+      </div>
+      <div class="races-image">
+        <img src="${r.img}" alt="${r.alt}">
+      </div>
+    </div>`;
+}
+
+
+(function setupRacesUI(){
+  const selector = document.getElementById('racesSelector');
+  if (!selector) return;
+
+  selector.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-race]');
+    if (!btn) return;
+    selector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderRace(btn.dataset.race);
+  });
+
+
+  renderRace('elf');
+})();
+
 /* ===========================
   
    =========================== */
@@ -874,7 +1146,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const teacherData = {
   professor: {
     seruphi: {
-      name: '賽露菲', // 可選：若要顯示用
+      name: '賽露菲', 
       img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FSeruphi%202.png?alt=media&token=788261e3-799a-425c-85c3-1473f5bd8feb',
       text: `
 【角色】賽露菲（Seruphi）
@@ -888,7 +1160,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       twitch: 'https://www.twitch.tv/nerukozwz'
     },
-      minasVeya: { // ✅ 改成英文 key
+	   minasVeya: { 
         name: '米納斯·薇婭',
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMinas%20Veya.png?alt=media&token=108659f6-c445-4eb6-97f6-95a1d900f7ff',
         text: `
@@ -899,15 +1171,57 @@ document.addEventListener('DOMContentLoaded', function () {
 【能力】變形學、化獸術、高階守護魔法  
 【扮演者】巴哥
         `,
-        twitch: 'https://www.twitch.tv/example2'
+        twitch: 'https://www.twitch.tv/pug_tw'
       },
-      '教授4': {
-        img: 'https://via.placeholder.com/320x200?text=%E6%95%99%E6%8E%884',
-        text: '教授4的詳細介紹：幻術、心靈學派與認知結界實務。',
-        twitch: 'https://www.twitch.tv/example4'
-      }
+      '大衛．羅曼': {
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FDavid.png?alt=media&token=231081e4-6cce-4727-adfc-cab79a28a22e',
+        text: `
+【角色】大衛．羅曼（David Roman）
+【種族】人類  
+【年齡】54歲
+【個性】冷靜、嚴肅、孤僻、極具自制力。  
+【能力】魔藥天賦  
+【扮演者】早八都有到
+        `,
+        twitch: 'https://www.twitch.tv/jack385196'
     },
-    // 導師（這裡將你原本 data-group="club" 的卡片視為導師類）
+	
+	 '西追 普萊特': {
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FPlight.png?alt=media&token=eb31ea1a-5099-45be-988b-6be36d2bd3e9',
+        text: `
+【角色】西追 普萊特 
+【種族】人類 
+【年齡】30歲 
+【個性】語氣柔和、待人謙遜，不喜歡爭辯，更不以權威壓人
+【能力】武鬥學、魔法治療學、防禦變形術 
+【扮演者】 緩而 
+  `,
+  twitch: 'https://www.twitch.tv/cheese_prime_ham'
+},
+	
+	
+
+  '優莉安娜・貝娜': {
+  name: '優莉安娜・貝娜',
+  img: '', 
+  text: `
+【角色】優莉安娜・貝娜（Yuliana Bena）
+【種族】四分之一薇拉血統的女巫  
+【年齡】  
+【個性】冷靜理智，內斂而溫柔，擅於觀察。  
+【能力】水系魔法、魔藥學、占卜學  
+【扮演者】-U-U-
+  `,
+  twitch: 'https://www.twitch.tv/loveuu_uu' 
+  }
+},
+
+
+
+
+
+
+
     mentor: {
       '社團老師': {
         img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FAiden%20Wesley.png?alt=media&token=dbfbdb57-e154-4880-a085-f0a7d49cc289',
@@ -949,23 +1263,36 @@ document.addEventListener('DOMContentLoaded', function () {
 `,
     twitch: ''
   },
-
-  '社團導師四': {
+  '社團導師四': { 
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20T.png?alt=media&token=de39f27e-f9e7-4d41-9b6e-88861fd5655e',
     text: `
-【角色】——
-【種族】——
-【年齡】——
-【個性】——
-【能力】——
-    `,
+【角色】?
+【種族】?
+【年齡】?
+【職位】?
+【個性】?
+【能力】?
+【扮演者】?
+`,
     twitch: ''
+  },
+
+  '社團導師二': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FFloa%20Fenrir.png?alt=media&token=2fddfc3a-53cb-4afa-a771-813169a1ff7c',
+    text: `
+【角色】芙洛‧芬里爾(Floa Fenrir)
+【種族】狼人
+【年齡】28歲
+【個性】表面沉靜、禮貌，真誠傾聽
+【能力】魔藥學
+    `,
+    twitch: 'https://www.twitch.tv/chichi5118'
   }
 },
 	 // 學院領導層（leader）
    leader: {
       '校長': {
-        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FRB.png?alt=media&token=d402f940-7b6a-4c02-9695-8e89926dba2e',
+        img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/god%2F%E6%A0%A1%E9%95%B7.png?alt=media&token=b78df672-a9b4-4391-9a36-e720ab7a2884',
         text: `
 【角色】阿布斯．鄧不利朵
 【種族】人類
@@ -973,7 +1300,7 @@ document.addEventListener('DOMContentLoaded', function () {
 【職位】麥格華茲魔法學院 校長
 【個性】嘮叨、熱情、老謀深算。
 【能力】深不可測。
-【扮演者】賈霸
+【扮演者】賈巴
 `,
         twitch: ''
       },
@@ -984,8 +1311,8 @@ document.addEventListener('DOMContentLoaded', function () {
 【種族】惡魔
 【年齡】外表約22左右（未知年齡）
 【職位】麥格華茲魔法學院 副校長
-【個性】傲慢毒舌、理智冷靜，嘴上壞。
-【能力】精通猩紅魔法、詛咒；魔力感知夜間異動。
+【個性】傲慢毒舌、理智冷靜，嘴壞。
+【能力】精通猩紅魔法、詛咒，魔力感知夜間異動。
 【扮演者】Nokia	
 `,
   twitch: ''
@@ -1027,7 +1354,19 @@ staff: {
 `,
     twitch: 'https://www.twitch.tv/hedfu'
   },
-  
+  '警衛': { 
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FLissandra.png?alt=media&token=e1bdc8ef-fdba-4553-99d0-8053cfd006f1',
+    text: `
+【角色】美．麗珊卓（Lissandra）
+【種族】獸人
+【年齡】不詳
+【職位】警衛
+【個性】陰陽怪氣、熱心助人、心直口快。
+【能力】黑魔法
+【扮演者】撒旦先生
+`,
+    twitch: 'https://www.twitch.tv/mrsatan717'
+  },
   '侍僕': {
     img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FIris%20Nova.png?alt=media&token=cf75709d-4073-4e8e-8d53-79dd65d36eda',
     text: `
@@ -1054,12 +1393,53 @@ staff: {
 `,
     twitch: '' // 若無可留空字串
   }
+},
+
+  
+ director: {
+  '米納斯·薇婭': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMinas%20Veya.png?alt=media&token=108659f6-c445-4eb6-97f6-95a1d900f7ff',
+    text: `
+【角色】米納斯·薇婭
+【職位】霍爾芬多學院主任
+【宗旨】我是霍爾芬多分院的主任。忠誠是力量，榮譽是信仰。守護不是義務，而是誓言為家園、為夥伴、為世界的安寧。我們如雄鷹展翼，守望天空，永不退卻。
+【擅長】防禦與騎士魔法
+`,
+    twitch: 'https://www.twitch.tv/medic'
+  },
+
+  '大衛．羅曼': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FDavid.png?alt=media&token=231081e4-6cce-4727-adfc-cab79a28a22e',
+    text: `
+【角色】大衛．羅曼
+【職位】斯卡瑪林班主任
+【宗旨】我是斯卡瑪林分院的主任。力量，是意志與磨練的結晶。唯有讓身體與心靈都承受試煉，力量才會回應並臣服於你。正如我們的徽章青蛇，沉著、致命、無懼挑戰。我們不逃避痛苦，我們征服它。
+`,
+    twitch: ''
+  },
+
+  '優莉安娜・貝娜': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FMG%20T.png?alt=media&token=de39f27e-f9e7-4d41-9b6e-88861fd5655e',
+    text: `
+【角色】優莉安娜・貝娜
+【職位】特威克羅學院主任
+【宗旨】我是特威克羅分院的主任。我們以智慧為刃、以知識為燈，追尋深藏於世界背後的真理。世人畏懼未知，而我們選擇直視並解讀它。只要答案仍被遮蔽，我們的探索便不會停止。
+`,
+    twitch: ''
+  },
+
+  '西追・普萊特': {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FPlight.png?alt=media&token=eb31ea1a-5099-45be-988b-6be36d2bd3e9',
+    text: `
+【角色】西追・普萊特
+【職位】赫文帕夫學院主任
+【宗旨】我是赫文帕夫分院的主任。和諧是力量，平衡是道路。魔法能療癒世界，如蓮綻放，以溫柔止息混亂。
+`,
+    twitch: 'https://www.twitch.tv/cheese_prime_ham'
+  }
 }
 
-	
-  };
-  
-  
+};
 
 
   const divisionDetail = document.getElementById('division-detail');
@@ -1299,16 +1679,266 @@ teacherCards.forEach(card => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const mainNav   = document.getElementById('mainNav');
+  const mainMenu  = document.getElementById('mainMenu');
+  if (!mainNav || !mainMenu) return;
+
+  // 找到「學院總攬」下拉的按鈕
+  const ddWrap   = mainMenu.querySelector('.menu-has-dropdown');
+  const ddToggle = ddWrap?.querySelector('.dropdown-toggle');
+  const ddMenu   = ddWrap?.querySelector('.dropdown');
+
+  if (ddToggle && ddMenu) {
+    // 手機：點擊切換展開/收合
+    ddToggle.addEventListener('click', (e) => {
+      // 在桌機上用 hover，不處理 click
+      if (window.matchMedia('(max-width: 800px)').matches) {
+        e.preventDefault();
+        e.stopPropagation();
+        const expanded = ddToggle.getAttribute('aria-expanded') === 'true';
+        ddToggle.setAttribute('aria-expanded', String(!expanded));
+        ddWrap.classList.toggle('open-submenu', !expanded);
+      }
+    });
+
+    // 點外面關閉（手機）
+    document.addEventListener('click', (e) => {
+      if (!mainNav.classList.contains('open')) return; // 只在手機開單時作用
+      if (!ddWrap.contains(e.target)) {
+        ddToggle.setAttribute('aria-expanded', 'false');
+        ddWrap.classList.remove('open-submenu');
+      }
+    });
+
+    // Esc 關閉（手機）
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        ddToggle.setAttribute('aria-expanded', 'false');
+        ddWrap.classList.remove('open-submenu');
+      }
+    });
+  }
+});
+
+
+
+// === Dropdown: 學院總攬 點擊展開/收合 ===
+(function(){
+  const mainNav = document.getElementById('mainNav');
+  const ddHost  = mainNav?.querySelector('.menu-has-dropdown');
+  const toggle  = ddHost?.querySelector('.dropdown-toggle');
+  const panel   = ddHost?.querySelector('.dropdown');
+
+  if(!mainNav || !ddHost || !toggle || !panel) return;
+
+  function openDD() {
+    ddHost.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+  function closeDD() {
+    ddHost.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  function toggleDD() {
+    if (ddHost.classList.contains('open')) closeDD();
+    else openDD();
+  }
+
+  // 點按鈕開/關
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleDD();
+  });
+
+  // 點子選單不關閉（可自行調整）
+  panel.addEventListener('click', (e) => e.stopPropagation());
+
+  // 點外面關閉
+  document.addEventListener('click', () => closeDD());
+
+  // ESC 關閉
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDD();
+  });
+})();
 
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBar = document.querySelector('.teacher-filter');
+  if (!filterBar) return;
+
+  const buttons = Array.from(filterBar.querySelectorAll('.filter-btn'));
+  const cards   = Array.from(document.querySelectorAll('.teacher-card'));
+
+  // 套用篩選
+  function applyFilter(filter) {
+    // 切換按鈕樣式與 ARIA
+    buttons.forEach(btn => {
+      const isActive = btn.dataset.filter === filter;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', String(isActive));
+      btn.tabIndex = isActive ? 0 : -1;
+    });
+
+    // 顯示 / 隱藏卡片（支援多分類：用逗號或空白分隔）
+    cards.forEach(card => {
+      const raw = (card.dataset.group || '').toLowerCase().trim();
+      const groups = raw.split(/[\s,]+/).filter(Boolean);
+      const show = filter === 'all' ? true : groups.includes(filter.toLowerCase());
+      card.classList.toggle('is-hidden', !show);
+    });
+  }
+
+  // 點擊
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+  });
+
+  // 鍵盤操作（左右鍵巡覽；Enter/Space 套用）
+  filterBar.addEventListener('keydown', (e) => {
+    const currentIndex = buttons.findIndex(b => b.classList.contains('active'));
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      const dir = e.key === 'ArrowRight' ? 1 : -1;
+      let next = (currentIndex + dir + buttons.length) % buttons.length;
+      buttons[next].focus();
+    } else if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const el = document.activeElement;
+      if (el && el.classList.contains('filter-btn')) {
+        applyFilter(el.dataset.filter);
+      }
+    }
+  });
+
+  // 預設從 .active 的按鈕讀取；若沒有則用第一個
+  const initial = (buttons.find(b => b.classList.contains('active')) || buttons[0])?.dataset.filter || 'leader';
+  applyFilter(initial);
+});
 
 
 
+(() => {
+  const mainNav   = document.getElementById('mainNav');
+  const mainMenu  = document.getElementById('mainMenu');
+  const navToggle = mainNav?.querySelector('.nav-toggle');
 
+  const isMobile = () => window.matchMedia('(max-width: 800px)').matches;
 
+  /** 關閉所有已展開的 li（含一、二層） */
+  function closeAll(container = mainMenu) {
+    container.querySelectorAll('.open').forEach(li => li.classList.remove('open'));
+    container.querySelectorAll('.dropdown-toggle[aria-expanded="true"]').forEach(btn => {
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  }
 
+  /** 關閉指定 li 的兄弟節點（避免同層多個同時打開） */
+  function closeSiblings(li) {
+    const parent = li.parentElement;
+    if (!parent) return;
+    parent.querySelectorAll(':scope > li.open').forEach(sib => {
+      if (sib !== li) sib.classList.remove('open');
+    });
+    parent.querySelectorAll(':scope > li .dropdown-toggle[aria-expanded="true"]').forEach(btn => {
+      const owner = btn.closest('li');
+      if (owner !== li) btn.setAttribute('aria-expanded', 'false');
+    });
+  }
 
+  /* === 手機：漢堡按鈕 === */
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      const nowOpen = !mainNav.classList.contains('open');
+      mainNav.classList.toggle('open', nowOpen);
+      navToggle.setAttribute('aria-expanded', String(nowOpen));
+      if (!nowOpen) closeAll();
+    });
+  }
+
+  /* === 手機：點擊展開/收合（事件委派）=== */
+  mainMenu.addEventListener('click', (e) => {
+    const btn = e.target.closest('.dropdown-toggle');
+    if (!btn) return;
+
+    const li = btn.closest('li');
+    // 桌機用 CSS hover 控制；手機用 JS
+    if (isMobile()) {
+      e.preventDefault();
+      const willOpen = !li.classList.contains('open');
+      // 同層只保留一個開啟
+      closeSiblings(li);
+      li.classList.toggle('open', willOpen);
+      btn.setAttribute('aria-expanded', String(willOpen));
+    }
+  });
+
+  /* === 鍵盤可用性（桌機 + 手機）：Enter/Space 開關，Esc 關閉 === */
+  mainMenu.addEventListener('keydown', (e) => {
+    const onToggle = e.target.closest('.dropdown-toggle');
+    if (!onToggle) {
+      if (e.key === 'Escape') {
+        // 按 Esc 關閉全部
+        closeAll();
+        if (isMobile()) mainNav.classList.remove('open');
+      }
+      return;
+    }
+
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const li = onToggle.closest('li');
+      // 桌機也允許用鍵盤打開
+      const willOpen = !li.classList.contains('open');
+      closeSiblings(li);
+      li.classList.toggle('open', willOpen);
+      onToggle.setAttribute('aria-expanded', String(willOpen));
+    } else if (e.key === 'Escape') {
+      const li = onToggle.closest('li');
+      li.classList.remove('open');
+      onToggle.setAttribute('aria-expanded', 'false');
+      onToggle.focus();
+    }
+  });
+
+  /* === 點擊外部：關閉所有 === */
+  document.addEventListener('click', (e) => {
+    if (!mainNav.contains(e.target)) {
+      closeAll();
+      if (isMobile()) {
+        mainNav.classList.remove('open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+
+  /* === 視窗尺寸變化：狀態重置，避免切換 RWD 後殘留 === */
+  let lastIsMobile = isMobile();
+  window.addEventListener('resize', () => {
+    const nowIsMobile = isMobile();
+    if (nowIsMobile !== lastIsMobile) {
+      // 切換斷點時關閉所有展開狀態
+      mainNav.classList.remove('open');
+      navToggle?.setAttribute('aria-expanded', 'false');
+      closeAll();
+      lastIsMobile = nowIsMobile;
+    }
+  });
+
+  /* === ）===
+  mainMenu.addEventListener('click', (e) => {
+    if (!isMobile()) return;
+    const linkInDropdown = e.target.closest('.menu-has-dropdown .dropdown a, .submenu-has-dropdown .dropdown a');
+    if (linkInDropdown) {
+    
+      // mainNav.classList.remove('open'); closeAll();
+    }
+  });
+  */
+})();
 
 
