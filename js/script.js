@@ -2004,6 +2004,85 @@ document.addEventListener('DOMContentLoaded', () => {
   */
 })();
 
+// ==== Mobile Nav & Dropdown (single source of truth) ====
+(function initMobileNav(){
+  const mainNav   = document.getElementById('mainNav');
+  const mainMenu  = document.getElementById('mainMenu');
+  const navToggle = document.querySelector('#mainNav .nav-toggle');
+  if (!mainNav || !mainMenu || !navToggle) return;
+
+  // 防止被綁多次（你檔案之前有重複初始化）
+  if (mainNav.dataset.inited === '1') return;
+  mainNav.dataset.inited = '1';
+
+  const isMobile = () => window.matchMedia('(max-width: 800px)').matches;
+
+  function closeAllSub(menu = mainMenu){
+    menu.querySelectorAll('.open').forEach(li => li.classList.remove('open'));
+    menu.querySelectorAll('.dropdown-toggle[aria-expanded="true"]').forEach(btn => {
+      btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+  function openNav(){
+    mainNav.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+  }
+  function closeNav(){
+    mainNav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    closeAllSub();
+  }
+
+  // 漢堡按鈕
+  navToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (mainNav.classList.contains('open')) closeNav();
+    else openNav();
+  });
+
+  // 手機下拉：只在手機寬度啟用點擊展開
+  mainMenu.addEventListener('click', (e) => {
+    const btn = e.target.closest('.dropdown-toggle');
+    if (!btn) return;
+    if (!isMobile()) return; // 桌機交給 CSS :hover or 你的桌機邏輯
+
+    e.preventDefault();
+    const li = btn.closest('li');
+    const willOpen = !li.classList.contains('open');
+
+    // 關閉兄弟節點
+    const parent = li.parentElement;
+    parent.querySelectorAll(':scope > li.open').forEach(sib => sib.classList.remove('open'));
+    parent.querySelectorAll(':scope > li .dropdown-toggle[aria-expanded="true"]').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+    });
+
+    li.classList.toggle('open', willOpen);
+    btn.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  // 點外面關閉（僅手機時）
+  document.addEventListener('click', (e) => {
+    if (!isMobile()) return;
+    if (!mainNav.contains(e.target)) closeNav();
+  });
+
+  // ESC 關閉
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
+  });
+
+  // 尺寸切換重置
+  let last = isMobile();
+  window.addEventListener('resize', () => {
+    const now = isMobile();
+    if (now !== last) {
+      closeNav();
+      last = now;
+    }
+  });
+})();
+
 
 
 
