@@ -1579,7 +1579,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+ (function () {
+    const buttons = document.querySelectorAll('.teacher-filter .filter-btn');
+    const cards = document.querySelectorAll('#teachers .teacher-card');
 
+    function applyFilter(kind) {
+      const k = String(kind || '').toLowerCase();
+      cards.forEach(card => {
+        const group = (card.getAttribute('data-group') || '').toLowerCase();
+        card.classList.toggle('is-hidden', group !== k);
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => { 
+          b.classList.remove('active'); 
+          b.setAttribute('aria-selected', 'false'); 
+        });
+        btn.classList.add('active'); 
+        btn.setAttribute('aria-selected','true');
+        applyFilter(btn.getAttribute('data-filter'));
+      });
+    });
+
+    applyFilter('leader');
+  })();
 
 (function(){
   const teacherSec = document.getElementById('teachers');
