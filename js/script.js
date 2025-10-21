@@ -1043,7 +1043,7 @@ const religionData = {
     alt: '聖光灑落的大地'
   },
   noctalis: {
-    title: '灰月秘儀會（',
+    title: '灰月秘儀會',
     desc: `信奉黑暗主神。主張「黑暗是光的回聲，死亡是生命的延續」。儀式於月蝕之夜舉行，以血墨繪製月之符文，召喚亡靈對話。其信徒多為靈魂法師與夜行者。<br><br>
 「光能照亮世界，但唯有影子能讓世界有形。」`,
 
@@ -2018,7 +2018,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('#mainNav .nav-toggle');
   if (!mainNav || !mainMenu || !navToggle) return;
 
-  // 防止被綁多次（你檔案之前有重複初始化）
+ 
   if (mainNav.dataset.inited === '1') return;
   mainNav.dataset.inited = '1';
 
@@ -2047,17 +2047,17 @@ document.addEventListener('DOMContentLoaded', () => {
     else openNav();
   });
 
-  // 手機下拉：只在手機寬度啟用點擊展開
+
   mainMenu.addEventListener('click', (e) => {
     const btn = e.target.closest('.dropdown-toggle');
     if (!btn) return;
-    if (!isMobile()) return; // 桌機交給 CSS :hover or 你的桌機邏輯
+    if (!isMobile()) return; 
 
     e.preventDefault();
     const li = btn.closest('li');
     const willOpen = !li.classList.contains('open');
 
-    // 關閉兄弟節點
+  
     const parent = li.parentElement;
     parent.querySelectorAll(':scope > li.open').forEach(sib => sib.classList.remove('open'));
     parent.querySelectorAll(':scope > li .dropdown-toggle[aria-expanded="true"]').forEach(b => {
@@ -2068,7 +2068,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('aria-expanded', String(willOpen));
   });
 
-  // 點外面關閉（僅手機時）
+
   document.addEventListener('click', (e) => {
     if (!isMobile()) return;
     if (!mainNav.contains(e.target)) closeNav();
@@ -2079,7 +2079,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeNav();
   });
 
-  // 尺寸切換重置
+ 
   let last = isMobile();
   window.addEventListener('resize', () => {
     const now = isMobile();
