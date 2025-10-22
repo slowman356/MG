@@ -948,9 +948,9 @@ nav{ all:unset; }
   flex:1 1 320px;
   min-width:260px;
   color:#f0e6a5;
-  font-size:1.28em;   /* 內文更大 */
-  line-height:1.85;   /* 行距更舒適 */
-  font-weight:700;    /* 內文加粗 */
+  font-size:1.28em;   
+  line-height:1.85;   
+  font-weight:700;    
 }
 
 #history .map-text h2{ margin-top:0; color:#f6db87; text-shadow:0 0 6px rgba(246,219,135,.6); }
@@ -1145,4 +1145,222 @@ nav{ all:unset; }
   #races .races-card{ flex-direction:column-reverse; padding:14px; }
   #races .races-text{ font-size:1.08em; line-height:1.7; }
   #races .races-image img{ max-width:240px; margin:0 auto; }
+}
+
+/* Demon Selector */
+#demon-lord .demon-selector {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 30px;
+  justify-content: center;
+}
+
+#demon-lord .demon-selector button {
+  background: rgba(246, 219, 135, .08);
+  border: 1px solid rgba(246, 219, 135, .14);
+  color: #f6db87;
+  padding: 10px 16px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.05em;
+  transition: .25s;
+}
+
+#demon-lord .demon-selector button:hover {
+  transform: translateY(-1px);
+  background: rgba(246, 219, 135, .12);
+  border-color: rgba(246, 219, 135, .30);
+}
+
+#demon-lord .demon-selector button.active {
+  background: #f6db87;
+  color: #000;
+  box-shadow: 0 0 12px rgba(246, 219, 135, .6);
+}
+
+/* Demon Content */
+#demon-lord .demon-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#demon-lord .demon-card {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, .25);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  margin-bottom: 30px;
+}
+
+/* Text on the left */
+#demon-lord .demon-text {
+  flex: 1 1 320px;
+  min-width: 260px;
+  color: #f0e6a5;
+  font-size: 1.18em;
+  line-height: 1.75;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+#demon-lord .demon-text h2 {
+  margin-top: 0;
+  color: #f6db87;
+  font-size: 1.7em;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 6px rgba(246, 219, 135, .6);
+}
+
+/* Image on the right */
+#demon-lord .demon-image {
+  flex: 1 1 420px;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Demon Image */
+#demon-lord .demon-image img {
+  display: block;
+  width: 100%;
+  max-width: 320px;  
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .6);
+  border: 1px solid rgba(255, 255, 255, .04);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  #demon-lord .demon-card {
+    flex-direction: column-reverse;
+    padding: 14px;
+  }
+
+  #demon-lord .demon-text {
+    font-size: 1.08em;
+    line-height: 1.7;
+  }
+
+  #demon-lord .demon-image img {
+    max-width: 100%;
+  }
+}
+
+
+#demon-lord .demon-selector {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 30px;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+#demon-lord .demon-selector button {
+  background: rgba(246, 219, 135, .08);
+  border: 1px solid rgba(246, 219, 135, .14);
+  color: #f6db87;
+  padding: 10px 16px;
+  border-radius: 18px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.05em;
+  transition: .25s;
+}
+
+#demon-lord .demon-selector button:hover {
+  transform: translateY(-1px);
+  background: rgba(246, 219, 135, .12);
+  border-color: rgba(246, 219, 135, .30);
+}
+
+#demon-lord .demon-selector button.active {
+  background: #f6db87;
+  color: #000;
+  box-shadow: 0 0 12px rgba(246, 219, 135, .6);
+}
+
+
+#demon-lord .demon-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#demon-lord .demon-card {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, .25);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  margin-bottom: 30px;
+  flex-direction: row; 
+}
+
+#demon-lord .demon-text {
+  flex: 1 1 320px;
+  min-width: 260px;
+  color: #f0e6a5;
+  font-size: 1.18em;
+  line-height: 1.75;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+#demon-lord .demon-text h2 {
+  margin-top: 0;
+  color: #f6db87;
+  font-size: 1.7em;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-shadow: 0 0 6px rgba(246, 219, 135, .6);
+}
+
+#demon-lord .demon-image {
+  flex: 1 1 420px;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#demon-lord .demon-image img {
+  display: block;
+  width: 100%;
+  max-width: 320px;  
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .6);
+  border: 1px solid rgba(255, 255, 255, .04);
+}
+
+
+@media (max-width: 800px) {
+  #demon-lord .demon-card {
+    flex-direction: column-reverse;
+    padding: 14px;
+  }
+
+  #demon-lord .demon-text {
+    font-size: 1.08em;
+    line-height: 1.7;
+  }
+
+  #demon-lord .demon-image img {
+    max-width: 100%;
+  }
 }
