@@ -32,10 +32,10 @@
   <ul id="mainMenu" role="menu">
     <li><a href="#" data-section="home" role="menuitem">首頁</a></li>
 
-    <!--學院總覽 -->
+    <!--學院總攬 -->
     <li class="menu-has-dropdown" role="none">
       <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="academyDropdown" role="menuitem">
-        學院總覽
+        學院總攬
       </button>
       <ul id="academyDropdown" class="dropdown" role="menu" aria-label="學院總覽">
         <li role="none"><a href="#" data-section="academies" role="menuitem">學院介紹</a></li>
@@ -53,6 +53,7 @@
       <ul id="worldDropdown" class="dropdown" role="menu" aria-label="世界觀">
         <li role="none"><a href="#" data-section="history" role="menuitem">大陸歷史</a></li>
 		<li role="none"><a href="#" data-section="god" role="menuitem">創世神</a></li> 
+		<li role="none"><a href="#" data-section="demon-lord" role="menuitem">魔王</a></li> 
 		<li role="none"><a href="#" data-section="religion" role="menuitem">宗教</a></li>
         <li role="none"><a href="#" data-section="races" role="menuitem">種族</a></li> 
       </ul>
@@ -641,7 +642,7 @@
   </div>
 </div>
 
-<!-- 坎普費爾 班主任 -->
+<!-- 斯卡瑪林 班主任 -->
 <div class="teacher-card" data-group="director" data-teacher="大衛．羅曼"
   style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px; background: rgba(246,219,135,0.1); padding: 15px 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(246,219,135,0.3);">
   <img src="https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/teacher%2FDavid.png?alt=media&token=231081e4-6cce-4727-adfc-cab79a28a22e"
@@ -649,7 +650,7 @@
     style="width:150px;height:150px;object-fit:cover;border-radius:12px;flex-shrink:0;">
   <div class="teacher-info" style="color:#f0e6a5;font-size:1.1em;line-height:1.5;">
     <h2 style="margin: 0 0 10px; line-height: 1.4;">
-      坎普費爾主任<br></h2>
+      斯卡瑪林主任<br></h2>
     <p>真正的黑暗從不是力量，而是失控的意志。</p>
   </div>
 </div>
@@ -963,6 +964,34 @@
 
   <div class="races-content" id="racesContent"></div>
 </div>
+
+
+<div id="demon-lord" class="section" aria-labelledby="demonLordTitle">
+  <h1 id="demonLordTitle">魔王</h1>
+  <p style="max-width:800px;margin:auto;color:#dcd0a1;">
+    選擇一位魔王部下查看簡介
+  </p>
+
+  <div class="demon-selector" id="demonSelector" aria-label="魔王選單">
+    <button data-demon="sar" class="active">魔王</button>
+    <button data-demon="leviathan">嫉妒之王</button>
+    <button data-demon="satan">憤怒之王</button>
+    <button data-demon="celia">貪婪之王</button>
+    <button data-demon="ilanreige">貪饕君主</button>
+    <button data-demon="belphegor">懶惰之王</button>
+    <button data-demon="asmodeus"> 欲之王</button>
+    <button data-demon="lucifer"> 傲慢之王</button>
+  </div>
+
+  <div class="demon-content" id="demonContent"></div>
+</div>
+
+
+    
+
+
+
+
 
   <div id="team" class="section">
     <h1>製作團隊</h1>
