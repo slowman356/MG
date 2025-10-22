@@ -792,7 +792,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         school: {
             title: '麥格華茲',
-            desc: '麥格華茲學院座落於神秘的萊卡城，這是一座融合多種族文化與歷史的魔法都市。學院致力於培養年輕一代的魔法師，促進不同種族間的理解與合作，共同維護大陸的和平與繁榮。學院最獨特之處在於它的四個分院，每個分院代表著不同的價值觀與特質，讓學生能依照自身天賦與性格獲得最適合的指導與成長環境。透過這樣的分院制度，學生不僅能學習強大的魔法技能，更能培養出領導力、勇氣與智慧。',
+            desc: '麥格華茲學院座落於奧德倫王國，這是一座融合多種族文化與歷史的魔法都市。學院致力於培養年輕一代的魔法師，促進不同種族間的理解與合作，共同維護大陸的和平與繁榮。學院最獨特之處在於它的四個分院，每個分院代表著不同的價值觀與特質，讓學生能依照自身天賦與性格獲得最適合的指導與成長環境。透過這樣的分院制度，學生不僅能學習強大的魔法技能，更能培養出領導力、勇氣與智慧。',
             notes: '特色：傳承奧秘、多元共融、卓越教育。',
             img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/map%2FMG.png?alt=media&token=2c79c111-fec4-48de-ae4e-4a5f780b8c4b',
             alt: '麥格華茲 圖片'
@@ -1176,6 +1176,146 @@ function renderRace(rKey) {
 
   renderRace('elf');
 })();
+
+const demonData = {
+  sar: {
+    title: '薩爾格洛斯 - 魔王',
+    desc: '世界仍處於混沌之中，七大元素尚未平衡。此時，第一位魔王薩爾格洛斯誕生，他是黑暗與靈魂元素的化身，體內流淌著毀滅與重生的力量。<br><br>' +
+    '薩爾格洛斯的誕生標誌著黑暗的覺醒，他能夠操控生死，主宰靈魂，並能賦予死亡詛咒，將活人徹底吞噬於無盡的黑暗。',
+    trait: '無窮力量、權力至上、統治慾望',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E9%AD%94%E7%8E%8B.png?alt=media&token=2569f165-b483-4f7c-a974-a831e2839555',
+    alt: '薩爾格洛斯 - 傲慢'
+  },
+  leviathan: {
+    title: '利維坦 - 嫉妒之王',
+  desc: '利維坦生於深海之淵，目睹世界因信仰而秩序，卻因嫉妒無法掌控信仰，便鑄造「罪契幣」，以罪與契約建立屬於魔族的法則，他以交易取代祈禱，創造了契約文明魔族尊其為「深海仲裁者」。<br><br>' +
+       '「在深海前發誓，聽見的是誘惑，背叛者將永沉」',
+    trait: '嫉妒、契約、靈魂',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E5%BF%8C%E5%A6%92.png?alt=media&token=a3803bdb-598d-43b8-841a-edc1bda96495',
+    alt: '利維坦 - 驕傲'
+  },
+  satan: {
+    title: '撒旦 - 憤怒之王',
+    desc: '撒旦誕生於地心的烈火脈中，那片永遠燃燒的深淵。從他的誕生之時起，便注定帶來毀滅與絕望。對他而言，正義從來不需要仁愛，只需無情的報復與血腥的勝利。<br><br>' +
+    '他視世界為腐敗之地，所有神明和善良的存在皆為虛偽的假象，必須被摧毀。<br><br>' +
+	'「烈焰能燒盡一切，唯獨燒不盡不義。」',
+    trait: '憤怒、復仇、毀滅',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E6%86%A4%E6%80%92.png?alt=media&token=ffa444a5-c5e8-4657-85a5-a65bb1e18135',
+    alt: '撒旦 - 憤怒'
+  },
+  celia: {
+    title: '瑟莉雅 - 貪婪之王',
+   desc: '誕生地獄深淵，那是一片永無止境的黑暗與火焰交織的地域。當地獄的深處，無數墮落靈魂的貪婪與渴望積聚成一股無形的力量時，瑟莉雅便在這股力量中誕生，成為貪婪的具象化。<br><br>' +
+    '「貪婪從不殺人，它只是靜靜等待，看誰先被慾望窒息」',
+    trait: '欲望、執著、貪婪',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E8%B2%AA%E5%A9%AA.png?alt=media&token=7bbf95d9-7e5b-4da0-9fc1-aa36a510d29a',
+    alt: '瑟莉雅 - 貪婪'
+  },
+  ilanreige: {
+    title: '伊蘭蕾潔 - 貪饕君主',
+   desc: '無數墮落靈魂的飢餓與慾望積聚成一股強大的能量，這股能量凝結成伊蘭蕾潔的化身，成為貪欲與飢渴的具象化。<br><br>' +
+    '她曾為魔王烹調「饕餮之宴」，以萬靈之魂為食，卻在嘗盡味道後陷入空虛。<br><br>' +
+    '「墮落亦能烹出美味，欲望與痛苦，總是相依。」',
+    trait: '享樂、食慾、暴食',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E4%BC%8A%E8%98%AD.png?alt=media&token=33fd7ac1-98b9-4269-89ac-35f0f90eacb9',
+    alt: '伊蘭蕾潔 - 貪饕'
+  },
+  belphegor: {
+    title: '貝爾芬格 - 懶惰之王',
+    desc: '誕生於地獄的深淵，那裡充滿了無盡的痛苦與無盡的爭鬥。與其他惡魔不同，貝爾芬格並不渴望力量、征服或報復。他見證了萬物的循環與變遷，並逐漸認識到一切奮鬥終將歸於虛無，無論是生死還是慾望，最終都會消散。<br><br>' +
+	'「沉睡者並非逃避，只是不願醒於破碎的夢。」',
+    trait: '懶惰、停滯、消極',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E6%87%B6%E6%83%B0.png?alt=media&token=6ad6ae2f-8a61-44c2-a02c-2cf256b76b4a',
+    alt: '貝爾芬格 - 懶惰'
+  },
+  asmodeus: {
+    title: '阿斯莫德 - 欲之王',
+    desc: '夢與幻象的織者，他創造美與愛，卻也揭露人心最深的偽裝。 他認為慾望是靈魂的真言，而抑制慾望，是對自我的背叛。<br><br>' +
+	'「慾望不是罪，虛偽才是。」',
+    trait: '誘惑、夢境、真實之鏡',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E6%85%BE%E6%9C%9B.png?alt=media&token=cb09be79-658a-4914-9f74-f8a7d9e0b4b0',
+    alt: '阿斯莫德 - 欲望'
+  },
+  lucifer: {
+    title: '路西恩 - 傲慢之王',
+    desc: '他對「自我」的傲慢不亞於任何存在。隨著對知識與真理的無盡追求，漸漸陷入了對「完美」的執念之中。他認為世界的每一個缺陷都該被修正，宇宙中的一切不完美之處必須被消除。<br><br>' +
+	'「神束縛靈魂，惡魔引領權力。」',
+    trait: '傲慢、自信、權力欲',
+    img: 'https://firebasestorage.googleapis.com/v0/b/mg2222-95b15.firebasestorage.app/o/%E6%83%A1%E9%AD%94%2F%E8%B7%AF%E8%A5%BF%E6%B3%95.png?alt=media&token=bb37fb09-eca0-4fe4-aad2-99add7b9c280',
+    alt: '路西恩 - 傲慢'
+  }
+};
+
+const demonSelector = document.getElementById('demonSelector');
+const demonContent = document.getElementById('demonContent');
+
+
+let currentDemon = demonData.sar;
+demonContent.innerHTML = `
+  <h2>${currentDemon.title}</h2>
+  <p>${currentDemon.desc}</p>
+  <p><strong>特徵:</strong> ${currentDemon.trait}</p>
+  <img src="${currentDemon.img}" alt="${currentDemon.alt}" style="max-width:100%;height:auto;">
+`;
+
+demonSelector.addEventListener('click', (event) => {
+  const selectedDemon = event.target.getAttribute('data-demon');
+  
+
+  if (demonData[selectedDemon]) {
+    currentDemon = demonData[selectedDemon];
+    demonContent.innerHTML = `
+      <h2>${currentDemon.title}</h2>
+      <p>${currentDemon.desc}</p>
+      <p><strong>特徵:</strong> ${currentDemon.trait}</p>
+      <img src="${currentDemon.img}" alt="${currentDemon.alt}" style="max-width:100%;height:auto;">
+    `;
+    
+
+    const buttons = demonSelector.querySelectorAll('button');
+    buttons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    event.target.classList.add('active');
+  }
+});
+
+
+function renderDemon(demonKey) {
+  const demon = demonData[demonKey];
+  if (!demon) return;
+  const demonContent = document.getElementById('demonContent');
+  demonContent.innerHTML = `
+    <div class="demon-card">
+      <div class="demon-text">
+        <h2>${demon.title}</h2>
+        <p>${demon.desc}</p>
+        <p><strong>特性：</strong>${demon.trait}</p>
+      </div>
+      <div class="demon-image">
+        <img src="${demon.img}" alt="${demon.alt}">
+      </div>
+    </div>
+  `;
+}
+
+function setupDemonUI() {
+  const selector = document.getElementById('demonSelector');
+  if (!selector) return;
+  selector.addEventListener('click', e => {
+    const btn = e.target.closest('button[data-demon]');
+    if (!btn) return;
+    selector.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderDemon(btn.dataset.demon);
+  });
+
+  renderDemon('sar');
+}
+
+setupDemonUI();
+
+
 
 /* ===========================
   
@@ -2018,7 +2158,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('#mainNav .nav-toggle');
   if (!mainNav || !mainMenu || !navToggle) return;
 
- 
+  // 防止被綁多次（你檔案之前有重複初始化）
   if (mainNav.dataset.inited === '1') return;
   mainNav.dataset.inited = '1';
 
@@ -2047,17 +2187,17 @@ document.addEventListener('DOMContentLoaded', () => {
     else openNav();
   });
 
-
+  // 手機下拉：只在手機寬度啟用點擊展開
   mainMenu.addEventListener('click', (e) => {
     const btn = e.target.closest('.dropdown-toggle');
     if (!btn) return;
-    if (!isMobile()) return; 
+    if (!isMobile()) return; // 桌機交給 CSS :hover or 你的桌機邏輯
 
     e.preventDefault();
     const li = btn.closest('li');
     const willOpen = !li.classList.contains('open');
 
-  
+    // 關閉兄弟節點
     const parent = li.parentElement;
     parent.querySelectorAll(':scope > li.open').forEach(sib => sib.classList.remove('open'));
     parent.querySelectorAll(':scope > li .dropdown-toggle[aria-expanded="true"]').forEach(b => {
@@ -2068,7 +2208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.setAttribute('aria-expanded', String(willOpen));
   });
 
-
+  // 點外面關閉（僅手機時）
   document.addEventListener('click', (e) => {
     if (!isMobile()) return;
     if (!mainNav.contains(e.target)) closeNav();
@@ -2079,7 +2219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeNav();
   });
 
- 
+  // 尺寸切換重置
   let last = isMobile();
   window.addEventListener('resize', () => {
     const now = isMobile();
