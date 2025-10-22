@@ -1229,7 +1229,7 @@ const demonData = {
     alt: '貝爾芬格 - 懶惰'
   },
   asmodeus: {
-    title: '阿斯莫德 - 欲之王',
+    title: '阿斯莫德 - 慾之王',
     desc: '夢與幻象的織者，他創造美與愛，卻也揭露人心最深的偽裝。 他認為慾望是靈魂的真言，而抑制慾望，是對自我的背叛。<br><br>' +
 	'「慾望不是罪，虛偽才是。」',
     trait: '誘惑、夢境、真實之鏡',
@@ -2240,3 +2240,4 @@ document.querySelectorAll('[data-section]').forEach(btn => {
     }
   });
 });
+
